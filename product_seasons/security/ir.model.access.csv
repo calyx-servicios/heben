@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_product_seasons_product_manager","product.seasons","model_product_seasons","base.group_partner_manager",1,1,1,1
+"access_product_seasons_public","product.seasons.public","model_product_seasons",,1,0,0,0
+"access_product_material_product_manager","product.material","model_product_material","base.group_partner_manager",1,1,1,1
+"access_product_material_public","product.material.public","model_product_material",,1,0,0,0
+"access_product_family_product_manager","product.family","model_product_family","base.group_partner_manager",1,1,1,1
+"access_product_family_public","product.family.public","model_product_family",,1,0,0,0

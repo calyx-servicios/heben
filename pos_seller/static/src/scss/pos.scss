@@ -1,0 +1,46 @@
+.div-seller button{
+	width: 404px;
+	margin-top: 5px;
+    margin-bottom: 0px;
+    height: 40px;
+    color: #555555;
+    font-size: 14px;
+	font-weight: bold;
+	border-color: #bfbfbf;
+}
+.icon-seller {
+	border-radius: 100%;
+	position: absolute;
+	left: 160px;
+	top: 13px;
+	width: 25px;
+	font-size: 15px;
+	line-height: 24px;
+}
+.pos .popup .sellers {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 0px;
+}
+.seller-list li {
+	text-align: left;
+    color: #555555;
+	font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
+	font-size: 16px;
+	line-height: 40px;
+	background: rgb(230,230,230);
+	padding-left: 5px;
+}
+.seller-list li:nth-child(even) {
+    background: rgb(247,247,247);
+}
+.pos .popup input {
+	min-height: 0px;
+	box-shadow: 0px 0px 0px 0px;
+	width: 3%;
+	margin-right: 5px;
+}
+.ml-seller {
+	margin-left: 15px;
+}

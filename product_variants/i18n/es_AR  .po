@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_variants
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-02 15:57+0000\n"
+"PO-Revision-Date: 2021-11-02 15:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_variants
+#: model:ir.model.fields,field_description:product_variants.field_product_product__discharge_date
+msgid "Discharge date"
+msgstr "Fecha de alta"
+
+#. module: product_variants
+#: model:ir.model.fields,field_description:product_variants.field_product_product__first_entry_date
+msgid "First Entry Date"
+msgstr "Fecha de Primer Ingreso"
+
+#. module: product_variants
+#: model:ir.model.fields,field_description:product_variants.field_product_product__first_sale_date
+msgid "First Sale Date"
+msgstr "Fecha de Primera Venta"
+
+#. module: product_variants
+#: model:ir.model.fields,field_description:product_variants.field_product_product__last_entry_date
+msgid "Last Entry Date"
+msgstr "Fecha de Último Ingreso"
+
+#. module: product_variants
+#: model:ir.model.fields,field_description:product_variants.field_product_product__last_sale_date
+msgid "Last Sale Date"
+msgstr "Fecha de Última Venta"
+
+#. module: product_variants
+#: model:ir.model,name:product_variants.model_product_product
+msgid "Product"
+msgstr "Producto"

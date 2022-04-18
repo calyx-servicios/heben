@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="product_variants_view_form" model="ir.ui.view">
+            <field name="name">product.variants.view.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_id']" position="after">
+                    <field name="discharge_date"/>
+                    <field name="first_entry_date"/>
+                    <field name="first_sale_date"/>
+                    <field name="last_entry_date"/>
+                    <field name="last_sale_date"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

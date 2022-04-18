@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_seasons_search_form_view" model="ir.ui.view">
+        <field name="name">product.seasons.search.form</field>
+        <field name="model">product.seasons</field>
+        <field name="arch" type="xml">
+            <search string="Temporadas">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="action_open_seasons_products" model="ir.actions.act_window">
+        <field name="name">Seasons Products</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="domain">[('product_seasons_id', '=', active_id)]</field>
+    </record>
+    <record id="action_open_single_product_seasons" model="ir.actions.act_window">
+        <field name="name">Product Seasons</field>
+        <field name="res_model">product.seasons</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="target">current</field>
+        <field name="domain">[('product_ids', 'in', active_id)]</field>
+    </record>
+        <record id="view_product_seasons_form" model="ir.ui.view">
+        <field name="name">product.seasons.form</field>
+        <field name="model">product.seasons</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="%(action_open_seasons_products)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-cubes"
+                        >
+                            <field
+                                name="products_count"
+                                widget="statinfo"
+                                string="Productos"
+                                context="{'default_product_seasons_id': active_id}"
+                            />
+                        </button>
+                    </div>
+                    <field name="logo" widget="image" class="oe_avatar" />
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <group string="Codigo">
+                            <field name="code" nolabel="1" class="col-6" />
+                        </group>
+                        <group string="Nombre">
+                            <field name="description" nolabel="1" class="col-6" />
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_product_seasons_tree" model="ir.ui.view">
+        <field name="name">product.seasons.tree</field>
+        <field name="model">product.seasons</field>
+        <field name="arch" type="xml">
+            <tree string="product.seasons">
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_product_seasons_kanban" model="ir.ui.view">
+        <field name="name">product.seasons.kanban</field>
+        <field name="model">product.seasons</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id" />
+                <field name="logo" />
+                <field name="products_count" />
+                <field name="description" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img
+                                    t-att-src="kanban_image('product.seasons', 'logo', record.id.raw_value)"
+                                    alt="Logo"
+                                />
+                            </div>
+                            <div class="oe_kanban_details">
+                                <h4>
+                                    <field name="name" />
+                                </h4>
+                                <div>
+                                    <a> <t t-esc="record.products_count.value" /> Products </a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="view_product_template_search_seasons" model="ir.ui.view">
+        <field name="name">product.template.search.seasons</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_seasons_id" />
+                <filter
+                    string="Temporada"
+                    name="groupby_seasons"
+                    domain="[]"
+                    context="{'group_by' : 'product_seasons_id'}"
+                />
+                <separator />
+            </field>
+        </field>
+    </record>
+    <record id="view_product_template_kanban_seasons" model="ir.ui.view">
+        <field name="name">product kanban view: add seasons</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]/strong[1]"
+                position="after"
+            >
+                <div>
+                    <a
+                        t-if="record.product_seasons_id"
+                        type="action"
+                        name="%(action_open_single_product_seasons)d"
+                    >
+                        <field name="product_seasons_id" />
+                    </a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_variant_kanban_seasons" model="ir.ui.view">
+        <field name="name">product variant kanban view: add seasons</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]/strong[1]"
+                position="after"
+            >
+                <div>
+                    <a t-if="record.product_seasons_id" type="open">
+                        <field name="product_seasons_id" />
+                    </a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_variant_form_seasons" model="ir.ui.view">
+     <field name="name">product variant form view: add seasons</field>
+     <field name="model">product.product</field>
+     <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+     <field name="arch" type="xml">
+        <group name="codes" position="after">
+           <group name="heben_info" string="Informacion">
+             <field name="product_seasons_id"  />
+           </group>
+        </group>
+     </field>
+    </record>
+    <record id="view_product_variant_form_seasons_vv" model="ir.ui.view">
+     <field name="name">product variant form view: add seasons_vv</field>
+     <field name="model">product.product</field>
+     <field name="inherit_id" ref="product.product_normal_form_view" />
+     <field name="arch" type="xml">
+         <field name="default_code" position="after">
+             <field name="product_seasons_id" string="Temporada" />
+         </field>
+     </field>
+    </record>
+    
+    <record id="view_product_template_tree_seasons" model="ir.ui.view">
+        <field name="name">product tree view: add seasons</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_seasons_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_variant_tree_seasons" model="ir.ui.view">
+        <field name="name">product variant tree view: add seasons</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_seasons_id" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_product_seasons">
+        <field name="name">seasons</field>
+        <field name="res_model">product.seasons</field>
+        <field name="view_mode">kanban,form,tree</field>
+    </record>
+
+    <menuitem
+        name="Temporada"
+        id="menu_product_seasons"
+        action="action_product_seasons"
+        parent="sale.prod_config_main"
+    />
+    <menuitem
+        name="Temporada"
+        id="menu_product_seasons_inventory"
+        action="action_product_seasons"
+        parent="stock.menu_product_in_config_stock"
+    />
+
+</odoo>
