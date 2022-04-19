@@ -150,7 +150,3 @@
 	url = https://github.com/regaby/odoo-custom.git
 	path = submodules/regaby/odoo-custom
 	branch = refs/heads/13.0
-[submodule "ctmil/account_debt_management"]
-	url = https://github.com/ctmil/account_debt_management.git
-	path = submodules/ctmil/account_debt_management
-	branch = refs/heads/master
