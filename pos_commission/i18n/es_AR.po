@@ -1,0 +1,481 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_commission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-14 15:05+0000\n"
+"PO-Revision-Date: 2022-04-14 15:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_apply__all_products
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__applied_on__3_global
+#, python-format
+msgid "All Products"
+msgstr "Todos los productos"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "All Products - Commission will be provided in all the products\n"
+msgstr "Todos los productos - Se proporcionará comisión en todos los productos.\n"
+
+#. module: pos_commission
+#: model:ir.model.fields,help:pos_commission.field_commission_type__commission_apply
+msgid ""
+"All Products - Commission will be provided in all the products\n"
+"Product Category - Commission will be provided in the selected categories \n"
+"Product - Commission will be provided in the selected products \n"
+msgstr ""
+"Todos los productos - Se proporcionará comisión en todos los productos.\n"
+"Categoría de producto: se proporcionará una comisión en las categorías seleccionadas \n"
+"Producto - Se proporcionará comisión en los productos seleccionados \n"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__applied_on
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__apply_on
+#, python-format
+msgid "Apply On"
+msgstr "Aplica en"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: pos_commission
+#: model_terms:ir.actions.act_window,help:pos_commission.action_commission_line
+#: model_terms:ir.actions.act_window,help:pos_commission.action_commission_type
+msgid ""
+"Build up promotion programs to attract more customers with discounts, free products, free delivery, etc.\n"
+"                You can share promotion codes or grant the promotions automatically if some conditions are met."
+msgstr ""
+"Cree programas de promoción para atraer a más clientes con descuentos, productos gratuitos, entrega gratuita, etc.\n"
+"                Puede compartir códigos de promoción u otorgar las promociones automáticamente si se cumplen algunas condiciones."
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__commission
+msgid "Commission"
+msgstr "Comisión"
+
+#. module: pos_commission
+#: model:ir.model,name:pos_commission.model_commission_type_line
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_line_ids
+msgid "Commission Line"
+msgstr "Línea de comisión"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_line_products
+msgid "Commission Line Products"
+msgstr "Lineas de comisión de productos"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Commission Lines"
+msgstr "Lineas de comisión"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Commission Name"
+msgstr "Nombre de comisión"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_price
+msgid "Commission Price"
+msgstr "Precio de comisión"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: model:ir.model,name:pos_commission.model_commission_type
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__commission_type
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_type
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__commission_type_id
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+#, python-format
+msgid "Commission Type"
+msgstr "Tipo de comisión"
+
+#. module: pos_commission
+#: model:ir.model,name:pos_commission.model_commission_line
+msgid "Commission line"
+msgstr "Línea de comisión"
+
+#. module: pos_commission
+#: model:ir.ui.menu,name:pos_commission.menu_commission
+msgid "Commissions"
+msgstr "Comisiones"
+
+#. module: pos_commission
+#: model:ir.actions.act_window,name:pos_commission.action_commission_line
+#: model:ir.ui.menu,name:pos_commission.menu_commission_line
+msgid "Commissions Line"
+msgstr "Línea de comisiones"
+
+#. module: pos_commission
+#: model:ir.actions.act_window,name:pos_commission.action_commission_type
+#: model:ir.ui.menu,name:pos_commission.menu_commission_type
+msgid "Commissions Type"
+msgstr "Tipo de comisiones"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__compute_price
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Compute Price"
+msgstr "Calcular precio"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__computed_price
+msgid "Computed Price"
+msgstr "Precio calculado"
+
+#. module: pos_commission
+#: model_terms:ir.actions.act_window,help:pos_commission.action_commission_line
+#: model_terms:ir.actions.act_window,help:pos_commission.action_commission_type
+msgid "Create a new promotion program"
+msgstr "Crear un nuevo programa de promoción"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__create_uid
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__create_uid
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__create_date
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__create_date
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__display_name
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__display_name
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "Fixed - Commission will be provided as fixed amount \n"
+msgstr "Fijo: la comisión se proporcionará como una cantidad fija \n"
+
+#. module: pos_commission
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__standard_commission_type__fixed
+msgid "Fixed Amount"
+msgstr "Monto fijo"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__fixed_commission
+msgid "Fixed Commission"
+msgstr "Comisión fija"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__fixed_price
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__compute_price__fixed
+#, python-format
+msgid "Fixed Price"
+msgstr "Precio fijo"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__id
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__id
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line____last_update
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type____last_update
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__write_uid
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__write_uid
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__write_date
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__write_date
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "Multiple"
+msgstr "Múltiple"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__order
+msgid "Order"
+msgstr "Orden de venta"
+
+#. module: pos_commission
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__standard_commission_type__percentage
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: pos_commission
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__compute_price__percentage
+msgid "Percentage (discount)"
+msgstr "Porcentaje (%)"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "Percentage - Commission will be provided as percentage.\n"
+msgstr "Porcentaje: la comisión se proporcionará como porcentaje.\n"
+
+#. module: pos_commission
+#: model:ir.model.fields,help:pos_commission.field_commission_type__standard_commission_type
+msgid ""
+"Percentage - Commission will be provided as percentage.\n"
+"Fixed - Commission will be provided as fixed amount \n"
+msgstr ""
+"Porcentaje: la comisión se proporcionará como porcentaje.\n"
+"Fijo: la comisión se proporcionará como una cantidad fija \n"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__percentage_commission
+msgid "Percentage Commission"
+msgstr "Porcentaje de comisión"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__percent_price
+#, python-format
+msgid "Percentage Price"
+msgstr "Porcentaje del precio"
+
+#. module: pos_commission
+#: model:ir.model,name:pos_commission.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión TPV"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Price Computation"
+msgstr "Cálculo de precios"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,help:pos_commission.field_commission_type_line__applied_on
+#, python-format
+msgid "Pricelist Item applicable on selected option"
+msgstr "Artículo de lista de precios aplicable en la opción seleccionada"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
+msgid "Pricelist Items"
+msgstr "Artículos de la lista de precios"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_apply__product
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__applied_on__1_product
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "Product - Commission will be provided in the selected products \n"
+msgstr "Producto - Se proporcionará comisión en los productos seleccionados \n"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_apply__category
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__applied_on__2_product_category
+#, python-format
+msgid "Product Category"
+msgstr "categoria de producto"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid ""
+"Product Category - Commission will be provided in the selected categories \n"
+msgstr ""
+"Categoría de producto: se proporcionará una comisión en las categorías seleccionadas \n"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__product_id
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__tree_product_tmpl
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__product_id
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type_line__applied_on__0_product_variant
+#, python-format
+msgid "Product Variant"
+msgstr "Variante"
+
+#. module: pos_commission
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_line__commission_type__product_categ
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_type__product_categ
+msgid "Product or Category"
+msgstr "Producto o Categoría"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid ""
+"Product or Category - Commission will be provided as percentage or fixed "
+"amount.\n"
+msgstr ""
+"Producto o categoría: La comisión se proporcionará como un porcentaje o monto "
+"fijo.\n"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__product_tmpl_id
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__tree_product
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__product_tmpl_id
+msgid "Producto"
+msgstr "Producto"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#, python-format
+msgid "Seller"
+msgstr "Vendedor"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__sellers
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__sellers_ids
+#, python-format
+msgid "Sellers"
+msgstr "Vendedores"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,help:pos_commission.field_commission_line__categ_id
+#: model:ir.model.fields,help:pos_commission.field_commission_type_line__categ_id
+#, python-format
+msgid ""
+"Specify a product category if this rule only applies to products belonging "
+"to this category or its children categories. Keep empty otherwise."
+msgstr ""
+"Especifique una categoría de producto si esta regla solo se aplica a los productos que pertenecen "
+"a esta categoría o sus categorías secundarias. Manténgase vacío de lo contrario."
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,help:pos_commission.field_commission_line__product_id
+#: model:ir.model.fields,help:pos_commission.field_commission_type_line__product_id
+#, python-format
+msgid ""
+"Specify a product if this rule only applies to one product. Keep empty "
+"otherwise."
+msgstr ""
+"Especifique un producto si esta regla solo se aplica a un producto. Manténgase vacío "
+"de lo contrario."
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,help:pos_commission.field_commission_line__product_tmpl_id
+#: model:ir.model.fields,help:pos_commission.field_commission_type_line__product_tmpl_id
+#, python-format
+msgid ""
+"Specify a template if this rule only applies to one product template. Keep "
+"empty otherwise."
+msgstr ""
+"Especifique una plantilla si esta regla solo se aplica a una plantilla de producto. Manténgase "
+"vacío de lo contrario."
+
+#. module: pos_commission
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_line__commission_type__standard
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_type__standard
+msgid "Standard"
+msgstr "Estandar"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#, python-format
+msgid "Standard - Commission will be provided as percentage or fixed amount.\n"
+msgstr "Estándar: la comisión se proporcionará como un porcentaje o una cantidad fija.\n"
+
+#. module: pos_commission
+#: model:ir.model.fields,help:pos_commission.field_commission_line__commission_type
+#: model:ir.model.fields,help:pos_commission.field_commission_type__commission_type
+msgid ""
+"Standard - Commission will be provided as percentage or fixed amount.\n"
+"Product or Category - Commission will be provided as percentage or fixed amount.\n"
+msgstr ""
+"Estándar: la comisión se proporcionará como un porcentaje o una cantidad fija.\n"
+"Producto o categoría: la comisión se proporcionará como un porcentaje o una cantidad fija.\n"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_apply
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__standard_commission_type
+#, python-format
+msgid "Standard Commission"
+msgstr "Comisión estandar"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__sellers
+msgid "Vendedor"
+msgstr "Vendedor"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__categ_id
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__tree_category
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__categ_id
+msgid "categoria de producto"
+msgstr "Categoría de producto"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_account_bank_statement_import_journal_creation__is_commission
+#: model:ir.model.fields,field_description:pos_commission.field_account_journal__is_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.view_account_journal_pos_commission_form
+msgid "Is Commission"
+msgstr "Commission"

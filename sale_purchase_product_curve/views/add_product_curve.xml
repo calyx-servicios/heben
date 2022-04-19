@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_sale_order_form_curve_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.view.curve</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//page[@name='order_lines']" position="after">
+                	<page name="sale_order_line" string="Sale order line">
+
+				<field name="product_data_ids" widget="curve_many2many" class="probando"/>
+                    		<br/><br/>
+				<field name="button_save" class="btn btn-primary js_class_save_data" id="saveDataLines" invisible="1"/> <!-- widget="save_data_many2many"/-->
+                  	</page>
+            	</xpath>
+            </field>
+        </record>
+    </data>
+</odoo> 
