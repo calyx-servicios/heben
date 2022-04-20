@@ -86,3 +86,5 @@ html2text
 suds-jurko
 requests
 phonenumbers
+zeep
+pdf417gen
