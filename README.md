@@ -12,7 +12,7 @@ This file is for reference of how is the `odoo.conf` addons path is configured i
 
 This file has all the python packages using in production. It has the Odoo 14.0 dependencies as well.
 
-Useful to create a new python environment for development purposes.
+Useful to create a new python environment.
 
 Consider to add there if a module has new dependencies.
 
