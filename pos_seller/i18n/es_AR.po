@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_seller
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-04 12:54+0000\n"
+"PO-Revision-Date: 2022-02-04 12:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_seller
+#: model_terms:ir.ui.view,arch_db:pos_seller.pos_config_form_view_inherit_seller
+msgid "<span class=\"o_form_label oe_edit_only\">Allowed Sellers </span>"
+msgstr "<span class=\"o_form_label oe_edit_only\">Vendedores seleccionados </span>"
+
+#. module: pos_seller
+#: model_terms:ir.ui.view,arch_db:pos_seller.pos_config_form_view_inherit_seller
+msgid "<span class=\"o_form_label\">Set sellers</span>"
+msgstr "<span class=\"o_form_label\">Seleccionar vendedores</span>"
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#, python-format
+msgid "Empty Seller"
+msgstr "Vendedor vacío"
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#, python-format
+msgid "Empty Serial/Lot Number"
+msgstr "Número serial / de lote vacío"
+
+#. module: pos_seller
+#: code:addons/pos_seller/models/pos_config.py:0
+#: model:ir.model.fields,help:pos_seller.field_pos_config__seller_ids
+#, python-format
+msgid "If left empty, all sellers can be used in the POS session"
+msgstr "Si se deja vacío, se pueden usar todos los vendedores en la sesión de POS"
+
+#. module: pos_seller
+#: model:ir.model.fields,field_description:pos_seller.field_pos_config__module_pos_seller
+msgid "Module Pos Seller"
+msgstr "Módulo POS Seller"
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#, python-format
+msgid "One or more product(s) required serial/lot number."
+msgstr "Uno o mas producto(s) requieren de un número de serie o de lote."
+
+#. module: pos_seller
+#: model:ir.model.fields,help:pos_seller.field_pos_order__seller_id
+msgid ""
+"Person who makes the sale. It can be a reliever, a student or an interim "
+"employee."
+msgstr ""
+"Persona que realiza la venta. Puede ser un relevista, un estudiante "
+"o un empleado interino."
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#, python-format
+msgid "Please select the seller"
+msgstr "Por favor seleccione un vendedor"
+
+#. module: pos_seller
+#: model:ir.model,name:pos_seller.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del TPV"
+
+#. module: pos_seller
+#: model:ir.model,name:pos_seller.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del TPV"
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/xml/pos.xml:0
+#, python-format
+msgid "Select a seller"
+msgstr "Seleccionar un vendedor"
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/models/pos_order.py:0
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#: model:ir.model.fields,field_description:pos_seller.field_pos_order__seller_id
+#: model_terms:ir.ui.view,arch_db:pos_seller.pos_order_form_inherit_seller
+#: model_terms:ir.ui.view,arch_db:pos_seller.pos_order_list_select_inherit_seller
+#: model_terms:ir.ui.view,arch_db:pos_seller.view_report_pos_order_search_inherit_seller
+#, python-format
+msgid "Seller"
+msgstr "Vendedor"
+
+#. module: pos_seller
+#: code:addons/pos_seller/models/pos_config.py:0
+#: model:ir.model.fields,field_description:pos_seller.field_pos_config__seller_ids
+#, python-format
+msgid "Seller with access"
+msgstr "Vendedores con acceso"
+
+#. module: pos_seller
+#: code:addons/pos_seller/models/pos_config.py:0
+#: model:ir.model.fields,help:pos_seller.field_pos_config__module_pos_seller
+#, python-format
+msgid "Show seller PoS session"
+msgstr "Mostrar vendedores en sesiones POS"
+
+#. module: pos_seller
+#: model_terms:ir.ui.view,arch_db:pos_seller.pos_config_form_view_inherit_seller
+msgid "Use employee credentials to associate a seller in the PoS session."
+msgstr "Utilice las credenciales de los empleados para asociar un vendedor en la sesión de PoS."
+
+#. module: pos_seller
+#. openerp-web
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#: code:addons/pos_seller/static/src/js/pos.js:0
+#, python-format
+msgid "You need to select the seller before you can invoice an order."
+msgstr "Debe seleccionar el vendedor antes de poder facturar un pedido."

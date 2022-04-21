@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* products_seasons
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-13 12:33+0000\n"
+"PO-Revision-Date: 2021-07-13 09:40-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__create_uid
+msgid "Created by"
+msgstr "creado por"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__description
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__id
+msgid "ID"
+msgstr "ID"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: products_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_kanban
+msgid "Logo"
+msgstr "Logo"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__logo
+msgid "Logo File"
+msgstr "Logo "
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__products_count
+msgid "Number of products"
+msgstr "Numero de Productos"
+
+#. module: products_seasons
+#: model:ir.actions.act_window,name:products_seasons.action_open_single_product_seasons
+#: model:ir.model,name:products_seasons.model_product_seasons
+msgid "Product Seasons"
+msgstr "Temporada de Producto"
+
+#. module: products_seasons
+#: model:ir.model,name:products_seasons.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: products_seasons
+#: model:ir.ui.menu,name:products_seasons.menu_product_seasons
+#: model:ir.ui.menu,name:products_seasons.menu_product_seasons_inventory
+#: model_terms:ir.ui.view,arch_db:products_seasons.product_seasons_search_form_view
+msgid "Product seasons"
+msgstr "Temporada de Producto"
+
+#. module: products_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_form
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_kanban
+msgid "Products"
+msgstr "Productos"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_product__product_seasons_id
+#: model:ir.model.fields,field_description:products_seasons.field_product_template__product_seasons_id
+msgid "Season"
+msgstr "Temporada"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__name
+msgid "Season Name"
+msgstr "Nombre de Temporada"
+
+#. module: products_seasons
+#: model:ir.model.fields,field_description:products_seasons.field_product_seasons__product_ids
+msgid "Season Products"
+msgstr "Temporada de Producto"
+
+#. module: products_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.product_template_view_form
+msgid "Seasons"
+msgstr "Temporada"
+
+#. module: products_seasons
+#: model:ir.actions.act_window,name:products_seasons.action_open_seasons_products
+msgid "Seasons Products"
+msgstr "Temporada de Producto"
+
+#. module: products_seasons
+#: model:ir.model.fields,help:products_seasons.field_product_product__product_seasons_id
+#: model:ir.model.fields,help:products_seasons.field_product_template__product_seasons_id
+msgid "Select a season for this product"
+msgstr "Selecciona la temporada para este producto "
+
+#. module: products_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_tree
+msgid "product.seasons"
+msgstr ""
+
+#. module: products_seasons
+#: model:ir.actions.act_window,name:products_seasons.action_product_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.product_template_form_seasons_add
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_template_search_seasons
+msgid "seasons"
+msgstr "Temporada"
+
+#. module: products_seasons
+#: model_terms:ir.ui.view,arch_db:products_seasons.view_product_seasons_form
+msgid "seasons Name"
+msgstr "Nombre de Temporada"
