@@ -150,3 +150,15 @@
 	url = https://github.com/regaby/odoo-custom.git
 	path = submodules/regaby/odoo-custom
 	branch = refs/heads/13.0
+[submodule "submodules/ingadhoc/multi-store"]
+	path = submodules/ingadhoc/multi-store
+	url = https://github.com/ingadhoc/multi-store.git
+	branch = 13.0
+[submodule "submodules/OCA/stock-logistics-warehouse"]
+	path = submodules/OCA/stock-logistics-warehouse
+	url = https://github.com/OCA/stock-logistics-warehouse.git
+	branch = 13.0
+[submodule "submodules/OCA/multi-company"]
+	path = submodules/OCA/multi-company
+	url = https://github.com/OCA/multi-company.git
+	branch = 13.0
