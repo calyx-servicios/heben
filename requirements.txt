@@ -88,3 +88,5 @@ requests
 phonenumbers
 zeep
 pdf417gen
+cubiscan
+mock
