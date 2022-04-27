@@ -21,7 +21,7 @@
 [submodule "calyx-servicios/third-party-paid"]
 	url = https://github.com/calyx-servicios/third-party-paid.git
 	path = submodules/calyx-servicios/third-party-paid
-	branch = refs/heads/13.0
+	branch = refs/heads/13.0_test
 [submodule "ctmil/meli_oerp"]
 	url = https://github.com/ctmil/meli_oerp.git
 	path = submodules/ctmil/meli_oerp
