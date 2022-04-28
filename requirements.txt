@@ -90,3 +90,5 @@ zeep
 pdf417gen
 cubiscan
 mock
+
+# Custom addons
