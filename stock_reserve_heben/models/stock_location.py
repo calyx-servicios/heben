@@ -6,7 +6,7 @@ class StockWarehouse(models.Model):
     _parent_name = "location_id"
     _order = 'sequence'
 
-    name = fields.Char('Location Name', required=True)
+    name_location = fields.Char('Location Name', required=True)
     contact = fields.Many2one('res.partner')
     zip_code_field = fields.Char(string=_("Postal Code"))
     from_zip = fields.Char(string=_("From Zip"))

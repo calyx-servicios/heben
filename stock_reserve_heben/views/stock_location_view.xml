@@ -5,6 +5,9 @@
             <field name="model">stock.location</field>
             <field name="inherit_id" ref="stock.view_location_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="name_location" string="Location Name"/>
+                </xpath>
                 <xpath expr="//field[@name='return_location']" position="after">
                     <field name="contact" string="Contact"/>
                 </xpath>
