@@ -14,3 +14,9 @@ class StockWarehouse(models.Model):
     nearest_warehouse = fields.One2many('stock.location', 'warehouses', string=_("Nearest Warehouse"))
     sequence = fields.Integer(default=10)
 
+    @api.constrains('nearest_warehouse')
+    def _nearest_warehouse(self):
+        for record in self:
+            if len(record.line_ids.ids) >= 2:
+                raise ValidationError(_('you can only add two locations')))
+
