@@ -11,4 +11,5 @@ class StockWarehouse(models.Model):
     zip_code = fields.Char(string=_("Zip"))
     warehouses = fields.Many2one('stock.location', string=_("Warehouses"))
     nearest_warehouse = fields.One2many('stock.location', 'warehouses', string=_("Nearest Warehouse"))
+    sequence = fields.Integer(default=10)
 
