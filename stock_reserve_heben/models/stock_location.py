@@ -32,8 +32,8 @@ class StockWarehouse(models.Model):
             ret_list.append((orig_location.id, name))
         return ret_list
 
-    @api.constrains('nearest_warehouse')
-    def _nearest_warehouse(self):
-        for record in self:
-            if len(record.line_ids.ids) >= 2:
-                raise ValidationError(_('you can only add two locations')))
+    # @api.constrains('nearest_warehouse')
+    # def _nearest_warehouse(self):
+    #     for record in self:
+    #         if len(record.line_ids.ids) >= 2:
+    #             raise ValidationError(_('you can only add two locations')))
