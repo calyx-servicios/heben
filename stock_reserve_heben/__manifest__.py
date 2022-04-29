@@ -17,5 +17,6 @@
     "depends": ['product', 'base', 'stock'],
     "data": [
         'views/stock_location_view.xml',
+        'views/sale_order_view.xml',
     ],
 }
