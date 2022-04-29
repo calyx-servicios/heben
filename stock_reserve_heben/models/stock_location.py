@@ -1,4 +1,5 @@
-from odoo import fields, models, _
+from odoo import api, fields, models, _
+from odoo.exceptions import UserError, ValidationError
 
 
 class StockWarehouse(models.Model):
@@ -14,4 +15,7 @@ class StockWarehouse(models.Model):
     nearest_warehouse = fields.One2many('stock.location', 'warehouses', string=_("Nearest Warehouse"))
     sequence = fields.Integer(default=10)
     
-
+    @api.constrains('nearest_warehouse')
+    def _nearest_warehouse(self):
+        if len(self.nearest_warehouse) > 2:
+            raise ValidationError(_('You can only add two locations'))
