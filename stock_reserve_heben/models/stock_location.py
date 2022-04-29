@@ -14,7 +14,7 @@ class StockWarehouse(models.Model):
     zip_code = fields.Char(string=_("Zip"))
     warehouses = fields.Many2one('stock.location', string=_("Warehouses"))
     nearest_warehouse = fields.One2many('stock.location', 'warehouses', string=_("Nearest Warehouse"))
-    sequence = fields.Integer(default=10)
+    sequence = fields.Integer(required=True, default=2)
     location_id = fields.Many2one(
         'stock.location', 'Parent Location', index=True, ondelete='cascade',
         help="The parent location that includes this location. Example : The 'Dispatch Zone' is the 'Gate 1' parent location.")

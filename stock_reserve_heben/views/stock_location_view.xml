@@ -8,6 +8,9 @@
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="name_location" string="Location Name"/>
                 </xpath>
+                <xpath expr="//field[@name='name']" position="atributes">
+                    <attribute name="required">False</attribute>
+                </xpath>
                 <xpath expr="//field[@name='return_location']" position="after">
                     <field name="contact" string="Contact"/>
                 </xpath>
