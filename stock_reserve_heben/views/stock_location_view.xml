@@ -19,6 +19,7 @@
                     <field name="nearest_warehouse" widget="one2many_list">
                         <tree string="WAREHOUSE" editable="bottom">
                             <field name="sequence" widget="handle"/>
+                            <field name="name"/>
                             <field name="warehouses"/>
                         </tree>
                     </field>
