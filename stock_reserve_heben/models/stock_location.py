@@ -11,11 +11,11 @@ class StockWarehouse(models.Model):
     from_zip = fields.Char(string=_("From Zip"))
     to_zip = fields.Char(string=_("To Zip"))
     zip_code = fields.Char(string=_("Zip"))
-    warehouses = fields.Many2one('stock.location', string=_("Warehouses"))
-    nearest_warehouse = fields.One2many('stock.location', 'warehouses', string=_("Nearest Warehouse"))
+    locations = fields.Many2one('stock.location')
+    secondary_location = fields.One2many('stock.location', 'locations')
     sequence = fields.Integer(default=10)
     
-    @api.constrains('nearest_warehouse')
-    def _nearest_warehouse(self):
-        if len(self.nearest_warehouse) > 2:
+    @api.constrains('secondary_location')
+    def _secondary_location(self):
+        if len(self.secondary_location) > 2:
             raise ValidationError(_('You can only add two locations'))
