@@ -3,7 +3,7 @@
     <data>
         <template id="assets_backend_curve" inherit_id="web.assets_backend">
             <xpath expr="script[last()]" position="after">
-                <script type="text/javascript" src="/sale_purchase_product_curve/static/src/js/add_data_product_template.js"></script>
+                <script type="text/javascript" src="/sale_purchase_product_curve/static/src/js/data_product_curve.js"></script>
             </xpath>
         </template>
     </data>

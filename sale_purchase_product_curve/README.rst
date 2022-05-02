@@ -1,9 +1,9 @@
 ===========================
-Point of sale commission
+Product Curve
 ===========================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! This module adds the commissions for sellers        !!
+   !! This module adds the curve for products             !!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -25,9 +25,9 @@ Install
 =======
 
 # Go to applications
-# Find module "pos_commission"
+# Find module "sale_purchase_product_curve"
 # Press Install
-# Go to Point of sale > and see the modifications
+# Go to Sale Purchase > and see the modifications
 
 
 Known issues / Roadmap
@@ -53,8 +53,8 @@ Contributors
 
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
-  * Paradiso Cristian
   * Perez Gabriela
+  * Deyker Gil
 
 Maintainers
 ~~~~~~~~~~~
