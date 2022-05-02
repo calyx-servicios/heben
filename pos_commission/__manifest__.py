@@ -5,7 +5,7 @@
         This module adds the commissions for sellers
     """,
     "author": "Calyx Servicios S.A.",
-    "maintainers": ["ParadisoCristian"],
+    "maintainers": ["ParadisoCristian", "PerezGabriela"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Point of sale",
