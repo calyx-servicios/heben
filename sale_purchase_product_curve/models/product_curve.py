@@ -1,11 +1,35 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields
 
-class ProductCurve(models.Model):
+class ProductCurveSale(models.Model):
     _inherit= 'sale.order'
       
     products_curve_ids = fields.Many2many(
         'product.template',
         'product_sale_order_curve_rel',
     )
-        
+
+class ProductCurveSaleTemplate(models.Model):
+    _inherit= 'sale.order.template'
+      
+    products_curve_ids = fields.Many2many(
+        'product.template',
+        'product_sale_order_template_curve_rel',
+    )
+
+class ProductCurvePurchase(models.Model):
+    _inherit= 'purchase.order'
+      
+    products_curve_ids = fields.Many2many(
+        'product.template',
+        'product_purchase_order_curve_rel',
+    )
+
+class ProductCurvePurchaseRequisition(models.Model):
+    _inherit= 'purchase.requisition'
+      
+    products_curve_ids = fields.Many2many(
+        'product.template',
+        'product_purchase_requisition_curve_rel',
+    )
+

@@ -6,12 +6,60 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
             	<xpath expr="//field[@name='sale_order_template_id']" position="after">
-            		<field name="id" class="order_id" invisible="1"/>
+            		<field name="id" invisible="1"/>
             		<field name="create_date" invisible="1"/>
             	</xpath>
             	<xpath expr="//page[@name='order_lines']" position="after">
                 	<page name="sale_products_curve" string="Sale products curve" attrs="{'invisible': [('create_date', '=', False)]}">
-						<field name="products_curve_ids" widget="curve_many2many"/>
+						<field name="products_curve_ids" widget="sale_curve_many2many"/>
+                  	</page>
+            	</xpath>
+            </field>
+        </record>
+        <record id="view_sale_order_template_form_curve_inherit" model="ir.ui.view">
+            <field name="name">sale.order.template.form.view.curve</field>
+            <field name="model">sale.order.template</field>
+            <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='active']" position="after">
+            		<field name="id" invisible="1"/>
+            		<field name="create_date" invisible="1"/>
+            	</xpath>
+            	<xpath expr="//page[1]" position="after">
+                	<page name="sale_template_products_curve" string="Sale template products curve" attrs="{'invisible': [('create_date', '=', False)]}">
+						<field name="products_curve_ids" widget="sale_template_curve_many2many"/>
+                  	</page>
+            	</xpath>
+            </field>
+        </record>
+        <record id="view_purchase_order_form_curve_inherit" model="ir.ui.view">
+            <field name="name">purchase.order.form.view.curve</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='currency_id']" position="after">
+            		<field name="id" invisible="1"/>
+            		<field name="create_date" invisible="1"/>
+            	</xpath>
+            	<xpath expr="//page[@name='purchase_delivery_invoice']" position="before">
+                	<page name="purchase_products_curve" string="Purchase products curve" attrs="{'invisible': [('create_date', '=', False)]}">
+						<field name="products_curve_ids" widget="purchase_curve_many2many"/>
+                  	</page>
+            	</xpath>
+            </field>
+        </record>
+        <record id="view_purchase_requisition_form_curve_inherit" model="ir.ui.view">
+            <field name="name">purchase.requisition.form.view.curve</field>
+            <field name="model">purchase.requisition</field>
+            <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='currency_id']" position="after">
+            		<field name="id" invisible="1"/>
+            		<field name="create_date" invisible="1"/>
+            	</xpath>
+            	<xpath expr="//page" position="after">
+                	<page name="requisition_products_curve" string="Purchase requisitions products curve" attrs="{'invisible': [('create_date', '=', False)]}">
+						<field name="products_curve_ids" widget="p_requisition_curve_many2many"/>
                   	</page>
             	</xpath>
             </field>

@@ -14,7 +14,15 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ['base', 'sale', 'product', 'product_matrix'],
+    "depends": [
+        'base', 
+        'sale', 
+        'product', 
+        'product_matrix', 
+        'sale_management', 
+        'purchase', 
+        'purchase_requisition'
+    ],
     "data": [
         'views/assets.xml',
         'views/product_curve.xml',
