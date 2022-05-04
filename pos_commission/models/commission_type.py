@@ -5,6 +5,12 @@ class CommissionType(models.Model):
     _name = 'commission.type'
     _description = "Commission Type"
 
+    def _get_company_allowed(self):
+        return [('id','in', self.env.user.company_ids.ids)]
+    
+    def _get_store_allowed(self):
+        return [('id','in', self.env.user.store_ids.ids)]
+
     active = fields.Boolean(default=True)
     name = fields.Char(required=True, translate=True)
     sellers_ids = fields.Many2many('hr.employee', string=_("Sellers"))
@@ -37,6 +43,10 @@ class CommissionType(models.Model):
     commission_line_ids = fields.One2many('commission.type.line','commission_type_id')
     commission_price = fields.Char(compute="_compute_commission_price")
     commission_line_products = fields.Char(compute="_compute_commission_line_product")
+    company_id = fields.Many2many('res.company', string=_('Company'), domain=_get_company_allowed)
+    store_id = fields.Many2many('res.store', string=_('Store'), domain=_get_store_allowed)
+    point_of_sale_id = fields.One2many('pos.config', 'commission_type_rel')
+
 
     @api.depends('commission_line_ids','commission_type')
     def _compute_commission_line_product(self):

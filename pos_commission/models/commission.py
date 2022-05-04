@@ -29,6 +29,9 @@ class CommissionLine(models.Model):
     tree_product = fields.Char(string=_("Product"))
     active = fields.Boolean(default=True)
     invoice_ids = fields.Many2many("account.move", string='Invoices', readonly=True, copy=False)
+    company = fields.Char(string=_('Company'))
+    store = fields.Char(string=_('Store'))
+    point_of_sale = fields.Char(string=_('Point of sale'))
     
     def action_view_invoice(self):
         invoices = self.mapped('invoice_ids')

@@ -15,6 +15,9 @@ class PosSession(models.Model):
                                             'sellers':pos_order.seller_id.id,
                                             'commission':active_commission.id,
                                             'order':pos_order.id,
+                                            'company': ','.join([c.name for c in active_commission.company_id]),
+                                            'store': ','.join([s.name for s in active_commission.store_id]),
+                                            'point_of_sale': ','.join([pos.name for pos in active_commission.point_of_sale_id]),
                                             }
                         if active_commission.commission_type == 'standard':
                             commission_line['commission_type'] = 'standard'
