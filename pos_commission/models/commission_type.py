@@ -53,8 +53,11 @@ class CommissionType(models.Model):
         for rec in self:
             object_list = []
             for commission in rec.commission_line_ids:
-                if commission.applied_on == '3_global':
+                if commission.applied_on == '4_global':
                     object_list.append(_('All Products'))
+                if commission.applied_on == '3_season':
+                    for season in commission.season_id:
+                        object_list.append(season.name)
                 if commission.applied_on == '2_product_category':
                     for category in commission.categ_id:
                         object_list.append(category.name)
@@ -118,12 +121,16 @@ class CommissionTypeLine(models.Model):
     categ_id = fields.Many2many(
         'product.category', string=_('Product Category'),
         help=_("Specify a product category if this rule only applies to products belonging to this category or its children categories. Keep empty otherwise."))
+    season_id = fields.Many2many(
+        'product.seasons', string=_('Season'),
+        help=_("Specify a template if this rule only applies to one season. Keep empty otherwise."))
     applied_on = fields.Selection([
-        ('3_global', 'All Products'),
+        ('4_global', 'All Products'),
+        ('3_season', 'Season'),
         ('2_product_category', 'Product Category'),
         ('1_product', 'Product'),
         ('0_product_variant', 'Product Variant')], _("Apply On"),
-        default='3_global', required=True,
+        default='4_global', required=True,
         help=_('Pricelist Item applicable on selected option'))
     compute_price = fields.Selection([
         ('fixed', 'Fixed Price'),
@@ -138,8 +145,11 @@ class CommissionTypeLine(models.Model):
         object_list = []
         for rec in self:
             object_list = []
-            if rec.applied_on == '3_global':
+            if rec.applied_on == '4_global':
                 object_list.append(_('All Products'))
+            if rec.applied_on == '3_season':
+                for season in rec.season_id:
+                    object_list.append(season.name)
             if rec.applied_on == '2_product_category':
                 for category in rec.categ_id:
                     object_list.append(category.name)

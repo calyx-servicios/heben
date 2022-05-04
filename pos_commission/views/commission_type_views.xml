@@ -36,6 +36,10 @@
                                 		<group>
                                     		<group name="pricelist_rule_target">
 	                                        	<field name="applied_on" widget="radio"/>
+	                                        	<field name="season_id" attrs="{
+	                                            	'invisible':[('applied_on', '!=', '3_season')],
+	                                            	'required':[('applied_on', '=', '3_season')]}"
+	                                            	options="{'no_create':1}" widget='many2many_tags'/>
 	                                        	<field name="categ_id" attrs="{
 	                                            	'invisible':[('applied_on', '!=', '2_product_category')],
 	                                            	'required':[('applied_on', '=', '2_product_category')]}"
