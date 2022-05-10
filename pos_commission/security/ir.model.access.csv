@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_commission_type","access_commission_type","model_commission_type","base.group_user",1,1,1,1
+"access_commission_type_line","access_commission_type_line","model_commission_type_line","base.group_user",1,1,1,1
+"access_commission_line","access_commission_line","model_commission_line","base.group_user",1,1,1,1

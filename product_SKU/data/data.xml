@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="rule_sku_1" model="rule.sku">
+            <field name="name">Temporada</field>
+            <field name="field_require_rule">product_seasons_id</field>
+        </record>
+        <record id="rule_sku_2" model="rule.sku">
+            <field name="name">Familia</field>
+            <field name="field_require_rule">product_family_id</field>
+        </record>
+        <record id="rule_sku_3" model="rule.sku">
+            <field name="name">Material</field>
+            <field name="field_require_rule">product_material_id</field>
+        </record>
+        <!-- <record id="rule_sku_4" model="rule.sku"> -->
+            <!-- <field name="name">Partner</field> -->
+            <!-- <field name="field_require_rule">res.partner</field> -->
+        <!-- </record> -->
+        <record id="rule_sku_5" model="rule.sku">
+            <field name="name">Talle</field>
+            <field name="is_talle" eval="1"/>
+        </record>
+        <record id="rule_sku_6" model="rule.sku">
+            <field name="name">Color</field>
+            <field name="is_color" eval="1"/>
+        </record>
+        <record id="rule_sku_7" model="rule.sku">
+            <field name="name">Modelo</field>
+            <field name="field_require_rule">internal_code</field>
+        </record>
+    </data>
+</odoo>

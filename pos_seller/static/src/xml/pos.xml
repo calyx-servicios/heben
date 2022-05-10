@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" inherit_id="point_of_sale.template">
+	<t t-name="SellersPopupWidget">
+	    <div role="dialog" class="modal-dialog">
+			<div class="popup">
+				<p class="title">Select a seller</p>
+				<div class="sellers">
+                    <ul class="seller-list"></ul>
+				</div>
+			</div>
+	    </div>
+	  </t>
+</templates>
+

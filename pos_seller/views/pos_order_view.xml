@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_order_form_inherit_seller" model="ir.ui.view">
+        <field name="name">pos.order.form.inherit.seller</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position='after'>
+                <field string='Seller' name="seller_id" readonly="1" attrs="{'invisible': [('seller_id','=',False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pos_order_list_select_inherit_seller" model="ir.ui.view">
+        <field name="name">pos.order.list.select.inherit.seller</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="seller_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='posted']" position="after">
+                <filter string="Seller" name="by_seller" domain="[]" context="{'group_by': 'seller_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_pos_order_tree_inherit_seller" model="ir.ui.view">
+        <field name="name">pos.order.tree.inherit.seller</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount_total']" position="before">
+                <field name="seller_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_material_search_form_view" model="ir.ui.view">
+        <field name="name">product.material.search.form</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <search string="Material">
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="action_open_material_products" model="ir.actions.act_window">
+        <field name="name">Material Productos</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="domain">[('product_material_id', '=', active_id)]</field>
+    </record>
+    <record id="action_open_single_product_material" model="ir.actions.act_window">
+        <field name="name">Producto Material</field>
+        <field name="res_model">product.material</field>
+        <field name="view_mode">kanban,form,tree</field>
+        <field name="target">current</field>
+        <field name="domain">[('product_ids', 'in', active_id)]</field>
+    </record>
+        <record id="view_product_material_form" model="ir.ui.view">
+        <field name="name">product.material.form</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="%(action_open_material_products)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-cubes"
+                        >
+                            <field
+                                name="products_count"
+                                widget="statinfo"
+                                string="Productos"
+                                context="{'default_product_material_id': active_id}"
+                            />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <group string="Codigo">
+                            <field name="code" nolabel="1" class="col-6" />
+                        </group>
+                        <group string="Nombre">
+                            <field name="description" nolabel="1" class="col-6" />
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_product_material_tree" model="ir.ui.view">
+        <field name="name">product.material.tree</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <tree string="product.material">
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_product_material_kanban" model="ir.ui.view">
+        <field name="name">product.material.kanban</field>
+        <field name="model">product.material</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id" />
+                <field name="products_count" />
+                <field name="description" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <h4>
+                                    <field name="name" />
+                                </h4>
+                                <div>
+                                    <a> <t t-esc="record.products_count.value" /> Products </a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="view_product_template_search_material" model="ir.ui.view">
+        <field name="name">product.template.search.material</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_material_id" />
+                <filter
+                    string="Material"
+                    name="groupby_material"
+                    domain="[]"
+                    context="{'group_by' : 'product_material_id'}"
+                />
+                <separator />
+            </field>
+        </field>
+    </record>
+    <record id="view_product_template_kanban_material" model="ir.ui.view">
+        <field name="name">product kanban view: add material</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]/strong[1]"
+                position="after"
+            >
+                <div>
+                    <a
+                        t-if="record.product_material_id"
+                        type="action"
+                        name="%(action_open_single_product_material)d"
+                    >
+                        <field name="product_material_id" />
+                    </a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_variant_kanban_material" model="ir.ui.view">
+        <field name="name">product variant kanban view: add material</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]/strong[1]"
+                position="after"
+            >
+                <div>
+                    <a t-if="record.product_material_id" type="open">
+                        <field name="product_material_id" />
+                    </a>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_variant_form_material_vv" model="ir.ui.view">
+     <field name="name">product variant form view: add material_vv</field>
+     <field name="model">product.product</field>
+     <field name="inherit_id" ref="product.product_normal_form_view" />
+     <field name="arch" type="xml">
+         <field name="default_code" position="after">
+             <field name="product_material_id" string="Material" />
+         </field>
+     </field>
+    </record>
+    <record id="view_product_template_tree_material" model="ir.ui.view">
+        <field name="name">product tree view: add material</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_material_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_variant_tree_material" model="ir.ui.view">
+        <field name="name">product variant tree view: add material</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_material_id" />
+            </field>
+        </field>
+    </record>
+    <record id="view_product_variant_form_material" model="ir.ui.view">
+     <field name="name">product variant form view: add material</field>
+     <field name="model">product.product</field>
+     <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+     <field name="arch" type="xml">
+        <field name="product_seasons_id" position="after">
+            <field name="product_material_id"  />
+        </field>
+     </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_product_material">
+        <field name="name">Material</field>
+        <field name="res_model">product.material</field>
+        <field name="view_mode">kanban,form,tree</field>
+    </record>
+
+    <menuitem
+        name="Material"
+        id="menu_product_material"
+        action="action_product_material"
+        parent="sale.prod_config_main"
+    />
+    <menuitem
+        name="Material"
+        id="menu_product_material_inventory"
+        action="action_product_material"
+        parent="stock.menu_product_in_config_stock"
+    />
+
+</odoo>

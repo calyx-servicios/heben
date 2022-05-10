@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_commission_wizard_view_form" model="ir.ui.view">
+        <field name="name">pos.commission.wizard.form</field>
+        <field name="model">pos.commission.wizard</field>
+        <field name="arch" type="xml">
+        	<form string="Invoice commission">
+	            <p class="oe_grey">
+	                Invoices will be created in draft so that you can review
+	                them before validation.
+	            </p>
+	            <footer>
+	                <button name="create_invoices" string="Create and View Invoice" type="object"
+	                    context="{'open_invoices': True}" class="btn-primary"/>
+	                <button name="create_invoices" string="Create Invoice" type="object"/>
+	                <button string="Cancel" class="btn-secondary" special="cancel"/>
+	            </footer>
+	       </form>
+        </field>
+    </record>
+    
+    <act_window
+        name="Create invoices"
+        res_model="pos.commission.wizard"
+        binding_model="commission.line"
+        binding_views="list"
+        view_mode="form"
+        target="new"
+        view_id="pos_commission_wizard_view_form"
+        id="action_invoice_pos_commission"
+    />
+    
+</odoo>

@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_product_sku","access_product_sku","model_product_sku","base.group_user",1,1,1,1
+"access_code_list","access_code_list","model_code_list","base.group_user",1,1,1,1 
+"access_rule_sku","access_rule_sku","model_rule_sku","base.group_user",1,1,1,1 
