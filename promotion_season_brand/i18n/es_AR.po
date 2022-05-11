@@ -1,0 +1,164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* promotion_season_brand
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-11 18:15+0000\n"
+"PO-Revision-Date: 2022-05-11 18:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion__promotion_brand_ids
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__brand_id
+#: model_terms:ir.ui.view,arch_db:promotion_season_brand.pos_promotion_form_view_inherit
+#, python-format
+msgid "Brand"
+msgstr "Marca"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__create_uid
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__create_date
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__disc_percentage
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__disc_percentage
+#, python-format
+msgid "Disc. %"
+msgstr "Desc. %"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__disc_amount
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__disc_amount
+#, python-format
+msgid "Disc. Amount"
+msgstr "Desc. Monto"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__display_name
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__state
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__state
+msgid "Estado"
+msgstr "Estado"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#, python-format
+msgid "Fixed Price"
+msgstr "Precio fijo"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__id
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__id
+msgid "ID"
+msgstr "ID"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand____last_update
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__write_uid
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__write_date
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__fixed_price
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__fixed_price
+msgid "Precio fijo"
+msgstr "Precio fijo"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__promotion_id
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__promotion_id
+#, python-format
+msgid "Promotion"
+msgstr "Promoción"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_brand__promotion_code
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__promotion_code
+#, python-format
+msgid "Promotion Code"
+msgstr "Código de promoción"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#: model_terms:ir.ui.view,arch_db:promotion_season_brand.pos_promotion_form_view_inherit
+#, python-format
+msgid "Season"
+msgstr "Temporada"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion.py:0
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion__promotion_season_ids
+#, python-format
+msgid "Seasons"
+msgstr "Temporadas"
+
+#. module: promotion_season_brand
+#: code:addons/promotion_season_brand/models/pos_promotion_brand.py:0
+#: code:addons/promotion_season_brand/models/pos_promotion_season.py:0
+#, python-format
+msgid "State"
+msgstr "Estado"
+
+#. module: promotion_season_brand
+#: model:ir.model.fields,field_description:promotion_season_brand.field_pos_promotion_season__season_id
+msgid "Temporada"
+msgstr "Temporada"
+
+#. module: promotion_season_brand
+#: model:ir.model,name:promotion_season_brand.model_pos_promotion
+msgid "pos.promotion"
+msgstr "pos.promotion"
+
+#. module: promotion_season_brand
+#: model:ir.model,name:promotion_season_brand.model_pos_promotion_brand
+msgid "pos.promotion.brand"
+msgstr "pos.promotion.brand"
+
+#. module: promotion_season_brand
+#: model:ir.model,name:promotion_season_brand.model_pos_promotion_season
+msgid "pos.promotion.season"
+msgstr "pos.promotion.season"

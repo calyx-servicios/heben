@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_promotion_form_view_inherit" model="ir.ui.view">
+        <field name="name">pos.promotion.inherit</field>
+        <field name="model">pos.promotion</field>
+        <field name="inherit_id" ref="pos_promotion_niq.pos_promotion_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='promotion_category']" position="after">
+            	<page name="promotion_season" string="Season" autofocus="autofocus">
+					<field name="promotion_season_ids"
+							context="{'default_promotion_code': promotion_code}"
+					    	attrs="{
+							   'readonly':[
+								    '|','&amp;','&amp;',('promotion_code', '!=', 'prod_disc_percentage'),
+									('promotion_code', '!=', 'prod_disc_amount'),
+									('promotion_code', '!=', 'prod_fixed_price'),
+									('state','in',('active','done'))]}" >
+						<tree editable="bottom">
+							<field name="season_id" options="{'no_create': True}"/>
+							<field name="fixed_price" attrs="{'readonly': [('promotion_code', 'not in', ('prod_fixed_price','prod_bxgy_free','combo_on_product'))]}"/>
+							<field name="disc_percentage" attrs="{'readonly': [('promotion_code', 'not in', ('prod_disc_percentage','prod_bxgy_percent','combo_on_product'))]}"/>
+							<field name="disc_amount" attrs="{'readonly': [('promotion_code', 'not in', ('prod_disc_amount','prod_bxgy_amount','combo_on_product'))]}"/>
+							<field name="promotion_code" invisible="1"/>
+						</tree>
+					</field>
+				</page>
+				<page name="promotion_brand" string="Brand" autofocus="autofocus">
+					<field name="promotion_brand_ids"
+							context="{'default_promotion_code': promotion_code}"
+					    	attrs="{
+							   'readonly':[
+								    '|','&amp;','&amp;',('promotion_code', '!=', 'prod_disc_percentage'),
+									('promotion_code', '!=', 'prod_disc_amount'),
+									('promotion_code', '!=', 'prod_fixed_price'),
+									('state','in',('active','done'))]}" >
+						<tree editable="bottom">
+							<field name="brand_id" options="{'no_create': True}"/>
+							<field name="fixed_price" attrs="{'readonly': [('promotion_code', 'not in', ('prod_fixed_price','prod_bxgy_free','combo_on_product'))]}"/>
+							<field name="disc_percentage" attrs="{'readonly': [('promotion_code', 'not in', ('prod_disc_percentage','prod_bxgy_percent','combo_on_product'))]}"/>
+							<field name="disc_amount" attrs="{'readonly': [('promotion_code', 'not in', ('prod_disc_amount','prod_bxgy_amount','combo_on_product'))]}"/>
+							<field name="promotion_code" invisible="1"/>
+						</tree>
+					</field>
+				</page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
