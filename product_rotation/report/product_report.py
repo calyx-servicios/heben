@@ -21,7 +21,6 @@ class ProductReport(models.Model):
     location_id = fields.Many2one(
         comodel_name="stock.location", string="Stock Location", readonly=True
     )
-    # qty_available = fields.Float(string="Available Quantity", readonly=True)
     company_id = fields.Many2one(comodel_name='res.company', string='Company', readonly=True)
     qty_sold = fields.Float(string='Quantity Sold', readonly=True)
     categ_id = fields.Many2one(comodel_name='product.category', string='Category', readonly=True)
@@ -125,16 +124,8 @@ class ProductReport(models.Model):
             {where}
         """
 
-        # _logger.info("%s (SELECT %s FROM %s WHERE %s GROUP BY %s)" % (
-        #     with_,
-        #     select_,
-        #     from_,
-        #     where_,
-        #     groupby_,
-        # ))
         
         query1= "(SELECT %s FROM %s WHERE %s GROUP BY %s)" % (
-            # with_,
             select_,
             from_,
             where_,
