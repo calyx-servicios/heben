@@ -145,7 +145,8 @@ class AddProductCurve(http.Controller):
                                     'date_planned':datetime.now(),
                                     'product_qty': int(line['quantity']),
                                     'product_uom': variants.uom_po_id.id,
-                                    'price_unit': variants.lst_price
+                                    'price_unit': variants.lst_price,
+                                    'taxes_id': [(6, 0, variants.supplier_taxes_id.ids)],
                                 }
                                 values.append(dict_value)
                         else:
