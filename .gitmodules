@@ -166,3 +166,7 @@
 	path = submodules/calyx-servicios/pos
 	url = https://github.com/calyx-servicios/pos.git
 	branch = 13.0
+[submodule "submodules/calyx-servicios/stock"]
+	path = submodules/calyx-servicios/stock
+	url = https://github.com/calyx-servicios/stock.git
+	branch = 13.0
