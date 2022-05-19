@@ -81,14 +81,17 @@ var SaleCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
+			var count_accept = 0;
+			var widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
 				}).then(data => {
 					if (data != false) {
-						if (btn_accept == 0){
-							$(elem).after("<a id='btn-accept' class='btn btn-secondary'>" + _t("Accept") + "</a>");
-							$("#btn-accept").on("click", this._onClickAddData);
+						if (btn_accept == 0 && count_accept == 0){
+							$(elem).after("<a id='btn-accept' class='btn btn-secondary curve_accept'>" + _t("Accept") + "</a>");
+							$("#btn-accept").on("click", widget._onClickAddData);
+							count_accept +=1;
 						}
 						$(elem).after("<div id='" + v["id"] + "' class='table_matrix'></div>");
 						$("#" + v["id"]).append(
@@ -182,14 +185,17 @@ var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
+			var count_accept = 0;
+			var widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
 				}).then(data => {
 					if (data != false) {
-						if (btn_accept == 0){
-							$(elem).after("<a id='btn-accept' class='btn btn-secondary'>" + _t("Accept") + "</a>");
-							$("#btn-accept").on("click", this._onClickAddData);
+						if (btn_accept == 0 && count_accept == 0){
+							$(elem).after("<a id='btn-accept' class='btn btn-secondary curve_accept'>" + _t("Accept") + "</a>");
+							$("#btn-accept").on("click", widget._onClickAddData);
+							count_accept +=1;
 						}
 						$(elem).after("<div id='" + v["id"] + "' class='table_matrix'></div>");
 						$("#" + v["id"]).append(
@@ -283,14 +289,17 @@ var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
+			var count_accept = 0;
+			var widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
 				}).then(data => {
 					if (data != false) {
-						if (btn_accept == 0){
-							$(elem).after("<a id='btn-accept' class='btn btn-secondary'>" + _t("Accept") + "</a>");
-							$("#btn-accept").on("click", this._onClickAddData);
+						if (btn_accept == 0 && count_accept == 0){
+							$(elem).after("<a id='btn-accept' class='btn btn-secondary curve_accept'>" + _t("Accept") + "</a>");
+							$("#btn-accept").on("click", widget._onClickAddData);
+							count_accept +=1;
 						}
 						$(elem).after("<div id='" + v["id"] + "' class='table_matrix'></div>");
 						$("#" + v["id"]).append(
@@ -384,14 +393,17 @@ var PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
+			var count_accept = 0;
+			var widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
 				}).then(data => {
 					if (data != false) {
-						if (btn_accept == 0){
-							$(elem).after("<a id='btn-accept' class='btn btn-secondary'>" + _t("Accept") + "</a>");
-							$("#btn-accept").on("click", this._onClickAddData);
+						if (btn_accept == 0 && count_accept == 0){
+							$(elem).after("<a id='btn-accept' class='btn btn-secondary curve_accept'>" + _t("Accept") + "</a>");
+							$("#btn-accept").on("click", widget._onClickAddData);
+							count_accept +=1;
 						}
 						$(elem).after("<div id='" + v["id"] + "' class='table_matrix'></div>");
 						$("#" + v["id"]).append(
