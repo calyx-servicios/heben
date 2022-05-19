@@ -2,11 +2,11 @@ odoo.define("sale_purchase_product_curve.add_data_product_template", function (r
     "use strict";
 
 require("web.dom_ready");
-var fieldRegistry = require("web.field_registry");
-var core = require("web.core");
-var qweb = core.qweb;
+let fieldRegistry = require("web.field_registry");
+let core = require("web.core");
+let qweb = core.qweb;
 const _t = core._t;
-var ajax = require("web.ajax");
+let ajax = require("web.ajax");
 
 function _activeTabs(){
 	$("a.nav-link.active").removeClass('active');
@@ -15,24 +15,24 @@ function _activeTabs(){
 	$("div.tab-pane[role='tab']").first().addClass('active');	
 }
 
-var FieldMany2ManyTags = require("web.relational_fields").FieldMany2ManyTags;
-var SaleCurveMany2Many = FieldMany2ManyTags.extend({
+let FieldMany2ManyTags = require("web.relational_fields").FieldMany2ManyTags;
+let SaleCurveMany2Many = FieldMany2ManyTags.extend({
 	_onClickAddData: function () {
-		var order_id = $("span[name=id]").text();
-		var tables = $(".table_matrix");
-		var datas = [];
+		let order_id = $("span[name=id]").text();
+		let tables = $(".table_matrix");
+		let datas = [];
 		$.each(tables, function (k, v){
-			var eventProps = new Object();
-			var div_table = $(v);
-			var table_body = div_table.find("div table tbody tr");
+			let eventProps = new Object();
+			let div_table = $(v);
+			let table_body = div_table.find("div table tbody tr");
 			eventProps['product_id'] = div_table.attr('id');
-			var list_data = [];
+			let list_data = [];
 			$.each($(table_body), function(k, v){
-				var inputs = $(v).find("td div.input-group input");
+				let inputs = $(v).find("td div.input-group input");
 				$.each(inputs, function(k, v){
-					var quantity = $(v).val();
+					let quantity = $(v).val();
 					if (quantity != 0){
-						var variants = $(v).attr('ptav_ids');
+						let variants = $(v).attr('ptav_ids');
 						list_data.push({
 							'quantity': quantity,
 							'variants': variants
@@ -54,11 +54,11 @@ var SaleCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 	_addTag: function (data) {
 		this._super.apply(this, arguments);
-		var elem = $(this.$el[0]);
-		var data_type = $.type(data);
-		var btn_accept = $("#btn-accept").length;
+		let elem = $(this.$el[0]);
+		let data_type = $.type(data);
+		let btn_accept = $("#btn-accept").length;
 		if (data_type == "object") {
-			var product_id = data["id"];
+			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
 				id: product_id,
 			}).then(data => {
@@ -81,8 +81,8 @@ var SaleCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
-			var count_accept = 0;
-			var widget = this;
+			let count_accept = 0;
+			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
@@ -110,9 +110,9 @@ var SaleCurveMany2Many = FieldMany2ManyTags.extend({
 		}
 	},
 	_onDeleteTag: function (event) {
-		var data_id = $(event.target).parent().data("id");
+		let data_id = $(event.target).parent().data("id");
 		$("#" + data_id).remove();
-		var table_matrix = $(".table_matrix").length;
+		let table_matrix = $(".table_matrix").length;
 		if (table_matrix == 0) {
 			$("#btn-accept").remove();
 		}
@@ -120,23 +120,23 @@ var SaleCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 });
 
-var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
+let SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 	_onClickAddData: function () {
-		var order_id = $("span[name=id]").text();
-		var tables = $(".table_matrix");
-		var datas = [];
+		let order_id = $("span[name=id]").text();
+		let tables = $(".table_matrix");
+		let datas = [];
 		$.each(tables, function (k, v){
-			var eventProps = new Object();
-			var div_table = $(v);
-			var table_body = div_table.find("div table tbody tr");
+			let eventProps = new Object();
+			let div_table = $(v);
+			let table_body = div_table.find("div table tbody tr");
 			eventProps['product_id'] = div_table.attr('id');
-			var list_data = [];
+			let list_data = [];
 			$.each($(table_body), function(k, v){
-				var inputs = $(v).find("td div.input-group input");
+				let inputs = $(v).find("td div.input-group input");
 				$.each(inputs, function(k, v){
-					var quantity = $(v).val();
+					let quantity = $(v).val();
 					if (quantity != 0){
-						var variants = $(v).attr('ptav_ids');
+						let variants = $(v).attr('ptav_ids');
 						list_data.push({
 							'quantity': quantity,
 							'variants': variants
@@ -158,11 +158,11 @@ var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 	_addTag: function (data) {
 		this._super.apply(this, arguments);
-		var elem = $(this.$el[0]);
-		var data_type = $.type(data);
-		var btn_accept = $("#btn-accept").length;
+		let elem = $(this.$el[0]);
+		let data_type = $.type(data);
+		let btn_accept = $("#btn-accept").length;
 		if (data_type == "object") {
-			var product_id = data["id"];
+			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
 				id: product_id,
 			}).then(data => {
@@ -185,8 +185,8 @@ var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
-			var count_accept = 0;
-			var widget = this;
+			let count_accept = 0;
+			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
@@ -214,9 +214,9 @@ var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 		}
 	},
 	_onDeleteTag: function (event) {
-		var data_id = $(event.target).parent().data("id");
+		let data_id = $(event.target).parent().data("id");
 		$("#" + data_id).remove();
-		var table_matrix = $(".table_matrix").length;
+		let table_matrix = $(".table_matrix").length;
 		if (table_matrix == 0) {
 			$("#btn-accept").remove();
 		}
@@ -224,23 +224,23 @@ var SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 });
 
-var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
+let PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 	_onClickAddData: function () {
-		var order_id = $("span[name=id]").text();
-		var tables = $(".table_matrix");
-		var datas = [];
+		let order_id = $("span[name=id]").text();
+		let tables = $(".table_matrix");
+		let datas = [];
 		$.each(tables, function (k, v){
-			var eventProps = new Object();
-			var div_table = $(v);
-			var table_body = div_table.find("div table tbody tr");
+			let eventProps = new Object();
+			let div_table = $(v);
+			let table_body = div_table.find("div table tbody tr");
 			eventProps['product_id'] = div_table.attr('id');
-			var list_data = [];
+			let list_data = [];
 			$.each($(table_body), function(k, v){
-				var inputs = $(v).find("td div.input-group input");
+				let inputs = $(v).find("td div.input-group input");
 				$.each(inputs, function(k, v){
-					var quantity = $(v).val();
+					let quantity = $(v).val();
 					if (quantity != 0){
-						var variants = $(v).attr('ptav_ids');
+						let variants = $(v).attr('ptav_ids');
 						list_data.push({
 							'quantity': quantity,
 							'variants': variants
@@ -262,11 +262,11 @@ var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 	_addTag: function (data) {
 		this._super.apply(this, arguments);
-		var elem = $(this.$el[0]);
-		var data_type = $.type(data);
-		var btn_accept = $("#btn-accept").length;
+		let elem = $(this.$el[0]);
+		let data_type = $.type(data);
+		let btn_accept = $("#btn-accept").length;
 		if (data_type == "object") {
-			var product_id = data["id"];
+			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
 				id: product_id,
 			}).then(data => {
@@ -289,8 +289,8 @@ var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
-			var count_accept = 0;
-			var widget = this;
+			let count_accept = 0;
+			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
@@ -318,9 +318,9 @@ var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 		}
 	},
 	_onDeleteTag: function (event) {
-		var data_id = $(event.target).parent().data("id");
+		let data_id = $(event.target).parent().data("id");
 		$("#" + data_id).remove();
-		var table_matrix = $(".table_matrix").length;
+		let table_matrix = $(".table_matrix").length;
 		if (table_matrix == 0) {
 			$("#btn-accept").remove();
 		}
@@ -328,23 +328,23 @@ var PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 });
 
-var PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
+let PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 	_onClickAddData: function () {
-		var order_id = $("span[name=id]").text();
-		var tables = $(".table_matrix");
-		var datas = [];
+		let order_id = $("span[name=id]").text();
+		let tables = $(".table_matrix");
+		let datas = [];
 		$.each(tables, function (k, v){
-			var eventProps = new Object();
-			var div_table = $(v);
-			var table_body = div_table.find("div table tbody tr");
+			let eventProps = new Object();
+			let div_table = $(v);
+			let table_body = div_table.find("div table tbody tr");
 			eventProps['product_id'] = div_table.attr('id');
-			var list_data = [];
+			let list_data = [];
 			$.each($(table_body), function(k, v){
-				var inputs = $(v).find("td div.input-group input");
+				let inputs = $(v).find("td div.input-group input");
 				$.each(inputs, function(k, v){
-					var quantity = $(v).val();
+					let quantity = $(v).val();
 					if (quantity != 0){
-						var variants = $(v).attr('ptav_ids');
+						let variants = $(v).attr('ptav_ids');
 						list_data.push({
 							'quantity': quantity,
 							'variants': variants
@@ -366,11 +366,11 @@ var PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 	},
 	_addTag: function (data) {
 		this._super.apply(this, arguments);
-		var elem = $(this.$el[0]);
-		var data_type = $.type(data);
-		var btn_accept = $("#btn-accept").length;
+		let elem = $(this.$el[0]);
+		let data_type = $.type(data);
+		let btn_accept = $("#btn-accept").length;
 		if (data_type == "object") {
-			var product_id = data["id"];
+			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
 				id: product_id,
 			}).then(data => {
@@ -393,8 +393,8 @@ var PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 				};
 			});
 		} else {
-			var count_accept = 0;
-			var widget = this;
+			let count_accept = 0;
+			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
 					id: v["id"],
@@ -422,9 +422,9 @@ var PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 		}
 	},
 	_onDeleteTag: function (event) {
-		var data_id = $(event.target).parent().data("id");
+		let data_id = $(event.target).parent().data("id");
 		$("#" + data_id).remove();
-		var table_matrix = $(".table_matrix").length;
+		let table_matrix = $(".table_matrix").length;
 		if (table_matrix == 0) {
 			$("#btn-accept").remove();
 		}
