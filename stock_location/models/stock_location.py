@@ -6,16 +6,15 @@ class StockWarehouse(models.Model):
     _inherit = 'stock.location'
     _order = 'sequence'
 
-    name = fields.Char(required=False)
+    name = fields.Char()
     contact = fields.Many2one('res.partner')
-    zip_code_field = fields.Char(string=_("Postal Code"))
-    from_zip = fields.Char(string=_("From Zip"))
-    to_zip = fields.Char(string=_("To Zip"))
-    zip_code = fields.Char(string=_("Zip"))
+    zip_code_field = fields.Char(string=("Postal Code"))
+    from_zip = fields.Char(string=("From Zip")
+    to_zip = fields.Char(string=("To Zip")
+    zip_code = fields.Char(string=("Zip")
     locations = fields.Many2one('stock.location')
     secondary_location = fields.One2many('stock.location', 'locations')
     sequence = fields.Integer(default=10)
-    name = fields.Char(required=False)
     
     @api.constrains('secondary_location')
     def _secondary_location(self):
