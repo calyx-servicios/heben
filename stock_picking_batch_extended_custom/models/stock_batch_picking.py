@@ -5,7 +5,7 @@ from odoo.exceptions import UserError
 class StockBatchPicking(models.Model):
     """ This object allow to manage multiple stock.picking at the same time.
     """
-    _inherit = ["stock.picking.batch", "mail.thread", "mail.activity.mixin"]
+    _inherit = ["stock.picking.batch"]
     _name = "stock.picking.batch"
 
     type_of_operation = fields.Selection([

@@ -13,9 +13,9 @@ Stock batch picking Custom
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/gitlab-calyxservicios--group%2Fodoo%2Fodoo--calyx-lightgray.png?logo=gitlab
-    :target: https://gitlab.com/calyxservicios-group/odoo/odoo-calyx
-    :alt: calyxservicios-group/odoo/odoo-calyx
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fheben-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/heben.git
+    :alt: calyx-servicios/heben.git
 
 |badge1| |badge2| |badge3|
 
@@ -23,10 +23,10 @@ Stock batch picking Custom
 Install
 =======
 
-# Go to applications
-# Find module "stock_picking_batch_extended_custom"
-# Press Install
-# Go to sale > Inventory > and see the modifications
+* Go to applications
+* Find module "stock_picking_batch_extended_custom"
+* Press Install
+* Go to sale > Inventory > and see the modifications
 
 
 Known issues / Roadmap
@@ -66,4 +66,4 @@ This module is maintained by the Calyx Servicios S.A.
 CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
 The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
 
-This module is part of the `Repo_name <https://github.com/calyx-servicios/custom-heben>`_ project on Github.
+This module is part of the `Heben <https://github.com/calyx-servicios/heben>`_ project on Github.
