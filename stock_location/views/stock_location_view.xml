@@ -1,0 +1,29 @@
+<odoo>
+
+    <record id="stock_location_form_inherit" model="ir.ui.view">
+        <field name="name">stock.location.form.view</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='return_location']" position="after">
+                <field name="contact" string="Contact"/>
+            </xpath>
+            <xpath expr="//field[@name='contact']" position="after">
+                <field name="zip_code_field" string="Postal Code" readonly="True"/>
+                    <div class="o_address_format">
+                        <field name="from_zip" placeholder="From Zip"/>
+                        <field name="to_zip" placeholder="To Zip"/>
+                    </div>
+            </xpath>
+            <xpath expr="//field[@name='return_location']" position="after">
+                <field name="secondary_location" widget="one2many_list">
+                    <tree string="locations" editable="bottom">
+                        <field name="sequence" widget="handle"/>
+                        <field name="locations"/>
+                    </tree>
+                </field>
+            </xpath>
+            </field>
+    </record>
+
+</odoo> 

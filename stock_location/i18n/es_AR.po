@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_location
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-17 12:58+0000\n"
+"PO-Revision-Date: 2022-05-17 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__zip_code_field
+msgid "Codigo Postal"
+msgstr ""
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__contact
+#: model_terms:ir.ui.view,arch_db:stock_location.stock_location_form_inherit
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__from_zip
+msgid "Desde"
+msgstr ""
+
+#. module: stock_location
+#: code:addons/stock_location/models/stock_location.py:0
+#: model_terms:ir.ui.view,arch_db:stock_location.stock_location_form_inherit
+#, python-format
+msgid "From Zip"
+msgstr "Desde"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__to_zip
+msgid "Hasta"
+msgstr ""
+
+#. module: stock_location
+#: model:ir.model,name:stock_location.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__name
+msgid "Location Name"
+msgstr "Nombre de ubicación"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__locations
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#. module: stock_location
+#: code:addons/stock_location/models/stock_location.py:0
+#: model_terms:ir.ui.view,arch_db:stock_location.stock_location_form_inherit
+#, python-format
+msgid "Postal Code"
+msgstr "Codigo Postal"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__secondary_location
+msgid "Secondary Location"
+msgstr "Ubicacion secundaria"
+
+#. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: stock_location
+#: code:addons/stock_location/models/stock_location.py:0
+#: model_terms:ir.ui.view,arch_db:stock_location.stock_location_form_inherit
+#, python-format
+msgid "To Zip"
+msgstr "Hasta"
+
+#. module: stock_location
+#: code:addons/stock_location/models/stock_location.py:0
+#, python-format
+msgid "You can only add two locations"
+msgstr "Solo puedes agregar dos ubicaciones"
+
+#. module: stock_location
+#: code:addons/stock_location/models/stock_location.py:0
+#: model:ir.model.fields,field_description:stock_location.field_stock_location__zip_code
+#, python-format
+msgid "Zip"
+msgstr ""
+
+#. module: stock_location
+#: model_terms:ir.ui.view,arch_db:stock_location.stock_location_form_inherit
+msgid "locations"
+msgstr "Ubicaciones"
