@@ -10,9 +10,12 @@
     "license": "AGPL-3",
     "category": "Sale",
     "version": "13.0.1.1.0",
+    "installable": True,
+    "application": False,
     "depends": [
         'base', 
         'sale', 
+        'stock',
         'product', 
         'product_matrix', 
         'sale_management', 

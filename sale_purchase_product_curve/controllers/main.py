@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import http
+from odoo import http, _
 from odoo.http import request
 from datetime import datetime
 
@@ -199,6 +199,56 @@ class AddProductCurve(http.Controller):
                             
             if len(values) != 0:
                 prl_obj.create_multi(values)
+                return True
+            else:
+                return True
+        else:
+            return False
+
+    @http.route(
+        ['/set_data_product_curve_stock_move'], 
+        type="json", 
+        auth="public",
+    )
+    def set_data_product_curve_stock_move(self, **args):
+        data = args.get('data',  False)
+        picking_id = args.get('order_id',  False)
+        if data and picking_id:
+            sm_obj = request.env['stock.move'].sudo()
+            picking_id = int(picking_id)
+            picking = request.env['stock.picking'].sudo().search([('id', '=',picking_id)])
+            values = []
+            for product in data:
+                product_id = int(product['product_id'])
+                product_tmpl = request.env['product.product'].search([('product_tmpl_id','=',product_id)])
+                for line in product['lines']:
+                    for variants in product_tmpl:
+                        list_variant = line['variants'].split(',')
+                        list_variant = list(map(int,list_variant))
+                        variants_tmpl = variants.product_template_attribute_value_ids.ids
+                        variants_tmpl.sort()
+                        if list_variant == variants_tmpl:
+                            line_exist = sm_obj.search([('picking_id','=',picking_id), ('product_id', '=', variants.id)])
+                            if line_exist:
+                                line_exist.product_uom_qty = line_exist.product_uom_qty + int(line['quantity'])
+                            else:
+                                dict_value = {
+                                    'name': _('New Move:') + variants.display_name,
+                                    'product_id': variants.id,
+                                    'product_uom_qty': int(line['quantity']),
+                                    'product_uom': variants.uom_po_id.id,
+                                    'location_id': picking.location_id.id,
+                                    'location_dest_id': picking.location_dest_id.id,
+                                    'state': 'draft',
+                                    'additional': True,
+                                    'picking_id': picking_id
+                                }
+                                values.append(dict_value)
+                        else:
+                            continue   
+                            
+            if len(values) != 0:
+                sm_obj.create_multi(values)
                 return True
             else:
                 return True
