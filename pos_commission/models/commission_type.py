@@ -15,12 +15,18 @@ class CommissionType(models.Model):
     name = fields.Char(required=True, translate=True)
     sellers_ids = fields.Many2many('hr.employee', string=_("Sellers"))
     sellers = fields.Char(compute="_compute_sellers")
+    boss_ids = fields.Many2many('hr.employee', 'rel_boss_commission', 'seller_id', 'boss_id', string=_("Boss"))
+    boss = fields.Char(compute="_compute_boss")
     commission_type = fields.Selection([
         ('standard', 'Standard'),
         ('product_categ', 'Product or Category'),
         ], string='Commission Type', default='standard',
         help=_("Standard - Commission will be provided as percentage or fixed amount.\n") +
             _("Product or Category - Commission will be provided as percentage or fixed amount.\n"))
+    commission_type_responsible = fields.Selection([
+        ('seller', 'Sellers'),
+        ('boss', 'Boss'),
+        ], string='Commission Type Responsible', default='seller')
     standard_commission_type = fields.Selection([
         ('percentage', 'Percentage'),
         ('fixed', 'Fixed Amount'),
@@ -40,7 +46,7 @@ class CommissionType(models.Model):
         help=_("All Products - Commission will be provided in all the products\n") +
             _("Product Category - Commission will be provided in the selected categories \n") +
             _("Product - Commission will be provided in the selected products \n"))
-    commission_line_ids = fields.One2many('commission.type.line','commission_type_id')
+    commission_line_ids = fields.One2many('commission.type.line','commission_type_id', string='Commission Lines')
     commission_price = fields.Char(compute="_compute_commission_price")
     commission_line_products = fields.Char(compute="_compute_commission_line_product")
     company_id = fields.Many2many('res.company', string=_('Company'), domain=_get_company_allowed)
@@ -82,6 +88,14 @@ class CommissionType(models.Model):
                 rec.sellers = rec.sellers_ids[0].name
             else:
                 rec.sellers = _("Multiple")
+    
+    @api.depends('boss_ids')
+    def _compute_boss(self):
+        for rec in self:
+            if len(rec.boss_ids.ids) == 1:
+                rec.boss = rec.boss_ids[0].name
+            else:
+                rec.boss = _("Multiple")
 
     @api.onchange('commission_type')
     def _onchange_commission_type(self):

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-04 16:20+0000\n"
-"PO-Revision-Date: 2022-05-04 16:20+0000\n"
+"POT-Creation-Date: 2022-06-03 20:18+0000\n"
+"PO-Revision-Date: 2022-06-03 20:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -66,6 +66,15 @@ msgid "Archived"
 msgstr "Archivado"
 
 #. module: pos_commission
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__boss
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__boss_ids
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_type_responsible__boss
+#, python-format
+msgid "Boss"
+msgstr "Jefes"
+
+#. module: pos_commission
 #: model_terms:ir.actions.act_window,help:pos_commission.action_commission_line
 #: model_terms:ir.actions.act_window,help:pos_commission.action_commission_type
 msgid ""
@@ -116,6 +125,11 @@ msgstr "Precio de comisión"
 #, python-format
 msgid "Commission Type"
 msgstr "Tipo de comisión"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__commission_type_responsible
+msgid "Commission Type Responsible"
+msgstr "Tipo de responsable"
 
 #. module: pos_commission
 #: model:ir.model,name:pos_commission.model_commission_line
