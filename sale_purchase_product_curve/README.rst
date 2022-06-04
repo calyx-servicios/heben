@@ -25,19 +25,15 @@ This module extends the functionality of the curve for products.
 Install
 =======
 
-* Go to applications
+* Go to applications > Find module "sale_purchase_product_curve" > Press Install
 
-* Find module "sale_purchase_product_curve"
-
-* Press Install
-
-* Go to Purchase > and see the modifications
-
-* Go to Sale > and see the modifications
+* Go to Purchase or Sale > and see the modifications
 
 * Go to Sale > Settings > Budget templates > and see the modifications
 
 * Go to Purchase > Purchase Agreements > and see the modifications
+
+* Go to Stock > Operations > Transfers > and see the modifications
 
 
 Known issues / Roadmap
