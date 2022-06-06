@@ -15,7 +15,7 @@ class CommissionType(models.Model):
     name = fields.Char(required=True, translate=True)
     sellers_ids = fields.Many2many('hr.employee', string=_("Sellers"))
     sellers = fields.Char(compute="_compute_sellers")
-    boss_ids = fields.Many2many('hr.employee', 'rel_boss_commission', 'seller_id', 'boss_id', string=_("Boss"))
+    boss_ids = fields.Many2many('hr.employee', 'rel_boss_commission_type', 'seller_id', 'boss_id', string=_("Boss"))
     boss = fields.Char(compute="_compute_boss")
     commission_type = fields.Selection([
         ('standard', 'Standard'),

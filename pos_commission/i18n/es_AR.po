@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-03 20:18+0000\n"
-"PO-Revision-Date: 2022-06-03 20:18+0000\n"
+"POT-Creation-Date: 2022-06-06 17:59+0000\n"
+"PO-Revision-Date: 2022-06-06 17:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -64,6 +64,20 @@ msgstr "Aplica en"
 #: model_terms:ir.ui.view,arch_db:pos_commission.commission_type_view_form
 msgid "Archived"
 msgstr "Archivado"
+
+#. module: pos_commission
+#: code:addons/pos_commission/models/commission.py:0
+#: code:addons/pos_commission/models/commission_type.py:0
+#: model:ir.model.fields,field_description:pos_commission.field_commission_type__boss
+#: model:ir.model.fields.selection,name:pos_commission.selection__commission_type__commission_type_responsible__boss
+#, python-format
+msgid "Boss"
+msgstr "Jefes"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.commission_line_search_view
+msgid "Bosses"
+msgstr "Jefes"
 
 #. module: pos_commission
 #: code:addons/pos_commission/models/commission_type.py:0
@@ -165,10 +179,32 @@ msgid "Computed Price"
 msgstr "Precio calculado"
 
 #. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.pos_commission_wizard_view_form
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: pos_commission
 #: model_terms:ir.actions.act_window,help:pos_commission.action_commission_line
 #: model_terms:ir.actions.act_window,help:pos_commission.action_commission_type
 msgid "Create a new promotion program"
 msgstr "Crear un nuevo programa de promoción"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.pos_commission_wizard_view_form
+msgid "Create and View Invoice"
+msgstr "Crear y ver facturas"
+
+#. module: pos_commission
+#: model:ir.actions.act_window,name:pos_commission.action_invoice_pos_commission
+msgid "Create invoices"
+msgstr "Crear Facturas"
+
+#. module: pos_commission
+#: code:addons/pos_commission/wizard/pos_commission.py:0
+#: model:ir.model,name:pos_commission.model_pos_commission_wizard
+#, python-format
+msgid "Create invoices from commissions"
+msgstr "Crear facturas desde comisiones"
 
 #. module: pos_commission
 #: model:ir.model.fields,field_description:pos_commission.field_commission_line__create_uid
@@ -221,6 +257,25 @@ msgstr "Precio fijo"
 #: model:ir.model.fields,field_description:pos_commission.field_commission_type_line__id
 msgid "ID"
 msgstr "ID"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.pos_commission_wizard_view_form
+msgid "Invoice commission"
+msgstr "Factura de comisión"
+
+#. module: pos_commission
+#: model:ir.model.fields,field_description:pos_commission.field_commission_line__invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: pos_commission
+#: model_terms:ir.ui.view,arch_db:pos_commission.pos_commission_wizard_view_form
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"\t                them before validation."
+msgstr ""
+"Las facturas se crearán en borrador para que puedas revisarlas\n"
+"\t                antes de la validación."
 
 #. module: pos_commission
 #: model:ir.model.fields,field_description:pos_commission.field_commission_line____last_update
