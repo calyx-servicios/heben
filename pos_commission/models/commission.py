@@ -7,6 +7,7 @@ class CommissionLine(models.Model):
 
     order = fields.Many2one('pos.order')
     sellers = fields.Many2one('hr.employee', string=_("Seller"))
+    bosses = fields.Many2one('hr.employee', string=_("Boss"))
     commission = fields.Many2one('commission.type')
     commission_type = fields.Selection([
         ('standard', 'Standard'),
@@ -53,12 +54,21 @@ class CommissionLine(models.Model):
         }
 
         if len(self) == 1:
-            context.update({
-                'default_partner_id': self.sellers.user_partner_id.id,
-                'default_partner_shipping_id': self.sellers.id,
-                'default_invoice_payment_term_id': self.env['account.move'].default_get(['invoice_payment_term_id']).get('invoice_payment_term_id'),
-                'default_invoice_origin': self.order.name,
-                'default_user_id': self.sellers.user_id.id,
-            })
+            if self.sellers:
+                context.update({
+                    'default_partner_id': self.sellers.user_partner_id.id,
+                    'default_partner_shipping_id': self.sellers.id,
+                    'default_invoice_payment_term_id': self.env['account.move'].default_get(['invoice_payment_term_id']).get('invoice_payment_term_id'),
+                    'default_invoice_origin': self.order.name,
+                    'default_user_id': self.sellers.user_id.id,
+                })
+            else:
+                context.update({
+                    'default_partner_id': self.bosses.user_partner_id.id,
+                    'default_partner_shipping_id': self.bosses.id,
+                    'default_invoice_payment_term_id': self.env['account.move'].default_get(['invoice_payment_term_id']).get('invoice_payment_term_id'),
+                    'default_invoice_origin': self.order.name,
+                    'default_user_id': self.bosses.user_id.id,
+                })
         action['context'] = context
         return action
