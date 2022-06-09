@@ -174,3 +174,11 @@
 	path = submodules/calyx-servicios/multi-store
 	url = https://github.com/calyx-servicios/multi-store.git
 	branch = 13.0
+[submodule "submodules/OCA/stock-logistics-workflow"]
+	path = submodules/OCA/stock-logistics-workflow
+	url = https://github.com/OCA/stock-logistics-workflow.git
+	branch = 13.0
+[submodule "submodules/calyx-servicios/account-invoicing"]
+	path = submodules/calyx-servicios/account-invoicing
+	url = https://github.com/calyx-servicios/account-invoicing.git
+	branch = 13.0
