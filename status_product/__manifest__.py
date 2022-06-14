@@ -14,7 +14,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ['product', 'base','account_reports'],
+    "depends": ['product', 'base','account_reports','sale'],
     "data": [
         'views/product_status_view.xml',
         'views/account_move_view.xml',
