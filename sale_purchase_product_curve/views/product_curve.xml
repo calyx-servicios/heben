@@ -64,5 +64,20 @@
             	</xpath>
             </field>
         </record>
+        <record id="view_stock_picking_form_curve_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.form.view.curve</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='id']" position="after">
+            		<field name="create_date" invisible="1"/>
+            	</xpath>
+            	<xpath expr="//page[@name='extra']" position="before">
+                	<page name="picking_products_curve" string="Stock Picking Products Curve" attrs="{'invisible': [('create_date', '=', False)]}">
+						<field name="products_curve_ids" widget="picking_curve_many2many"/>
+                  	</page>
+            	</xpath>
+            </field>
+        </record>
     </data>
 </odoo> 

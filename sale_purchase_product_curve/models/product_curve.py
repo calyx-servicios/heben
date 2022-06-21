@@ -33,3 +33,11 @@ class ProductCurvePurchaseRequisition(models.Model):
         'product_purchase_requisition_curve_rel',
     )
 
+class ProductCurveStockPicking(models.Model):
+    _inherit= 'stock.picking'
+      
+    products_curve_ids = fields.Many2many(
+        'product.template',
+        'product_stock_picking_curve_rel',
+    )
+
