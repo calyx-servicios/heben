@@ -5,8 +5,8 @@
         <field name="inherit_id" ref="stock_picking_batch_extended.stock_batch_picking_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='date']" position="after">
-                <field name="type_of_operation"/>
-                <field name="partner_id"/>
+                <field name="type_of_operation" invisible="1"/>
+                <field name="partner_id" invisible="1"/>
             </xpath>
         </field>
     </record>
