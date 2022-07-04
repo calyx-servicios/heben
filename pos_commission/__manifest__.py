@@ -9,12 +9,13 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Point of sale",
-    "version": "13.0.1.0.0",
-    "development_status": "Production/Stable",
+    "version": "13.0.3.0.4",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ['pos_seller','account'],
+    "depends": [
+        'pos_seller',
+        'account'
+    ],
     "data": [
         'security/ir.model.access.csv',
         'wizard/pos_commission_wizard_views.xml',

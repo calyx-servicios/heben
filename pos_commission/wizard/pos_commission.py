@@ -59,13 +59,36 @@ class PosCommission(models.TransientModel):
                     }
                     if journal:
                         values[seller_id]['journal_id'] = journal.id
+            else:
+                boss_id = commission.bosses.user_partner_id.id
+                description = commission.commission.name + ' - ' + dict(commission_line_obj._fields['commission_type'].selection).get(commission.commission_type)
+                amount = commission.amount
+                company = commission.bosses.company_id.id
+                journal = self.env['account.journal'].search([
+                    ('type', '=', 'purchase'),
+                    ('is_commission','=',True),
+                    ('company_id','=',company)
+                ],limit=1)
+                if values.get(boss_id, False):
+                    values[boss_id]['invoice_lines'].append({
+                        'amount': amount, 'description': description
+                    })
+                    values[boss_id]['commission_lines'].append(commission)
+                else:
+                    values[boss_id] = {
+                        'order': commission.order.name, 'partner_id': boss_id, 
+                        'commission_lines': [commission],
+                        'invoice_lines': [{'amount': amount, 'description': description}]
+                    }
+                    if journal:
+                        values[boss_id]['journal_id'] = journal.id
             
-        for seller in values:
-            commision_lines = values[seller].pop('commission_lines')
-            invoice_lines_vals = values[seller].pop('invoice_lines')
+        for partner in values:
+            commision_lines = values[partner].pop('commission_lines')
+            invoice_lines_vals = values[partner].pop('invoice_lines')
             invoice_lines = self._prepare_invoice_line_values(invoice_lines_vals)
-            values[seller]['invoice_lines'] = invoice_lines
-            invoice_vals = self._prepare_invoice_values(values[seller])
+            values[partner]['invoice_lines'] = invoice_lines
+            invoice_vals = self._prepare_invoice_values(values[partner])
             invoice = self.env['account.move'].sudo().create(invoice_vals).with_user(self.env.uid)
             for line in commision_lines:
                 line.invoice_ids = [(4, invoice.id)]
