@@ -14,23 +14,15 @@
                     <field name="active" invisible="1"/>
                     <group>
                         <group name="standard_commission_type">
-                            <field name="commission_type" widget='radio'/>  
-                            <field name="sellers_ids" widget='many2many_tags' required="1"/>
+                            <field name="commission_type" widget='radio'/>
                         </group>
-                        <group>
-                            <field name="standard_commission_type" widget='radio' attrs="{'invisible': [('commission_type', '!=', 'standard')]}"/>
-                            <field name="percentage_commission" attrs="{'invisible': ['|',('standard_commission_type', '!=', 'percentage'),('commission_type', '!=', 'standard')]}"/>
-                            <field name="fixed_commission" attrs="{'invisible': ['|',('standard_commission_type', '!=', 'fixed'),('commission_type', '!=', 'standard')]}"/>  
+                        <group attrs="{'invisible': [('commission_type', '!=', 'standard')]}">
+                            <field name="standard_commission_type" widget='radio' />
+                            <field name="percentage_commission" attrs="{'invisible': [('standard_commission_type', '!=', 'percentage')]}"/>
+                            <field name="fixed_commission" attrs="{'invisible': [('standard_commission_type', '!=', 'fixed')]}"/>  
                         </group>
-                    </group>
-                    <group name="other_info">
-                    	<field name="company_id" widget="many2many_tags" options="{'no_create':1}"/>
-                    	<field name="store_id" widget="many2many_tags" options="{'no_create':1}"/>
-                    	<field name="point_of_sale_id" widget="many2many"/>
-                    </group>
-                    <group string="Commission Lines" attrs="{'invisible': [('commission_type', '=', 'standard')]}">
-                    	<group name='commission_lines'>
-                        	<field name="commission_line_ids" nolabel="1">
+                    	<group name='commission_lines' attrs="{'invisible': [('commission_type', '=', 'standard')]}">
+                        	<field name="commission_line_ids">
                             	<form string="Pricelist Items">
                                 	<sheet>
                                 		<group>
@@ -83,10 +75,24 @@
 	                            </tree>
                         	</field>
                         </group>
-                        <group>
-                        </group>
                     </group>
-                </sheet>
+                    <group>
+                    	<group name="responsible_commission_type">
+                    		<field name="commission_type_responsible" widget='radio'/>
+                    	</group>
+                           <group attrs="{'invisible': [('commission_type_responsible', '!=', 'seller')]}">
+                            <field name="sellers_ids" widget='many2many_tags' attrs="{'required': [('commission_type_responsible', '=', 'seller')]}"/>
+                           </group>
+                           <group attrs="{'invisible': [('commission_type_responsible', '!=', 'boss')]}">
+                           	<field name="boss_ids" widget='many2many_tags' attrs="{'required': [('commission_type_responsible', '=', 'boss')]}"/>
+                           </group>
+                    </group>
+                    <group name="other_info">
+                    	<field name="company_id" widget="many2many_tags" options="{'no_create':1}"/>
+                    	<field name="store_id" widget="many2many_tags" options="{'no_create':1}"/>
+                    	<field name="point_of_sale_id" widget="many2many"/>
+                    </group>
+	        	</sheet>
             </form>
         </field>
     </record>
