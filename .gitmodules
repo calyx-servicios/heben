@@ -186,3 +186,7 @@
 	path = submodules/calyx-servicios/account-payment
 	url = https://github.com/calyx-servicios/account-payment.git
 	branch = 13.0
+[submodule "submodules/filoquin/payment"]
+	path = submodules/filoquin/payment
+	url = https://github.com/filoquin/payment.git
+	branch = 13.0
