@@ -170,10 +170,6 @@
 	path = submodules/calyx-servicios/stock
 	url = https://github.com/calyx-servicios/stock.git
 	branch = 13.0
-[submodule "submodules/calyx-servicios/multi-store"]
-	path = submodules/calyx-servicios/multi-store
-	url = https://github.com/calyx-servicios/multi-store.git
-	branch = 13.0
 [submodule "submodules/OCA/stock-logistics-workflow"]
 	path = submodules/OCA/stock-logistics-workflow
 	url = https://github.com/OCA/stock-logistics-workflow.git
@@ -185,4 +181,12 @@
 [submodule "submodules/calyx-servicios/account-payment"]
 	path = submodules/calyx-servicios/account-payment
 	url = https://github.com/calyx-servicios/account-payment.git
+	branch = 13.0_test
+[submodule "submodules/filoquin/payment"]
+	path = submodules/filoquin/payment
+	url = https://github.com/filoquin/payment.git
+	branch = 13.0
+[submodule "submodules/calyx-servicios/multi-store"]
+	path = submodules/calyx-servicios/multi-store
+	url = https://github.com/calyx-servicios/multi-store.git
 	branch = 13.0_test
