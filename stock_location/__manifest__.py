@@ -16,5 +16,6 @@
     "data": [
         'views/stock_location_view.xml',
         'views/sale_order_line_view.xml',
+        'data/mail_data.xml',
     ],
 }
