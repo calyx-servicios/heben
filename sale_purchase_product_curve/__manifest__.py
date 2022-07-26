@@ -20,7 +20,8 @@
         'product_matrix', 
         'sale_management', 
         'purchase', 
-        'purchase_requisition'
+        'purchase_requisition',
+        'status_product'
     ],
     "data": [
         'views/assets.xml',
