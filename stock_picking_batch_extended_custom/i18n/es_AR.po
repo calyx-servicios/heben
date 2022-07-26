@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-30 17:20+0000\n"
-"PO-Revision-Date: 2022-05-30 17:20+0000\n"
+"POT-Creation-Date: 2022-07-21 16:24+0000\n"
+"PO-Revision-Date: 2022-07-21 16:24+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,29 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__batch_id
+msgid "Batch"
+msgstr "Lote"
+
+#. module: stock_picking_batch_extended_custom
 #: model:ir.model,name:stock_picking_batch_extended_custom.model_stock_picking_batch
 msgid "Batch Transfer"
-msgstr "Transferencia por lotes"
+msgstr "Transferir agrupación"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__create_date
+msgid "Created on"
+msgstr "Creado por"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
 
 #. module: stock_picking_batch_extended_custom
 #: model:ir.model.fields.selection,name:stock_picking_batch_extended_custom.selection__stock_picking_batch__type_of_operation__entry
@@ -31,11 +51,70 @@ msgid "Exit"
 msgstr "Salida"
 
 #. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,help:stock_picking_batch_extended_custom.field_stock_picking_batch__partner_id
+msgid ""
+"If you choose a partner then only pickings of this partner willbe "
+"sellectable"
+msgstr ""
+"Si elige un Partner, entonces solo las ordenes de movimiento de este Partner"
+" serán elegibles"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch__import_completed
+msgid "Import Completed"
+msgstr "Importación Completa"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: stock_picking_batch_extended_custom
 #: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch__partner_id
 msgid "Partner"
 msgstr "Contacto"
 
 #. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch__product_imput_ids
+msgid "Product Imput"
+msgstr "Entrada de producto"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch_product__qty
+msgid "Qty"
+msgstr "Cantidad"
+
+#. module: stock_picking_batch_extended_custom
 #: model:ir.model.fields,field_description:stock_picking_batch_extended_custom.field_stock_picking_batch__type_of_operation
 msgid "Type of Operation"
 msgstr "Tipo de Operacion"
+
+#. module: stock_picking_batch_extended_custom
+#: model_terms:ir.ui.view,arch_db:stock_picking_batch_extended_custom.stock_batch_picking_form_inherit
+msgid "compute products"
+msgstr "Calcular"
+
+#. module: stock_picking_batch_extended_custom
+#: model:ir.model,name:stock_picking_batch_extended_custom.model_stock_picking_batch_product
+msgid "stock.picking.batch.product"
+msgstr ""
