@@ -1,7 +1,8 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
-class ProductStatus (models.Model):
+
+class ProductStatus(models.Model):
     _inherit = 'product.product'
 
     @api.model
@@ -27,5 +28,5 @@ class ProductStatus (models.Model):
     def _onchange_state_in_out(self):
         for record in self:
             if record.state == "low" and record.qty_available:
-                raise ValidationError("El stock debe estar en 0")
+                raise ValidationError(_("The stock must be at 0"))
 

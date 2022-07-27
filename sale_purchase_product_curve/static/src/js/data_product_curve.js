@@ -60,7 +60,7 @@ let SaleCurveMany2Many = FieldMany2ManyTags.extend({
 		if (data_type == "object") {
 			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
-				id: product_id,
+				id: product_id, model: "sale_order"
 			}).then(data => {
 				if (data != false) {
 					if (btn_accept == 0){
@@ -85,7 +85,7 @@ let SaleCurveMany2Many = FieldMany2ManyTags.extend({
 			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
-					id: v["id"],
+					id: v["id"], model: "sale_order"
 				}).then(data => {
 					if (data != false) {
 						if (btn_accept == 0 && count_accept == 0){
@@ -164,7 +164,7 @@ let SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 		if (data_type == "object") {
 			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
-				id: product_id,
+				id: product_id, model: "sale_order"
 			}).then(data => {
 				if (data != false) {
 					if (btn_accept == 0){
@@ -189,7 +189,7 @@ let SaleTemplateCurveMany2Many = FieldMany2ManyTags.extend({
 			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
-					id: v["id"],
+					id: v["id"], model: "sale_order"
 				}).then(data => {
 					if (data != false) {
 						if (btn_accept == 0 && count_accept == 0){
@@ -268,7 +268,7 @@ let PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 		if (data_type == "object") {
 			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
-				id: product_id,
+				id: product_id, model: "purchase_order"
 			}).then(data => {
 				if (data != false) {
 					if (btn_accept == 0){
@@ -293,7 +293,7 @@ let PurchaseCurveMany2Many = FieldMany2ManyTags.extend({
 			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
-					id: v["id"],
+					id: v["id"], model: "purchase_order"
 				}).then(data => {
 					if (data != false) {
 						if (btn_accept == 0 && count_accept == 0){
@@ -372,7 +372,7 @@ let PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 		if (data_type == "object") {
 			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
-				id: product_id,
+				id: product_id, model: "purchase_order"
 			}).then(data => {
 				if (data != false) {
 					if (btn_accept == 0){
@@ -397,7 +397,7 @@ let PurchaseRequisitionCurveMany2Many = FieldMany2ManyTags.extend({
 			let widget = this;
 			$.each(data, function (k, v) {
 				ajax.jsonRpc("/get_data_product_curve", "call", {
-					id: v["id"],
+					id: v["id"], model: "purchase_order"
 				}).then(data => {
 					if (data != false) {
 						if (btn_accept == 0 && count_accept == 0){
@@ -476,7 +476,7 @@ let StockCurveMany2Many = FieldMany2ManyTags.extend({
 		if (data_type == "object") {
 			let product_id = data["id"];
 			ajax.jsonRpc("/get_data_product_curve", "call", {
-				id: product_id,
+				id: product_id, model: "stock_move"
 			}).then(data => {
 				if (data != false) {
 					if (btn_accept == 0){
