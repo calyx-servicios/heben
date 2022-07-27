@@ -9,14 +9,15 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.2.0.0",
+    "version": "13.0.3.0.0",
     "installable": True,
     "application": False,
     "depends": [
         'product',
         'base',
         'account_reports',
-        'sale'
+        'sale',
+        'point_of_sale'
     ],
     "data": [
         'views/product_status_view.xml',
