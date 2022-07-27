@@ -7,6 +7,7 @@ MODELS_STATUS = {
     'sale_order': ['draft','low'],
     'purchase_order': ['draft','low','in_out','liquidation'],
     'stock_move': ['draft','low'],
+    'stock_picking_batch': ['draft','low'],
 }
 
 class AddProductCurve(http.Controller):
@@ -265,6 +266,49 @@ class AddProductCurve(http.Controller):
                             
             if len(values) != 0:
                 sm_obj.create_multi(values)
+                return True
+            else:
+                return True
+        else:
+            return False
+
+    @http.route(
+        ['/set_data_product_curve_stock_picking_batch'], 
+        type="json", 
+        auth="public",
+    )
+    def set_data_product_curve_stock_picking_batch(self, **args):
+        data = args.get('data',  False)
+        batch_id = args.get('batch_id',  False)
+        if data and batch_id:
+            spbp_obj = request.env['stock.picking.batch.product'].sudo()
+            batch_id = int(batch_id)
+            values = []
+            for product in data:
+                product_id = int(product['product_id'])
+                product_tmpl = request.env['product.product'].search([('product_tmpl_id','=',product_id)])
+                for line in product['lines']:
+                    for variants in product_tmpl:
+                        list_variant = line['variants'].split(',')
+                        list_variant = list(map(int,list_variant))
+                        variants_tmpl = variants.product_template_attribute_value_ids.ids
+                        variants_tmpl.sort()
+                        if list_variant == variants_tmpl:
+                            line_exist = spbp_obj.search([('batch_id','=',batch_id), ('product_id', '=', variants.id)])
+                            if line_exist:
+                                line_exist.qty = line_exist.qty + int(line['quantity'])
+                            else:
+                                dict_value = {
+                                    'batch_id': batch_id,
+                                    'product_id': variants.id,
+                                    'qty': int(line['quantity'])
+                                }
+                                values.append(dict_value)
+                        else:
+                            continue   
+                            
+            if len(values) != 0:
+                spbp_obj.create_multi(values)
                 return True
             else:
                 return True

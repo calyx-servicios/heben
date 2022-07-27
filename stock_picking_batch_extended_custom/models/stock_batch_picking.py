@@ -1,7 +1,7 @@
-from odoo import _, fields, models
+from odoo import fields, models
+
 
 class StockBatchPicking(models.Model):
-
     _inherit = "stock.picking.batch"
 
     type_of_operation = fields.Selection([
@@ -36,13 +36,10 @@ class StockBatchPicking(models.Model):
                         self.picking_ids += picking
 
 class StockBatchPickingProduct(models.Model):
-
     _name = "stock.picking.batch.product"
+    _description = "Stock Picking batch product"
 
-    batch_id = fields.Many2one(
-        'stock.picking.batch',
-    )
-    product_id = fields.Many2one(
-        'product.product',
-    )
+    batch_id = fields.Many2one('stock.picking.batch')
+    product_id = fields.Many2one('product.product')
     qty = fields.Integer()
+

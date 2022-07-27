@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='date']" position="after">
                 <field name="type_of_operation" invisible="1"/>
-                <field name="partner_id" invisible="1"/>
+                <field name="partner_id"/>
             </xpath>
             <xpath expr="//field[@name='move_line_ids']" position="after">
                 <button name="compute_import" string="compute products"  type="object"/>

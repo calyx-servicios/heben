@@ -9,7 +9,7 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Sale",
-    "version": "13.0.1.1.0",
+    "version": "13.0.2.1.1",
     "installable": True,
     "application": False,
     "depends": [
@@ -21,7 +21,8 @@
         'sale_management', 
         'purchase', 
         'purchase_requisition',
-        'status_product'
+        'status_product',
+        'stock_picking_batch_extended_custom'
     ],
     "data": [
         'views/assets.xml',
