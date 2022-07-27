@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-03 17:38+0000\n"
-"PO-Revision-Date: 2022-06-03 17:38+0000\n"
+"POT-Creation-Date: 2022-07-27 15:32+0000\n"
+"PO-Revision-Date: 2022-07-27 15:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,9 +27,16 @@ msgstr ""
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
+#: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
+#: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #, python-format
 msgid "Accept"
 msgstr "Aceptar"
+
+#. module: sale_purchase_product_curve
+#: model:ir.model,name:sale_purchase_product_curve.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr "Transferir agrupación"
 
 #. module: sale_purchase_product_curve
 #: code:addons/sale_purchase_product_curve/controllers/main.py:0
@@ -43,6 +50,7 @@ msgstr "Nuevo movimiento:"
 #: model:ir.model.fields,field_description:sale_purchase_product_curve.field_sale_order__products_curve_ids
 #: model:ir.model.fields,field_description:sale_purchase_product_curve.field_sale_order_template__products_curve_ids
 #: model:ir.model.fields,field_description:sale_purchase_product_curve.field_stock_picking__products_curve_ids
+#: model:ir.model.fields,field_description:sale_purchase_product_curve.field_stock_picking_batch__products_curve_ids
 msgid "Products Curve"
 msgstr "Productos con matriz"
 
@@ -112,12 +120,24 @@ msgid "Stock Move"
 msgstr "Movimiento de existencias"
 
 #. module: sale_purchase_product_curve
+#: model_terms:ir.ui.view,arch_db:sale_purchase_product_curve.stock_batch_picking_form_curve_inherit
+msgid "Stock Picking Batch Products Curve"
+msgstr "Productos por matriz"
+
+#. module: sale_purchase_product_curve
 #: model_terms:ir.ui.view,arch_db:sale_purchase_product_curve.view_stock_picking_form_curve_inherit
 msgid "Stock Picking Products Curve"
 msgstr "Productos por matriz"
 
 #. module: sale_purchase_product_curve
+#: model:ir.model,name:sale_purchase_product_curve.model_stock_picking_batch_product
+msgid "Stock Picking batch product"
+msgstr "Producto de grupo de albaranes"
+
+#. module: sale_purchase_product_curve
 #. openerp-web
+#: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
+#: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0
 #: code:addons/sale_purchase_product_curve/static/src/js/data_product_curve.js:0

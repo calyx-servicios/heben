@@ -79,5 +79,20 @@
             	</xpath>
             </field>
         </record>
+        <record id="stock_batch_picking_form_curve_inherit" model="ir.ui.view">
+	        <field name="name">stock.picking.batch.form.curve</field>
+	        <field name="model">stock.picking.batch</field>
+	        <field name="inherit_id" ref="stock_picking_batch_extended_custom.stock_batch_picking_form_inherit"/>
+	        <field name="arch" type="xml">
+	            <xpath expr="//field[@name='date']" position="after">
+	                <field name="create_date" invisible="1"/>
+	            </xpath>
+	            <xpath expr="//page[last()]" position="before">
+                	<page name="picking_products_curve" id="picking_products_curve" string="Stock Picking Batch Products Curve" attrs="{'invisible': [('create_date', '=', False)]}">
+						<field name="products_curve_ids" widget="picking_batch_curve_many2many"/>
+                  	</page>
+            	</xpath>
+	        </field>
+	    </record>
     </data>
 </odoo> 
