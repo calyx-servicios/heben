@@ -53,6 +53,7 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Andres Andrade
+  * Paradiso Cristian
 
 Maintainers
 ~~~~~~~~~~~
