@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 
@@ -17,7 +17,7 @@ class ProductStatus(models.Model):
             ('liquidation','Liquidation'),
             ('low','Low'),
             ('draft', 'Draft'),
-            ],'State', index=True, default='draft',
+            ],'State', index=True, default='draft', track_visibility='allways',
             help="Commercial treatment status\n"
              " * Active: Most of the articles will have this status, it indicates that the product can be bought, sold and distributed freely.\n"
              " * In-Out: Indicates that you should not continue buying. That is bought only once, but it is not continuous.\n"
@@ -25,8 +25,12 @@ class ProductStatus(models.Model):
              " * Low: The product will no longer be marketed in the company. Block the sale, purchase and distribution, the stock must be at 0.\n")
 
     @api.onchange("state")
-    def _onchange_state_in_out(self):
+    def _onchange_state(self):
         for record in self:
+            if record.state in ["draft","low"]:
+                record.available_in_pos = False
+            else:
+                record.available_in_pos = True
             if record.state == "low" and record.qty_available:
                 raise ValidationError(_("The stock must be at 0"))
 
