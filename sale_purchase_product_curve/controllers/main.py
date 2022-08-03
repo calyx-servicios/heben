@@ -31,7 +31,9 @@ class AddProductCurve(http.Controller):
                         if ptav_ids != False and model != False:
                             status = MODELS_STATUS.get(model, 'sale_order')
                             for product in products:
-                                if ptav_ids == product.product_template_attribute_value_ids.ids and product.state in status:
+                                product_attribute = product.product_template_attribute_value_ids.ids
+                                product_attribute.sort() 
+                                if (ptav_ids == product_attribute) and (product.state in status):
                                     val['is_possible_combination'] = False
                 return matrix_template
             else:
