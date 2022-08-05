@@ -54,6 +54,7 @@ msgid "Location Name"
 msgstr "Nombre de ubicación"
 
 #. module: stock_location
+#: model:ir.model.fields,field_description:stock_location.field_sale_order_line__locations
 #: model:ir.model.fields,field_description:stock_location.field_stock_location__locations
 msgid "Locations"
 msgstr "Ubicaciones"
@@ -64,6 +65,11 @@ msgstr "Ubicaciones"
 #, python-format
 msgid "Postal Code"
 msgstr "Codigo Postal"
+
+#. module: stock_location
+#: model:ir.model,name:stock_location.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
 
 #. module: stock_location
 #: model:ir.model.fields,field_description:stock_location.field_stock_location__secondary_location
