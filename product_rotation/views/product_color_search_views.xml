@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="product.product_search_form_view" />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="product_color" />
-                <filter string="Product Color" name="groupby_product_color" domain="[]" context="{'group_by' : 'product_color'}" />
+                <field name="product_name_and_color" />
+                <filter string="Product Color" name="groupby_product_name_and_color" domain="[]" context="{'group_by' : 'product_name_and_color'}" />
                 <separator />
             </field>
         </field>
