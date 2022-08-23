@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="group_product_views_access" model="res.groups">
+            <field name="name">Product Views Access</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+            <field name="implied_ids" eval="[(6,0,[ref('stock.group_stock_user')])]"/>
+        </record>
+    </data>
+</odoo>
+
