@@ -172,7 +172,10 @@ class AddProductCurve(http.Controller):
                             continue   
                             
             if len(values) != 0:
-                pl_obj.create_multi(values)
+                pl_ids = pl_obj.create_multi(values)
+                for pl_id in pl_ids:
+                    line = pl_obj.browse(pl_id)
+                    line.onchange_product_id()
                 return True
             else:
                 return True
