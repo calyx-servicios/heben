@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 17:45+0000\n"
-"PO-Revision-Date: 2021-11-02 17:45+0000\n"
+"POT-Creation-Date: 2022-07-26 19:05+0000\n"
+"PO-Revision-Date: 2022-07-26 19:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,8 +29,7 @@ msgid ""
 " * Liquidation: It tells us that no replacements or purchases should be made. When its stock is finished, the product will be canceled and will not re-enter.\n"
 " * Low: The product will no longer be marketed in the company. Block the sale, purchase and distribution, the stock must be at 0.\n"
 msgstr ""
-"Estado de tratamiento comercial"
-" * Activo: La mayoría de los artículos tendrá este estado, indica que el producto se puede comprar, vender y distribuir libremente.\n"
+"Estado de tratamiento comercial * Activo: La mayoría de los artículos tendrá este estado, indica que el producto se puede comprar, vender y distribuir libremente.\n"
 " * In-Out: Indica que no se debe seguir comprando. Que se compra por única vez, pero no es continuo.\n"
 " * Liquidación: Nos indica que no deben realizarse reposiciones ni compras. Cuando se termine su stock el producto se dará de baja y no vuelve a entrar.\n"
 " * Baja: El producto no se comercializará más en la compañía. Bloquea la Venta, la compra y la distribución, El stock debe estar en 0.\n"
@@ -48,7 +47,7 @@ msgstr "In-Out"
 #. module: status_product
 #: model:ir.model,name:status_product.model_account_move_line
 msgid "Journal Item"
-msgstr "Apunte contable"
+msgstr "Asiento Contable"
 
 #. module: status_product
 #: model:ir.model.fields.selection,name:status_product.selection__product_product__state__liquidation
@@ -63,16 +62,35 @@ msgstr "Baja"
 #. module: status_product
 #: model:ir.model,name:status_product.model_product_product
 #: model:ir.model.fields,field_description:status_product.field_account_move_line__product_id
+#: model:ir.model.fields,field_description:status_product.field_purchase_order_line__product_id
+#: model:ir.model.fields,field_description:status_product.field_sale_order_line__product_id
 msgid "Product"
 msgstr "Producto"
 
 #. module: status_product
 #: model_terms:ir.ui.view,arch_db:status_product.account_move_form_view_in
-#: model_terms:ir.ui.view,arch_db:status_product.view_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:status_product.view_purchase_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:status_product.view_sale_order_form_inherit
 msgid "Product_id"
-msgstr "Product_id"
+msgstr "Producto"
+
+#. module: status_product
+#: model:ir.model,name:status_product.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de pedido de compra"
+
+#. module: status_product
+#: model:ir.model,name:status_product.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de Orden de Ventas"
 
 #. module: status_product
 #: model:ir.model.fields,field_description:status_product.field_product_product__state
 msgid "State"
 msgstr "Estado"
+
+#. module: status_product
+#: code:addons/status_product/models/product_status.py:0
+#, python-format
+msgid "The stock must be at 0"
+msgstr "El stock debe estar en 0"

@@ -3,6 +3,12 @@ from odoo import http, _
 from odoo.http import request
 from datetime import datetime
 
+MODELS_STATUS = {
+    'sale_order': ['draft','low'],
+    'purchase_order': ['draft','low','in_out','liquidation'],
+    'stock_move': ['draft','low'],
+    'stock_picking_batch': ['draft','low'],
+}
 
 class AddProductCurve(http.Controller):
     @http.route(
@@ -13,10 +19,23 @@ class AddProductCurve(http.Controller):
     def get_data_product_curve(self, **args):
         data = {'header':{},'rows':{}}
         product_id = args.get('id',  False)
+        model = args.get('model', False)
         if product_id:
             product = request.env['product.template'].sudo().search([('id', '=', product_id)])
             if product.attribute_line_ids:
-                return product._get_template_matrix()
+                matrix_template = product._get_template_matrix()
+                products = request.env['product.product'].sudo().search([('product_tmpl_id', '=', product.id)])
+                for values_prod in matrix_template.get('matrix'):
+                    for val in values_prod:
+                        ptav_ids = val.get('ptav_ids', False)
+                        if ptav_ids != False and model != False:
+                            status = MODELS_STATUS.get(model, 'sale_order')
+                            for product in products:
+                                product_attribute = product.product_template_attribute_value_ids.ids
+                                product_attribute.sort() 
+                                if (ptav_ids == product_attribute) and (product.state in status):
+                                    val['is_possible_combination'] = False
+                return matrix_template
             else:
                 return False
         else:
@@ -249,6 +268,49 @@ class AddProductCurve(http.Controller):
                             
             if len(values) != 0:
                 sm_obj.create_multi(values)
+                return True
+            else:
+                return True
+        else:
+            return False
+
+    @http.route(
+        ['/set_data_product_curve_stock_picking_batch'], 
+        type="json", 
+        auth="public",
+    )
+    def set_data_product_curve_stock_picking_batch(self, **args):
+        data = args.get('data',  False)
+        batch_id = args.get('batch_id',  False)
+        if data and batch_id:
+            spbp_obj = request.env['stock.picking.batch.product'].sudo()
+            batch_id = int(batch_id)
+            values = []
+            for product in data:
+                product_id = int(product['product_id'])
+                product_tmpl = request.env['product.product'].search([('product_tmpl_id','=',product_id)])
+                for line in product['lines']:
+                    for variants in product_tmpl:
+                        list_variant = line['variants'].split(',')
+                        list_variant = list(map(int,list_variant))
+                        variants_tmpl = variants.product_template_attribute_value_ids.ids
+                        variants_tmpl.sort()
+                        if list_variant == variants_tmpl:
+                            line_exist = spbp_obj.search([('batch_id','=',batch_id), ('product_id', '=', variants.id)])
+                            if line_exist:
+                                line_exist.qty = line_exist.qty + int(line['quantity'])
+                            else:
+                                dict_value = {
+                                    'batch_id': batch_id,
+                                    'product_id': variants.id,
+                                    'qty': int(line['quantity'])
+                                }
+                                values.append(dict_value)
+                        else:
+                            continue   
+                            
+            if len(values) != 0:
+                spbp_obj.create_multi(values)
                 return True
             else:
                 return True
