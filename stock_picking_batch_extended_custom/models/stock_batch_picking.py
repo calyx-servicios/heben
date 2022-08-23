@@ -16,7 +16,7 @@ class StockBatchPicking(models.Model):
     def compute_import(self):
         for line in self.product_imput_ids:
             qty_to_do = line.qty
-            pickings = self.env['stock.picking'].search([('state','=',"assigned"),('partner_id','=',self.partner_id)], order='date')
+            pickings = self.env['stock.picking'].search([('state','=',"assigned"),('partner_id','=',self.partner_id.id)], order='date')
             for picking in pickings:
                 move_line = picking.move_ids_without_package.filtered(lambda picking_line: picking_line.product_id.id == line.product_id.id)
                 if len(move_line) != 0 and qty_to_do != 0:
