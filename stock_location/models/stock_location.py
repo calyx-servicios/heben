@@ -13,7 +13,7 @@ class StockWarehouse(models.Model):
     to_zip = fields.Char(string="To Zip")
     zip_code = fields.Char(string="Zip")
     locations = fields.Many2one('stock.location')
-    secondary_location = fields.One2many('stock.location', 'locations')
+    secondary_location = fields.Many2many('stock.location','rel_secondary_location', 'locations', 'locations_ids')
     sequence = fields.Integer(default=10)
     
     @api.constrains('secondary_location')

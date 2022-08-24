@@ -16,10 +16,10 @@
                     </div>
             </xpath>
             <xpath expr="//field[@name='return_location']" position="after">
-                <field name="secondary_location" widget="one2many_list">
+                <field name="secondary_location" >
                     <tree string="locations" editable="bottom">
                         <field name="sequence" widget="handle"/>
-                        <field name="locations"/>
+                        <field name="name"/>
                     </tree>
                 </field>
             </xpath>
