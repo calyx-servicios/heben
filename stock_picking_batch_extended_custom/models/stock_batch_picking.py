@@ -15,6 +15,7 @@ class StockBatchPicking(models.Model):
 
     def compute_import(self):
         for line in self.product_imput_ids:
+            pickings_to_process = []
             qty_to_do = line.qty
             pickings = self.env['stock.picking'].search([('state','=',"assigned"),('partner_id','=',self.partner_id.id)], order='date')
             for picking in pickings:
@@ -23,17 +24,16 @@ class StockBatchPicking(models.Model):
                     if move_line.product_uom_qty >= qty_to_do:
                         move_line.quantity_done = qty_to_do
                         qty_to_do = 0
-                        values = {'pick_ids': picking}
-                        sit = self.env['stock.backorder.confirmation'].create(values)
-                        sit.process()
-                        self.picking_ids += picking
+                        pickings_to_process.append(picking)
                     else:
                         move_line.quantity_done = move_line.product_uom_qty
                         qty_to_do = qty_to_do - move_line.product_uom_qty
-                        values = {'pick_ids': picking}
-                        sit = self.env['stock.backorder.confirmation'].create(values)
-                        sit.process()
-                        self.picking_ids += picking
+                        pickings_to_process.append(picking)
+        for picking_to_process in pickings_to_process:
+            self.picking_ids += picking_to_process
+            values = {'pick_ids': picking_to_process}
+            sit = self.env['stock.backorder.confirmation'].create(values)
+            sit.process()
 
 class StockBatchPickingProduct(models.Model):
     _name = "stock.picking.batch.product"
