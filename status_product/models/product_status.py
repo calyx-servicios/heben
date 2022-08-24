@@ -27,10 +27,6 @@ class ProductStatus(models.Model):
     @api.onchange("state")
     def _onchange_state(self):
         for record in self:
-            if record.state in ["draft","low"]:
-                record.available_in_pos = False
-            else:
-                record.available_in_pos = True
             if record.state == "low" and record.qty_available:
                 raise ValidationError(_("The stock must be at 0"))
 

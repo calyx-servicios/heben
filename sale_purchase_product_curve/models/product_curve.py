@@ -41,3 +41,11 @@ class ProductCurveStockPicking(models.Model):
         'product_stock_picking_curve_rel',
     )
 
+class ProductCurveStockPickingBatch(models.Model):
+    _inherit = "stock.picking.batch"
+    
+    products_curve_ids = fields.Many2many(
+        'product.template',
+        'product_stock_picking_batch_curve_rel',
+    )
+
