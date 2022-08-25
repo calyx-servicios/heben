@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="missing_picking_wizard_view_form" model="ir.ui.view">
+        <field name="name">missing.picking.wizard.form</field>
+        <field name="model">missing.picking.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Missing Picking">
+                <p>The following products are out of stock, do you want to create an order?</p>
+                    <field name="product_imput_ids" options="{'no_open':True,'no_create':1,'no_create_edit':1}">
+                        <tree>
+                            <field name="product_id"/>
+                            <field name="qty"/>
+                            <field name="qty_left" string="Quantiy left to be done"/>
+                        </tree>
+                    </field>
+
+                <footer>
+                    <button string="Create" class="oe_highlight" type="object" name="creat_purchase_order"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+           </form>
+        </field>
+    </record>
+    
+</odoo>
