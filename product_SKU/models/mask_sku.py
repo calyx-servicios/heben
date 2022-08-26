@@ -33,7 +33,7 @@ class MaskSku(models.Model):
             variant_color_id = product.product_template_attribute_value_ids.filtered(lambda attribute: attribute.display_type == 'color')
             if len(variant_color_id) >= 1:
                 sku_fields['variant_color_id'] = variant_color_id[0].product_attribute_value_id.code
-            variant_talle_id = product.product_template_attribute_value_ids.filtered(lambda attribute: attribute.display_type == 'talle')
+            variant_talle_id = product.product_template_attribute_value_ids.filtered(lambda attribute: attribute.display_type == 'size')
             if len(variant_talle_id) >= 1:
                 sku_fields['variant_talle_id'] = variant_talle_id[0].product_attribute_value_id.code
             if len(product.variant_seller_ids) >= 1:
