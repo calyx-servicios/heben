@@ -9,12 +9,12 @@
     'website': 'http://odoo.calyx-cloud.com.ar/',
     'license': 'AGPL-3',
     'category': 'Stock',
-    'version': '13.0.1.0.0',
+    'version': '13.0.2.0.0',
     'application': False,
     'installable': True,
     'depends': [
         'point_of_sale',
-        'meli_oerp'
+        'website_sale'
     ],
     'data': [
         'security/product_views_access_security.xml',
