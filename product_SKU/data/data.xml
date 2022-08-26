@@ -16,7 +16,7 @@
         </record>
         <record id="rule_sku_4" model="sku.rule.line">
             <field name="name">Partner</field>
-            <field name="field_require_rule">internal_code</field>
+            <field name="field_require_rule">partner_code</field>
         </record>
         <record id="rule_sku_5" model="sku.rule.line">
             <field name="name">Talle</field>
