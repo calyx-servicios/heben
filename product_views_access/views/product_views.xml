@@ -16,6 +16,26 @@
         	</xpath>
         </field>
     </record>
+    <record id="product_template_form_view_account_inherit" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="account.product_template_form_view"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//page[@name='invoicing']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        </field>
+    </record>
+    <record id="view_template_property_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.stock.property.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.view_template_property_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//page[@name='invoicing']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        </field>
+    </record>
     <record id="product_template_only_form_view_inherit" model="ir.ui.view">
         <field name="name">product.template.product.form.inherit</field>
         <field name="model">product.template</field>
@@ -28,6 +48,25 @@
                 <attribute name="groups">product_views_access.group_product_views_access</attribute>
         	</xpath>
         	<xpath expr="//field[@name='standard_price']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        </field>
+    </record>
+    <record id="view_template_property_form_stock_inherit" model="ir.ui.view">
+        <field name="name">product.template.stock.property.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock_account.view_template_property_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//label[@for='standard_price']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        	<xpath expr="//div[@name='standard_price_uom']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        	<xpath expr="//field[@name='standard_price']" position="attributes">        	
+                <attribute name="groups">product_views_access.group_product_views_access</attribute>
+        	</xpath>
+        	<xpath expr="//span[@name='update_cost_price']" position="attributes">        	
                 <attribute name="groups">product_views_access.group_product_views_access</attribute>
         	</xpath>
         </field>
@@ -54,14 +93,5 @@
                 <attribute name="groups">product_views_access.group_product_views_access</attribute>
         	</xpath>
         </field>
-    </record>
-    <record id="meli_oerp.product_template_form_view_meli_buttons" model="ir.ui.view">
-  		<field name="groups_id" eval="[(4, (ref('product_views_access.group_product_views_access')))]"/>
-    </record>
-    <record id="meli_oerp.product_tpl_ml_form_view" model="ir.ui.view">
-        <field name="groups_id" eval="[(4, (ref('product_views_access.group_product_views_access')))]"/>
-    </record>
-    <record id="meli_oerp.product_normal_ml_form_view" model="ir.ui.view">
-  		<field name="groups_id" eval="[(4, (ref('product_views_access.group_product_views_access')))]"/>
     </record>
 </odoo>
