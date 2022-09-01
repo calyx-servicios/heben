@@ -1,4 +1,4 @@
-﻿/* 
+﻿/*
 Nombre Funcion: product_rotation
 Parametros:
 	- p_date_from: Fecha rango inferior
@@ -11,8 +11,8 @@ Test
 
 select *
    from product_rotation_report() as (id integer, partner_id integer, company_id integer, company varchar, default_code varchar, product_id integer, product varchar,
-			 product_variant varchar, product_template_id integer, categ_id integer, categ varchar, brand_id integer, brand varchar, product_season_id integer, 
-			 product_season varchar, product_family_id integer,product_family varchar, product_material_id integer, product_material varchar, 
+			 product_variant varchar, product_template_id integer, categ_id integer, categ varchar, brand_id integer, brand varchar, product_season_id integer,
+			 product_season varchar, product_family_id integer,product_family varchar, product_material_id integer, product_material varchar,
 			 location_id integer, location_name varchar, date_order date, available decimal(12,2), sold decimal(12,2))
 */
 

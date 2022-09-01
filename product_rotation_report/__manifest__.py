@@ -11,11 +11,13 @@
     "category": "Product",
     "version": "13.0.0.0.1",
     "development_status": "Production/Stable",
-    "application": False,
-    "installable": True,
-    "depends": ['base','product', 'sale_stock','account', 'stock'],
+    "depends": ['base', 'product', 'sale_stock', 'account', 'stock'],
     "data": [
         "security/ir.model.access.csv",
         "report/product_rotation_report_views.xml",
     ],
+    "pre_init_hook": "pre_init_hook",
+    "application": False,
+    "installable": True,
+
 }

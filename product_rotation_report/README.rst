@@ -29,9 +29,7 @@ This module installs a wizard to launch product report rotation
 Install
 =======
 
-1 - Apply "product_rotation.sql" on DataBase.
-
-2 - Install "Product Rotation Report" from Apps.
+1 - Install "Product Rotation Report" from Apps.
 
 Usage
 =====
