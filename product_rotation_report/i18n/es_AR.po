@@ -1,0 +1,191 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_rotation_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-29 19:13+0000\n"
+"PO-Revision-Date: 2022-08-29 16:14-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__brand_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Brand"
+msgstr "Marca"
+
+#. module: product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.product_rotation_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__categ_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Category"
+msgstr "Categoría"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__company_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Company"
+msgstr "Compañía"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__date_order
+msgid "Date"
+msgstr "Fecha"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__date_from
+msgid "Desde"
+msgstr ""
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__display_name
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.product_rotation_report_wizard
+msgid "Execute"
+msgstr "Ejecutar"
+
+#. module: product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__date_to
+msgid "Hasta"
+msgstr ""
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__id
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report____last_update
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__partner_id
+msgid "Partner Company"
+msgstr "Partner de la compañía"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_id
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__product_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Product"
+msgstr "Producto"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_family_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Product Family"
+msgstr "Familia de Producto"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_material_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Product Material"
+msgstr "Material del Producto"
+
+#. module: product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_tree
+msgid "Product Rotation"
+msgstr "Rotación de Productos"
+
+#. module: product_rotation_report
+#: model:ir.model,name:product_rotation_report.model_product_rotation_report
+msgid "Product Rotation Data for Report"
+msgstr "Datos del reporte de rotacion de productos"
+
+#. module: product_rotation_report
+#: model:ir.ui.menu,name:product_rotation_report.menu_product_rotation_report
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_pivot
+msgid "Product Rotation Report"
+msgstr "Reporte de Rotación de Productos"
+
+#. module: product_rotation_report
+#: model:ir.model,name:product_rotation_report.model_product_rotation_report_wizard
+msgid "Product Rotation Wizard for Report"
+msgstr "Wizard para Reporte de Rotacion de Productos"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_template_id
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_variant
+msgid "Product Variant"
+msgstr "Variante de Producto"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_season_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Season"
+msgstr "Temporada"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__sold
+msgid "Sold"
+msgstr "Vendido"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__location_id
+msgid "Stock Location"
+msgstr "Ubicacion de Stock"
+
+#. module: product_rotation_report
+#: model:ir.actions.act_window,name:product_rotation_report.action_product_rotation_report_wzd
+msgid "action_product_rotation_report_wzd"
+msgstr ""
