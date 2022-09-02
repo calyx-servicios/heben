@@ -12,9 +12,10 @@ class MaskSku(models.Model):
 
     @api.onchange("sku_rules_ids")
     def onchange_code_list(self):
+        rules = sorted(self.sku_rules_ids, key=lambda rule_obj: rule_obj.sequence)
         sku_name = []
         product = self.env['product.product'].search([('use_sku','=',True)],limit=1)
-        for rule in self.sku_rules_ids:
+        for rule in rules:
             if rule.rule_id.name and rule.rule_id.field_require_rule != 'separator':
                 sku_name.append(rule.rule_id.field_require_rule)
             else:
