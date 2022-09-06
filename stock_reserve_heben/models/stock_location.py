@@ -14,8 +14,3 @@ class StockWarehouse(models.Model):
     locations = fields.Many2one('stock.location')
     secondary_location = fields.One2many('stock.location', 'locations')
     sequence = fields.Integer(default=10)
-    
-    @api.constrains('secondary_location')
-    def _secondary_location(self):
-        if len(self.secondary_location) > 2:
-            raise ValidationError(_('You can only add two locations'))
