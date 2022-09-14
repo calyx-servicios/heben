@@ -6,7 +6,7 @@
          <field name="model">product.rotation.report</field>
          <field name="arch" type="xml">
              <pivot string="Product Rotation Report" disable_linking="False">
-                 <field name="product_template_id" type="row"/>
+                 <field name="product_and_color" type="row"/>
                  <field name="location_id" type="col"/>
                  <field name="available" type="measure"/>
                  <field name="sold" type="measure"/>
@@ -20,8 +20,10 @@
          <field name="arch" type="xml">
              <search string="Product Rotation">
                 <field name="company_id"/>
+                <field name="product_and_color"/>
                 <field name="product_id"/>
-                <field name="product_variant"/>
+                <field name="product_color"/>
+                <field name="product_size"/>
                 <field name="product_template_id"/>
                 <field name="categ_id"/>
                 <field name="brand_id"/>
@@ -31,8 +33,11 @@
                 <field name="location_id"/>
                 <field name="date_order"/>
                 <group expand="0" string="Group By...">
-                    <filter name="by_product_template_id" string="Product Template" context="{'group_by': 'product_template_id'}"/>
+                    <filter name="by_product_and_color" string="Producto + Color" context="{'group_by': 'product_and_color'}"/>
+                    <filter name="by_product_color" string="Color" context="{'group_by': 'product_color'}"/>
+                    <filter name="by_product_size" string="Size" context="{'group_by': 'product_size'}"/>
                     <filter name="by_product_id" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="by_product_template_id" string="Product Template" context="{'group_by': 'product_template_id'}"/>
                     <filter name="by_categ_id" string="Category" context="{'group_by': 'categ_id'}"/>
 		            <filter name="by_brand_id" string="Brand" context="{'group_by': 'brand_id'}"/>
                     <filter name="by_company" string="Company" context="{'group_by': 'company_id'}"/>
@@ -51,8 +56,9 @@
          <field name="arch" type="xml">
              <tree string="Product Rotation" create="false">
                 <field name="company_id"/>
-                <field name="product_id"/>
-                <field name="product_variant"/>
+                <field name="product_and_color"/>
+                <field name="product_color"/>
+                <field name="product_size"/>
                 <field name="product_template_id"/>
                 <field name="categ_id"/>
                 <field name="brand_id"/>
