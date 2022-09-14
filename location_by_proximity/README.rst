@@ -1,6 +1,6 @@
-==============
-Stock Location
-==============
+=====================
+Location By Proximity
+=====================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !! this module adds fields in nearby stock reservation !!
@@ -25,7 +25,7 @@ Install
 =======
 
 * Go to applications
-* Find module "stock_location"
+* Find module "location_by_proximity"
 * Press Install
 * Go to locations > and see the modifications
 
