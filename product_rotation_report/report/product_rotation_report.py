@@ -10,24 +10,17 @@ class ProductRotationReport(models.Model):
 
     partner_id = fields.Many2one('res.partner', string="Partner Company")
     company_id = fields.Many2one('res.company', string="Company")
-    #company    varchar
-    #default_code    varchar
     product_id = fields.Many2one('product.product', string="Product")
-    #product    varchar
-    product_variant = fields.Char(string="Product Variant")
+    product_and_color = fields.Char(string="Product + Color")
+    product_color = fields.Char(string="Color")
+    product_size = fields.Char(string="Size")
     product_template_id = fields.Many2one('product.template', string="Product Template")
     categ_id = fields.Many2one('product.category', string="Category")
-    #categ    varchar
     brand_id = fields.Many2one('product.brand', string="Brand")
-    #brand    varchar
     product_season_id = fields.Many2one('product.seasons', string="Season")
-    #product_season    varchar
     product_family_id = fields.Many2one('product.family', string="Product Family")
-    #product_family    varchar
     product_material_id = fields.Many2one('product.material', string="Product Material")
-    #product_material    varchar
     location_id = fields.Many2one('stock.location', string="Stock Location")
-    #location_name     varchar
     date_order = fields.Date(string="Date")
     available = fields.Float(string="Available")
     sold = fields.Float(string="Sold")
@@ -42,7 +35,9 @@ class ProductRotationReport(models.Model):
                          , partner_id
                          , company_id
                          , product_id
-                         , product_variant
+                         , product_and_color
+                         , product_color
+                         , product_size
                          , product_template_id
                          , categ_id
                          , brand_id
@@ -54,8 +49,8 @@ class ProductRotationReport(models.Model):
                          , date_order
                          , available
                          , sold
-                      from product_rotation_report(%s,%s) as (id integer, partner_id integer, company_id integer, company varchar, default_code varchar, product_id integer, product varchar,
-			 product_variant varchar, product_template_id integer, categ_id integer, categ varchar, brand_id integer, brand varchar, product_season_id integer, 
+                      from product_rotation_report() as (id integer, partner_id integer, company_id integer, company varchar, default_code varchar, product_id integer, product_and_color varchar,
+			 product_color varchar, product_size varchar, product_template_id integer, categ_id integer, categ varchar, brand_id integer, brand varchar, product_season_id integer, 
 			 product_season varchar, product_family_id integer,product_family varchar, product_material_id integer, product_material varchar, 
 			 location_id integer, location_name varchar, date_order date, available decimal(12,2), sold decimal(12,2)))""",(vdate_from, vdate_to))
 

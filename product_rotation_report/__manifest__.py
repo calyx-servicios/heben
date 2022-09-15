@@ -17,6 +17,7 @@
         "report/product_rotation_report_views.xml",
     ],
     "pre_init_hook": "pre_init_hook",
+    "uninstall_hook": "uninstall_hook",
     "application": False,
     "installable": True,
 

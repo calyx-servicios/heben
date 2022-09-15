@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20220126\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-29 19:13+0000\n"
-"PO-Revision-Date: 2022-08-29 16:14-0300\n"
+"POT-Creation-Date: 2022-09-14 19:23+0000\n"
+"PO-Revision-Date: 2022-09-14 16:25-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -40,6 +40,12 @@ msgid "Category"
 msgstr "Categoría"
 
 #. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_color
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Color"
+msgstr "Color"
+
+#. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__company_id
 #: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
 msgid "Company"
@@ -63,7 +69,7 @@ msgstr "Fecha"
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__date_from
 msgid "Desde"
-msgstr ""
+msgstr "Desde"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__display_name
@@ -84,7 +90,7 @@ msgstr "Agrupar Por..."
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__date_to
 msgid "Hasta"
-msgstr ""
+msgstr "Hasta"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__id
@@ -120,10 +126,14 @@ msgstr "Partner de la compañía"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_id
-#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report_wizard__product_id
 #: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
 msgid "Product"
 msgstr "Producto"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_and_color
+msgid "Product + Color"
+msgstr "Producto + Color"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_family_id
@@ -161,19 +171,26 @@ msgstr "Wizard para Reporte de Rotacion de Productos"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_template_id
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
 msgid "Product Template"
 msgstr "Plantilla de Producto"
 
 #. module: product_rotation_report
-#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_variant
-msgid "Product Variant"
-msgstr "Variante de Producto"
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Producto + Color"
+msgstr "Producto + Color"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_season_id
 #: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
 msgid "Season"
 msgstr "Temporada"
+
+#. module: product_rotation_report
+#: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__product_size
+#: model_terms:ir.ui.view,arch_db:product_rotation_report.view_product_rotation_report_filter
+msgid "Size"
+msgstr "Talle"
 
 #. module: product_rotation_report
 #: model:ir.model.fields,field_description:product_rotation_report.field_product_rotation_report__sold
