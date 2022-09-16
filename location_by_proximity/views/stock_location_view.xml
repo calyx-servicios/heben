@@ -16,7 +16,7 @@
                     </div>
             </xpath>
             <xpath expr="//field[@name='return_location']" position="after">
-                <field name="secondary_wherehouse_ids" >
+                <field name="secondary_location_ids" >
                     <tree string="locations" editable="bottom">
                         <field name="sequence" widget="handle"/>
                         <field name="name"/>
