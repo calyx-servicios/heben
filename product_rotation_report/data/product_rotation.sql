@@ -277,7 +277,8 @@ select t.id
      , t.location_id
      , t.location_name
      , t.date_order
-     , sum(t.available)::decimal(12,2) as "available"
+     --al disponible le restamos lo vendido (o que salio)
+     , (sum(t.available) - sum(t.sold))::decimal(12,2) as "available"
      , sum(t.sold)::decimal(12,2) as "sold"
  from tmp_result t
  inner join stock_location l
