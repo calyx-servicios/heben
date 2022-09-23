@@ -28,5 +28,3 @@ class SaleOrderLine(models.Model):
     _order = "id desc"
 
     location_id = fields.Many2one('stock.location')
-
-

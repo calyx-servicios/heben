@@ -14,10 +14,10 @@ class StockBatchPicking(models.Model):
     import_completed = fields.Boolean()
 
     def compute_import(self):
+        move_lines = []
+        quantity_done = []
+        pickings_to_process = []
         for line in self.product_imput_ids:
-            pickings_to_process = []
-            move_lines = []
-            quantity_done = []
             qty_to_do = line.qty
             line.qty_left = line.qty
             pickings = self.env['stock.picking'].search([('state','=',"assigned"),('partner_id','=',self.partner_id.id)], order='date')
@@ -54,7 +54,7 @@ class StockBatchPicking(models.Model):
         else:
             for picking_line, qty_done in zip(move_lines,quantity_done):
                 picking_line.quantity_done = qty_done
-
+        pickings_to_process = list(dict.fromkeys(pickings_to_process))
         for picking_to_process in pickings_to_process:
             self.picking_ids += picking_to_process
             values = {'pick_ids': picking_to_process}
