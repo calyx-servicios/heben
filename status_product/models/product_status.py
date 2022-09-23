@@ -4,12 +4,6 @@ from odoo.exceptions import ValidationError
 
 class ProductStatus(models.Model):
     _inherit = 'product.product'
-
-    @api.model
-    def create(self, vals_list):
-        #Attempt to set a default image in the product.
-        #recs.config_logo = recs._get_image()
-        return super(ProductStatus, self).create(vals_list) 
     
     state = fields.Selection([
             ('active','Active'),
@@ -27,10 +21,6 @@ class ProductStatus(models.Model):
     @api.onchange("state")
     def _onchange_state(self):
         for record in self:
-            if record.state in ["draft","low"]:
-                record.available_in_pos = False
-            else:
-                record.available_in_pos = True
             if record.state == "low" and record.qty_available:
                 raise ValidationError(_("The stock must be at 0"))
 
