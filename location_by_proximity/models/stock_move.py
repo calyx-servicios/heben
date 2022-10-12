@@ -5,7 +5,7 @@ class StockMove(models.Model):
 
     def create(self, vals_list):
         so = False
-        if type(vals_line) != type({}):
+        if type(vals_list) != type({}):
             if vals_list[0].get('origin',False):
                 so = self.env['sale.order'].search([('name','=',vals_list[0]['origin'])])
                 if so:
