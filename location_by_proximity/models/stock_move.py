@@ -5,7 +5,7 @@ class StockMove(models.Model):
 
     def create(self, vals_list):
         so = False
-        if type(vals_line) != type({}):
+        if type(vals_list) != type({}):
             if vals_list[0].get('origin',False):
                 so = self.env['sale.order'].search([('name','=',vals_list[0]['origin'])])
                 if so:
@@ -14,7 +14,7 @@ class StockMove(models.Model):
                         for vals_line,so_line in zip(vals_list,so_lines):
                             vals_line['location_id'] = so_line.location_id.id    
         else:
-            if vals_line.get('origin',False):
+            if vals_list.get('origin',False):
                 so = self.env['sale.order'].search([('name','=',vals_list['origin'])])
                 if so:
                     so_lines = so.order_line
