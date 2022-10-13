@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_product_rotation_report_pivot" model="ir.ui.view">
+         <field name="name">view_product_rotation_report_pivot</field>
+         <field name="model">product.rotation.report</field>
+         <field name="arch" type="xml">
+             <pivot string="Product Rotation Report" disable_linking="False">
+                 <field name="product_and_color" type="row"/>
+                 <field name="location_id" type="col"/>
+                 <field name="available" type="measure"/>
+                 <field name="sold" type="measure"/>
+             </pivot>
+         </field>
+    </record>
+
+    <record id="view_product_rotation_report_filter" model="ir.ui.view">
+         <field name="name">view_product_rotation_report_filter</field>
+         <field name="model">product.rotation.report</field>
+         <field name="arch" type="xml">
+             <search string="Product Rotation">
+                <field name="company_id"/>
+                <field name="product_and_color"/>
+                <field name="product_id"/>
+                <field name="product_color"/>
+                <field name="product_size"/>
+                <field name="product_template_id"/>
+                <field name="categ_id"/>
+                <field name="brand_id"/>
+                <field name="product_season_id"/>
+                <field name="product_family_id"/>
+                <field name="product_material_id"/>
+                <field name="location_id"/>
+                <field name="date_order"/>
+                <group expand="0" string="Group By...">
+                    <filter name="by_product_and_color" string="Producto + Color" context="{'group_by': 'product_and_color'}"/>
+                    <filter name="by_product_color" string="Color" context="{'group_by': 'product_color'}"/>
+                    <filter name="by_product_size" string="Size" context="{'group_by': 'product_size'}"/>
+                    <filter name="by_product_id" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="by_product_template_id" string="Product Template" context="{'group_by': 'product_template_id'}"/>
+                    <filter name="by_categ_id" string="Category" context="{'group_by': 'categ_id'}"/>
+		            <filter name="by_brand_id" string="Brand" context="{'group_by': 'brand_id'}"/>
+                    <filter name="by_company" string="Company" context="{'group_by': 'company_id'}"/>
+                    <filter name="by_product_season_id" string="Season" context="{'group_by': 'product_season_id'}"/>
+                    <filter name="by_family_id" string="Product Family" context="{'group_by': 'product_family_id'}"/>
+                    <filter name="by_product_material_id" string="Product Material" context="{'group_by': 'product_material_id'}"/>
+                    <filter name="by_location_id" string="Location" context="{'group_by': 'location_id'}"/>
+               </group>
+            </search>
+         </field>
+    </record>
+
+    <record id="view_product_rotation_report_tree" model="ir.ui.view">
+         <field name="name">view_product_rotation_report_tree</field>
+         <field name="model">product.rotation.report</field>
+         <field name="arch" type="xml">
+             <tree string="Product Rotation" create="false">
+                <field name="company_id"/>
+                <field name="product_and_color"/>
+                <field name="product_color"/>
+                <field name="product_size"/>
+                <field name="product_template_id"/>
+                <field name="categ_id"/>
+                <field name="brand_id"/>
+                <field name="product_season_id"/>
+                <field name="product_family_id"/>
+                <field name="product_material_id"/>
+                <field name="location_id"/>
+                <field name="date_order"/>
+                <field name="available"/>
+                <field name="sold"/>
+            </tree>
+         </field>
+    </record>
+
+    <record id="product_rotation_report_wizard" model="ir.ui.view">
+        <field name="name">product_rotation_report_wizard</field>
+        <field name="model">product.rotation.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </group>
+                <footer>
+                    <button
+                        name='action_confirm'
+                        type='object'
+                        string='Execute'
+                        class='oe_highlight'
+                    />
+                    <button special='cancel' string='Cancel'/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_rotation_report_wzd" model="ir.actions.act_window">
+        <field name="name">action_product_rotation_report_wzd</field>
+        <field name="res_model">product.rotation.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name='target'>new</field>
+    </record>
+
+    <menuitem id="menu_product_rotation_report"
+    name="Product Rotation Report"
+    action="action_product_rotation_report_wzd"
+    parent="sale.menu_sale_report"
+    sequence="10"/>
+</odoo>
