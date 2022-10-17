@@ -2,25 +2,26 @@
 <odoo>
 
     <record id="view_product_sku_form" model="ir.ui.view">
-        <field name="name">product.sku.form</field>
-        <field name="model">product.sku</field>
+        <field name="name">mask.sku.form</field>
+        <field name="model">mask.sku</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" />
                         <h1>
-                            <field name="name" />
+                            <field name="name"/>
                         </h1>
                     </div>
                     <group>
-                        <field name="sku" />
+                        <field name="sku_example"/>
+                        <field name="code_list" force_save="1" invisible="1"/>
                     </group>
                     <group>
-                        <field name="code_list" nolabel="1">
+                        <field name="sku_rules_ids" nolabel="1">
                             <tree editable="bottom">
                                <field name="sequence" widget="handle"/>
-                               <field name="rule" string="name"/>
+                               <field name="rule_id" string="name"/>
                            </tree>
                         </field>
                     </group>
@@ -29,53 +30,24 @@
         </field>
     </record>
 
-
     <record id="view_product_sku_tree" model="ir.ui.view">
-        <field name="name">product.sku.tree</field>
-        <field name="model">product.sku</field>
+        <field name="name">mask.sku.tree</field>
+        <field name="model">mask.sku</field>
         <field name="arch" type="xml">
-            <tree string="product.sku">
-                <field name="name" />
-                <field name="sku" />
+            <tree string="Sku Mask">
+                <field name="name"/>
+                <field name="sku_example"/>
             </tree>
-        </field>
-    </record>
-
-    <record id="view_product_variant_form_sku_vv" model="ir.ui.view">
-        <field name="name">product variant form view: add sku_vv</field>
-        <field name="model">product.product</field>
-        <field name="inherit_id" ref="product.product_normal_form_view" />
-        <field name="arch" type="xml">
-            <field name="default_code" position="before">
-                <field name="product_sku_id" string="SKU" attrs="{'invisible': [('use_sku', '=', False)]}"/>
-                <field name="use_sku" />
-            </field>
         </field>
     </record>
 
     <record id="action_product_sku" model="ir.actions.act_window">
         <field name="name">SKU</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">product.sku</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-    <record id="action_code_list" model="ir.actions.act_window">
-        <field name="name">Code List</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">code.list</field>
+        <field name="res_model">mask.sku</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="view_code_list_tree" model="ir.ui.view">
-        <field name="name">code.list.tree</field>
-        <field name="model">code.list</field>
-        <field name="arch" type="xml">
-            <tree editable="bottom" string="code list">
-                <field name="rule" />
-                <field name="sequence" />
-            </tree>
-        </field>
-    </record>
     <menuitem
     name="SKU"
     id="menu_product_sku_inventory"
