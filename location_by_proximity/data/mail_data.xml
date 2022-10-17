@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="email_template_edi_sale" model="mail.template">
+        <field name="name">Sales Order: Stock Locations</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+        <field name="partner_to">${object.partner_id.id}</field>
+        <field name="subject">${object.company_id.name} ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} (Ref ${object.name or 'n/a' })</field>
+        <field name="body_html"><![CDATA[
+            <p><strong>${object.partner_id.name}</strong></p>
+
+            <p>Reservar <strong></strong></p>
+            <p>para entregar el dia:  <strong>${object.effective_date}</strong></p>
+            <p>para la orden:  <strong>${object.display_name}</strong></p>
+            ]]>
+        </field>
+    </record>
+</odoo>
