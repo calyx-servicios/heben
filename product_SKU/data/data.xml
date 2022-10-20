@@ -30,7 +30,7 @@
             <field name="name">Modelo</field>
             <field name="field_require_rule">internal_code</field>
         </record>
-        <record id="rule_sku_7" model="sku.rule.line">
+        <record id="rule_sku_8" model="sku.rule.line">
             <field name="name">Separator</field>
             <field name="field_require_rule">separator</field>
         </record>
