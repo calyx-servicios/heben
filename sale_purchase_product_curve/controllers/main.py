@@ -176,6 +176,8 @@ class AddProductCurve(http.Controller):
                 for pl_id in pl_ids:
                     line = pl_obj.browse(pl_id)
                     line.onchange_product_id()
+                    qty = [obj.get("product_qty") for obj in values if obj.get('product_id') == line.product_id.id]
+                    line.product_qty = qty[0]
                 return True
             else:
                 return True
