@@ -14,6 +14,7 @@
     "application": False,
     "depends": ["stock_picking_batch_extended"],
     "data": [
+        "wizard/missing_picking_wizard_view.xml",
         "security/ir.model.access.csv",
         "views/stock_batch_picking.xml",
     ],
