@@ -2,10 +2,9 @@
 Stock batch picking Custom
 ==========================
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! This add modifications to the module stock  !!
-   !! picking batch extended                      !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! This add modifications to the module stock picking batch extended !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .. User https://shields.io for badge creation.
 .. |badge1| image:: https://img.shields.io/badge/maturity-Stable-brightgreen
@@ -25,9 +24,8 @@ Install
 =======
 
 * Go to applications
-
-* Find module "stock_picking_batch_extended_custom" > Press Install
-
+* Find module "stock_picking_batch_extended_custom"
+* Press Install
 * Go to sale > Inventory > and see the modifications
 
 
@@ -55,10 +53,7 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Andres Andrade
-  
   * Paradiso Cristian
-  
-  * Perez Gabriela
 
 Maintainers
 ~~~~~~~~~~~
