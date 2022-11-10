@@ -9,6 +9,9 @@ class SaleOrder(models.Model):
         master_location = self.env['stock.location'].search([('from_zip','<=',client_zip),('to_zip','>=',client_zip)])
         locations = master_location + master_location.secondary_location_ids
         order_lines = self.order_line
+        for order_line in self.order_line:
+            if order_line.product_id.type == 'service':
+                order_lines -= order_line
         order_lines.write({
                 'location_id':False
             })
