@@ -186,3 +186,7 @@
 	path = submodules/calyx-servicios/multi-store
 	url = https://github.com/calyx-servicios/multi-store.git
 	branch = 13.0_test
+[submodule "submodule/OCA/stock-logistics-barcode"]
+	path = submodule/OCA/stock-logistics-barcode
+	url = https://github.com/OCA/stock-logistics-barcode.git
+	branch = 13.0
