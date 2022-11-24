@@ -51,7 +51,7 @@ class AddProductCurve(http.Controller):
         order_id = args.get('order_id',  False)
         if data and order_id:
             sl_obj = request.env['sale.order.line'].sudo()
-            order_id = int(order_id)
+            order_id = int(str(order_id).replace('.','').replace(',',''))
             values = []
             for product in data:
                 product_id = int(product['product_id'])
@@ -94,7 +94,7 @@ class AddProductCurve(http.Controller):
         order_id = args.get('order_id',  False)
         if data and order_id:
             stl_obj = request.env['sale.order.template.line'].sudo()
-            order_id = int(order_id)
+            order_id = int(str(order_id).replace('.','').replace(',',''))
             values = []
             for product in data:
                 product_id = int(product['product_id'])
@@ -140,7 +140,7 @@ class AddProductCurve(http.Controller):
         order_id = args.get('order_id',  False)
         if data and order_id:
             pl_obj = request.env['purchase.order.line'].sudo()
-            order_id = int(order_id)
+            order_id = int(str(order_id).replace('.','').replace(',',''))
             values = []
             for product in data:
                 product_id = int(product['product_id'])
@@ -194,7 +194,7 @@ class AddProductCurve(http.Controller):
         order_id = args.get('order_id',  False)
         if data and order_id:
             prl_obj = request.env['purchase.requisition.line'].sudo()
-            order_id = int(order_id)
+            order_id = int(str(order_id).replace('.','').replace(',',''))
             values = []
             for product in data:
                 product_id = int(product['product_id'])
@@ -239,7 +239,7 @@ class AddProductCurve(http.Controller):
         picking_id = args.get('order_id',  False)
         if data and picking_id:
             sm_obj = request.env['stock.move'].sudo()
-            picking_id = int(picking_id)
+            picking_id = int(str(picking_id).replace('.','').replace(',',''))
             picking = request.env['stock.picking'].sudo().search([('id', '=',picking_id)])
             values = []
             for product in data:
@@ -289,7 +289,7 @@ class AddProductCurve(http.Controller):
         batch_id = args.get('batch_id',  False)
         if data and batch_id:
             spbp_obj = request.env['stock.picking.batch.product'].sudo()
-            batch_id = int(batch_id)
+            batch_id = int(str(batch_id).replace('.','').replace(',',''))
             values = []
             for product in data:
                 product_id = int(product['product_id'])
