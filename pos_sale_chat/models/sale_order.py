@@ -16,7 +16,7 @@ class SaleOrder(models.Model):
                             'domain': [('location_id', '=',picking.location_id.id)]
                         })
                         url = "/web?#action=%s&model=%s&view_type=list" % (action_id, picking._name)
-                        span = "<a href='%s' target='_blank'>Committed products</a>" % url
+                        span = _("<a href='%s' target='_blank'>Committed products</a>") % url
                         rec.send_notice(partner_id, span)
         return rec
 
