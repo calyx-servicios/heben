@@ -158,6 +158,10 @@
 	path = submodules/OCA/stock-logistics-warehouse
 	url = https://github.com/OCA/stock-logistics-warehouse.git
 	branch = 13.0
+[submodule "submodules/OCA/stock-logistics-barcode"]
+	path = submodules/OCA/stock-logistics-barcode
+	url = https://github.com/OCA/stock-logistics-barcode.git
+	branch = 13.0
 [submodule "submodules/OCA/multi-company"]
 	path = submodules/OCA/multi-company
 	url = https://github.com/OCA/multi-company.git
