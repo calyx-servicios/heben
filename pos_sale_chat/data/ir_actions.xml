@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+	<record id="action_pos_reserve_products" model="ir.actions.act_window">
+	    <field name="name">Stock reserve notification</field>
+	    <field name="res_model">stock.picking</field>
+	    <field name="view_ids"
+               eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'tree', 'view_id': ref('stock.vpicktree')}),
+                      (0, 0, {'view_mode': 'form', 'view_id': ref('stock.view_picking_form')})]"/>
+	</record>
+</odoo>

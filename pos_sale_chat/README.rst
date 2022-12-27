@@ -1,9 +1,10 @@
-==============
-Stock Location
-==============
+=============
+POS sale chat
+=============
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! this module adds fields in nearby stock reservation !!
+   !! This module adds the stock reservation              !!
+   !! notice to the pos                                   !!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -20,14 +21,14 @@ Stock Location
 
 |badge1| |badge2| |badge3|
 
+This module adds the stock reservation notice to the pos.
 
 Install
 =======
 
-* Go to applications
-* Find module "stock_location"
-* Press Install
-* Go to locations > and see the modifications
+* Go to applications > Find module "pos_sale_chat" > Press Install
+
+* Go to Sale > and see the modifications
 
 
 Known issues / Roadmap
@@ -53,7 +54,7 @@ Contributors
 
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
-  * Andres Andrade
+  * Perez Gabriela
 
 Maintainers
 ~~~~~~~~~~~
@@ -61,10 +62,10 @@ Maintainers
 This module is maintained by the Calyx Servicios S.A.
 
 .. image:: https://ss-static-01.esmsv.com/id/13290/galeriaimagenes/obtenerimagen/?width=120&height=40&id=sitio_logo&ultimaModificacion=2020-05-25+21%3A45%3A05
-   :alt: Odoo Calyx Servicios S.A.
-   :target: http://www.calyxservicios.com.ar/
+   :alt: Calyx Servicios S.A.
+   :target: https://odoo.calyx-cloud.com.ar/
 
-CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
-The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
+CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization.
+The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 300 professionals.
 
 This module is part of the `Heben <https://github.com/calyx-servicios/heben>`_ project on Github.
