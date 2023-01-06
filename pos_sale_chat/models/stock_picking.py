@@ -6,12 +6,13 @@ class StockPicking(models.Model):
     def action_assign(self):
         rec = super(StockPicking, self).action_assign()
         if self.state == "assigned":
-            partner_id = self.location_id.contact
-            user_id = self.sale_id.user_id
-            msg = _("Stock reservation successful!")
-            subj = _("Stock reserve notification")
-            self.message_post(body=msg)
-            self.sale_id.send_chat(user_id, partner_id, msg, subj)
+            if self.sale_id:
+                partner_id = self.location_id.contact
+                user_id = self.sale_id.user_id
+                msg = _("Stock reservation successful!")
+                subj = _("Stock reserve notification")
+                self.message_post(body=msg)
+                self.sale_id.send_chat(user_id, partner_id, msg, subj)
         else:
             self.message_post(body=_("Stock not available!"))
         return rec
@@ -28,7 +29,7 @@ class StockPicking(models.Model):
         return msg
 
     def verify_stock_reserve(self):
-        pickings = self.env["stock.picking"].search([("state","=","confirmed"),("company_id","=",self.env.company.id)])
+        pickings = self.env["stock.picking"].search([("state","=","confirmed"),("company_id","=",self.env.company.id),("sale_id","!=", False)])
         for pick in pickings:
             partner_id = pick.location_id.contact
             msg = pick.get_url_stock_reserve()
