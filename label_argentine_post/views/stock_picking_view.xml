@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <record id="stock_form_inherit" model="ir.ui.view">
+        <field name="name">stock.view.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position='inside'>
+                <button name ='create_template_label_in_branch' 
+                    string = "Print label Argentine post" 
+                    type='object'
+                    attrs="{'invisible': [('in_branch', '=', False)]}"
+                />
+                <button name ='create_template_label_in_address' 
+                    string = "Print label Argentine post" 
+                    type='object'
+                    attrs="{'invisible': [('in_branch', '=', True)]}"
+                />
+            </xpath>
+            <field name="origin" position="after">
+                <field name="in_branch"/>
+                <field name="branch_post_id" attrs="{'invisible': [('in_branch', '=', False)]}"/>
+            </field>
+        </field>
+        </record>
+</odoo>

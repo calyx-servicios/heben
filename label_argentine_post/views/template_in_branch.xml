@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- action report -->
+        <report
+        id="action_report_preprinted_label_in_branch"
+        model="stock.picking"
+        string="label argentine mail"
+        report_type="qweb-pdf"
+        name="label_argentine_post.preprinted_label_brach"
+        file="label_argentine_post.preprinted_label_brach"
+        />
+    <!-- layout label -->
+        <template id="preprinted_label_brach">
+        <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+
+            <table style="border:1px solid;border:1px solid;width:60%">
+                <tr>
+                    <td rowspan="6"><h4 class="" style="-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg);" >Remitente</h4></td>
+                    <td class=""><span t-field="o.company_id.name"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class="" style="border:1px solid;border:1px solid;"><span t-field="o.company_id.street"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span t-field="o.company_id.state_id.name"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span t-field="o.company_id.zip"/><span t-field="o.company_id.city"/><br/></td>
+                </tr>
+                <tr class="">
+                    <!-- <span t-field="o.company_id.l10n_latam_identification_type_id.name"/> -->
+                    <td class=""><span t-field="o.company_id.vat"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span class="">TE: </span><span t-field="o.company_id.phone"/><br/></td>
+                </tr>
+            </table>
+            <img src="/label_argentine_post/static/src/img/correo_arg.png" alt="" style="width:40%;height:15%"/>
+            
+            <div class="" style="border:1px solid; width:100%;background:#C8C8C8;text-align:center;margin-top:20px">
+                <h2 class="">Encomienda A SUCURSAL</h2>   
+            </div>
+            <table style="width:100%;margin-top:20px">
+                <tr class=""  >
+                    <td class="" style="background:	#C8C8C8;width:50%;text-align: center;border:1px solid"><h2 class="">SE RETIRA EN SUCURSAL</h2></td>
+                    <td style="background:black;color:white;text-align: center;border:1px solid;width:30%;padding-left: 30px;"><h3 class="">NO se debe cobrar POSTE RESTANTE</h3></td>
+                </tr>
+            </table>
+            <div class="" style="border:1px solid; width:100%;background:#C8C8C8;height:20%;margin-top:20px">
+                <table style="margin-top:60px" >
+                    <tr class="">
+                        <td style="margin-top:10px">
+                            <h3 style="-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg)">DESTINATARIO</h3>
+                        </td>
+                        <td class="" style="background:white; width:85%;border:1px solid;margin-top:-10px">
+                                <span t-field="o.partner_id.name"/><span class="" style="margin-left:100px">TE: </span><span t-field="o.partner_id.phone"/><br/>
+                                <span class="">Sucursal</span><span style="margin-left:10px" t-field="o.branch_post_id.name"/><span class="">(<span t-field="o.branch_post_id.code_nis"/>)</span><br/>
+                                <span t-field="o.branch_post_id.code_nis"/><span style="margin-left:30px" t-field="o.branch_post_id.city"/><br/>
+                                <span t-field="o.branch_post_id.state_id.name"/><br/>
+                                <span class="">TE: </span><span t-field="o.partner_id.phone"/><br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </t>
+         </t>
+        </template>
+</odoo>

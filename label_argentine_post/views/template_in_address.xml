@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- action report -->
+        <report
+        id="action_report_preprinted_label_in_address"
+        model="stock.picking"
+        string="label argentine mail"
+        report_type="qweb-pdf"
+        name="label_argentine_post.preprinted_label_address"
+        file="label_argentine_post.preprinted_label_address"
+        />
+    <!-- layout label -->
+        <template id="preprinted_label_address">
+            <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+
+            <table style="border:1px solid;border:1px solid;width:60%">
+                <tr>
+                    <td rowspan="6"><h3 class="" style="-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg);" >Remitente</h3></td>
+                    <td class=""><span t-field="o.company_id.name"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class="" style="border:1px solid;border:1px solid;"><span t-field="o.company_id.street"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span t-field="o.company_id.state_id.name"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span t-field="o.company_id.zip"/><span t-field="o.company_id.city"/><br/></td>
+                </tr>
+                <tr class="">
+                    <!-- <span t-field="o.company_id.l10n_latam_identification_type_id.name"/> -->
+                    <td class=""><span t-field="o.company_id.vat"/><br/></td>
+                </tr>
+                <tr class="">
+                    <td class=""><span class="">TE: </span><span t-field="o.company_id.phone"/><br/></td>
+                </tr>
+            </table>
+            <img src="/label_argentine_post/static/src/img/correo_arg.png" alt="" style="width:40%;height:15%"/>
+            
+            <div class="" style="border:1px solid; width:100%;background:white;text-align:center;margin-top:20px">
+                <h2 class="">Encomienda con entrega A DOMICILIO</h2>   
+            </div>
+            <div class="" style="border:1px solid; width:100%;height:20%;margin-top:20px;text-align:center;">
+                <table style="margin-top:40px" >
+                    <tr class="">
+                        <td  style="margin-top:20px;text-align:center;">
+                            <h3 style="-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg)">DESTINATARIO</h3>
+                        </td>
+                        <td class="" style="background:white; width:85%;border:1px solid;height:120px">
+                                <span t-field="o.partner_id.name"/><span class="" style="margin-left:100px">TE: </span><span t-field="o.partner_id.phone"/><br/>
+                                <span t-field="o.partner_id.zip"/><span style="margin-left:30px" t-field="o.partner_id.city"/><br/>
+                                <span t-field="o.partner_id.state_id.name"/><br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </t>
+        </t>
+        </template>
+</odoo>
