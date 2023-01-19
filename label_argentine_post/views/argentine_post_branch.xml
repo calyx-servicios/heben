@@ -18,6 +18,7 @@
                         <h1><field name="name"/></h1>
                         <group>
                             <group>
+                                <label for="street" string="Address"/>
                                 <div class="o_address_format">
                                     <field name="street" placeholder="Street..." class="o_address_street"/>
                                     <field name="street2" placeholder="Street 2..." class="o_address_street"/>
@@ -28,6 +29,7 @@
                                 </div>
                             </group>
                             <group>
+                                <field name="phone" widget="phone" />
                                 <field name="code_cpa" />
                                 <field name="code_nis"/>
                                 <field name="type_brach"/>

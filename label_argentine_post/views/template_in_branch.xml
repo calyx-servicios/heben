@@ -16,7 +16,7 @@
 
             <table style="border:1px solid;border:1px solid;width:60%">
                 <tr>
-                    <td rowspan="6"><h4 class="" style="-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg);" >Remitente</h4></td>
+                    <td rowspan="6"><h4 class="" style="margin-top:-10px;-ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg);" >Remitente</h4></td>
                     <td class=""><span t-field="o.company_id.name"/><br/></td>
                 </tr>
                 <tr class="">
@@ -58,7 +58,7 @@
                                 <span class="">Sucursal</span><span style="margin-left:10px" t-field="o.branch_post_id.name"/><span class="">(<span t-field="o.branch_post_id.code_nis"/>)</span><br/>
                                 <span t-field="o.branch_post_id.code_nis"/><span style="margin-left:30px" t-field="o.branch_post_id.city"/><br/>
                                 <span t-field="o.branch_post_id.state_id.name"/><br/>
-                                <span class="">TE: </span><span t-field="o.partner_id.phone"/><br/>
+                                <span class="">TE: </span><span t-field="o.branch_post_id.phone"/><br/>
                         </td>
                     </tr>
                 </table>
