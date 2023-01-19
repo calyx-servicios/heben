@@ -15,3 +15,4 @@ class StockPostBrach(models.Model):
     city = fields.Char('City')
     state_id = fields.Many2one("res.country.state", string='State')
     country_id = fields.Many2one('res.country', string='Country')
+    phone = fields.Char(string="Branch Phone")
