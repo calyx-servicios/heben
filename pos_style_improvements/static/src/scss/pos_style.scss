@@ -7,3 +7,13 @@
 .popup popup-textinput{
     height: 27rem !important;
 }
+.pos .popup input{
+    appearance: auto !important;
+    box-shadow: none !important;
+}
+.body span {
+    width: auto !important;
+}
+.body select{
+    width: inherit !important;
+}
