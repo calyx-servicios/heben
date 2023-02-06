@@ -12,7 +12,7 @@
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
-    "depends": [],
+    "depends": ['globalteckz_magento_2'],
     "data": [
         'data/ir_cron.xml',
     ],
