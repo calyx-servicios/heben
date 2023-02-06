@@ -7,4 +7,4 @@ class GTMagentoStore(models.Model):
         self.env['gt.magento.store'].search([('name','=','Heben AR View')]).GtCreateMagentoOrders()
 
     def import_cl_orders(self):
-        self.env['gt.magento.store'].search([('name','=','Heben CL View')]).GtcreateMagentoOrders()
+        self.env['gt.magento.store'].search([('name','=','Heben CL View')]).GtCreateMagentoOrders()
