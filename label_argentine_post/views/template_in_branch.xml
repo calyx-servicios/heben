@@ -4,7 +4,7 @@
         <report
         id="action_report_preprinted_label_in_branch"
         model="stock.picking"
-        string="label argentine mail"
+        string="label argentine mail in Branch"
         report_type="qweb-pdf"
         name="label_argentine_post.preprinted_label_brach"
         file="label_argentine_post.preprinted_label_brach"
