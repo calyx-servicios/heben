@@ -1,0 +1,238 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* label_argentine_post
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220425\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-14 15:07+0000\n"
+"PO-Revision-Date: 2023-02-14 15:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid ""
+"<br/>\n"
+"                                <span class=\"\">Sucursal</span>"
+msgstr ""
+"<br/>\n"
+"                                <span class=\"\">Sucursal</span>"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid ""
+"<br/>\n"
+"                                <span class=\"\">TE: </span>"
+msgstr ""
+"<br/>\n"
+"                                <span class=\"\">TE: </span>"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_address
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "<span class=\"\" style=\"margin-left:100px\">TE: </span>"
+msgstr "<span class=\"\" style=\"margin-left:100px\">TE: </span>"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_address
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "<span class=\"\">TE: </span>"
+msgstr "<span class=\"\">TE: </span>"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "Address"
+msgstr "Dirección"
+
+#. module: label_argentine_post
+#: model:ir.actions.act_window,name:label_argentine_post.action_stock_post_branch
+#: model:ir.ui.menu,name:label_argentine_post.menu_action_stock_post_branch
+msgid "Branch Argentine Post"
+msgstr "Sucursal Correo Argentino"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__phone
+msgid "Branch Phone"
+msgstr "Teléfono sucursal"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_picking__branch_post_id
+msgid "Branch Post"
+msgstr "Sucursal de correo"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__code_cpa
+msgid "CPA"
+msgstr "CPA"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__city
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__country_id
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "Country"
+msgstr "País"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_address
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "DESTINATARIO"
+msgstr "DESTINATARIO"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "Encomienda A SUCURSAL"
+msgstr "Encomienda A SUCURSAL"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_address
+msgid "Encomienda con entrega A DOMICILIO"
+msgstr "Encomienda con entrega A DOMICILIO"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__id
+msgid "ID"
+msgstr "ID"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_picking__in_branch
+msgid "In Branch"
+msgstr "En sucursal"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__code_nis
+msgid "NIS"
+msgstr "NIS"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "NO se debe cobrar POSTE RESTANTE"
+msgstr "NO se debe cobrar POSTE RESTANTE"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_tree
+msgid "Post Branch"
+msgstr "Sucursal de correo"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.stock_form_inherit
+msgid "Print label Argentine post"
+msgstr "Imprimir etiqueta Correo Argentino"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_address
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "Remitente"
+msgstr "Remitente"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
+msgid "SE RETIRA EN SUCURSAL"
+msgstr "SE RETIRA EN SUCURSAL"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__state_id
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "State"
+msgstr "Estado"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__street
+msgid "Street"
+msgstr "Calle"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__street2
+msgid "Street2"
+msgstr "Calle 2"
+
+#. module: label_argentine_post
+#: model:ir.model,name:label_argentine_post.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__type_brach
+msgid "Type"
+msgstr "Tipo"
+
+#. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.view_stock_post_branch_form
+msgid "ZIP"
+msgstr "CP"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__zip
+msgid "Zip"
+msgstr "CP"
+
+#. module: label_argentine_post
+#: model:ir.actions.report,name:label_argentine_post.action_report_preprinted_label_in_address
+msgid "label argentine mail in Address"
+msgstr "Entrega a domicilio"
+
+#. module: label_argentine_post
+#: model:ir.actions.report,name:label_argentine_post.action_report_preprinted_label_in_branch
+msgid "label argentine mail in Branch"
+msgstr "Retiro en sucursal"
+
+#. module: label_argentine_post
+#: model:ir.model,name:label_argentine_post.model_stock_post_branch
+msgid "stock.post.branch"
+msgstr "stock.post.branch"

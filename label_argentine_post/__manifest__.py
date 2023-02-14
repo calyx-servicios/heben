@@ -1,15 +1,17 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
-    "name": "labeled Argentine mail",
+    "name": "Labeled Argentine post",
     "summary": """
-        create label for Argentine mail""",
+        Create label for Argentine post""",
     "author": "Calyx Servicios S.A.",
-    "maintainers": ["GeorginaGuzman"],
+    "maintainers": ["GeorginaGuzman","PerezGabriela"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Stock",
-    "version": "13.0.1.0.0",
+    "version": "13.0.2.0.1",
     "development_status": "Production/Stable",
+    "installable": True,
+    "application": False,
     "depends": ['base','stock'],
     "data": [
         'security/ir.model.access.csv',
