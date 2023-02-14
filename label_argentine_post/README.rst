@@ -1,10 +1,9 @@
-===============
-Dispatch Report
-===============
+====================
+Label Argentine Post
+====================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! This file is intended to be in every module    !!
-   !! to explain why and how it works.               !!
+   !! This module create label for Argentine post    !!
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -15,34 +14,22 @@ Dispatch Report
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fgualok-lightgray.png?logo=github
-    :target: https://github.com/calyx-servicios/gualok
-    :alt: calyx-servicios/gualok
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fheben-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/heben.git
+    :alt: calyx-servicios/heben.git
 
 |badge1| |badge2| |badge3|
 
-.. !!! Description must be max 2-3 paragraphs, and is required.
 
-This module extends the functionality of create a new packing slip design 
-
-**Table of contents**
-
-.. contents::
-   :local:
-
-.. !!! Instalation: must only be present if there are very specific installation instructions, such as installing non-python dependencies.The audience is systems administrators. ] To install this module, you need to: !!!
+This module create label for Argentine post.
 
 Install
 =======
 
-#
+* Go to applications > Find module "label_argentine_post" > Press Install
 
-Usage
-=====
+* Go to Stock > and see the modifications
 
-1. 
-2. 
-3.
 
 Known issues / Roadmap
 ======================
@@ -67,6 +54,8 @@ Contributors
 
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
+  * Perez Gabriela
+  
   * `Georgina Guzman <https://github.com/garaceliguzman/>`_
 
 Maintainers
@@ -75,10 +64,10 @@ Maintainers
 This module is maintained by the Calyx Servicios S.A.
 
 .. image:: https://ss-static-01.esmsv.com/id/13290/galeriaimagenes/obtenerimagen/?width=120&height=40&id=sitio_logo&ultimaModificacion=2020-05-25+21%3A45%3A05
-   :alt: Odoo Calyx Servicios S.A.
-   :target: http://www.calyxservicios.com.ar/
+   :alt: Calyx Servicios S.A.
+   :target: https://odoo.calyx-cloud.com.ar/
 
-CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
-The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
+CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization.
+The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 300 professionals.
 
-This module is part of the `gualok <https://github.com/calyx-servicios/gualok>`_ project on Github.
+This module is part of the `Heben <https://github.com/calyx-servicios/heben>`_ project on Github.
