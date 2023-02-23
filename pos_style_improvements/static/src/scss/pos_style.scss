@@ -1,0 +1,21 @@
+.pos .modal-dialog .popup .body {
+    display: revert;
+}
+.pos .modal-dialog .popup{
+    height: 27rem !important;
+}
+.popup popup-textinput{
+    height: 27rem !important;
+}
+.pos .popup input{
+    appearance: auto !important;
+    box-shadow: none !important;
+}
+.body span {
+    width: auto !important;
+    font-size: smaller !important;
+}
+.body select{
+    width: inherit !important;
+    font-size: initial !important;
+}
