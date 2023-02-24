@@ -41,7 +41,7 @@
             <div class="" style="border:1px solid; width:100%;background:white;text-align:center;margin-top:20px">
                 <h2 class="">Encomienda con entrega A DOMICILIO</h2>   
             </div>
-            <div class="" style="border:1px solid; width:100%;height:20%;margin-top:20px;text-align:center;">
+            <div class="" style="border:1px solid; width:100%;height:20%;margin-top:20px;text-align:center;margin-bottom:30px;">
                 <table style="margin-top:40px" >
                     <tr class="">
                         <td  style="margin-top:20px;text-align:center;">
@@ -59,4 +59,22 @@
         </t>
         </t>
         </template>
+
+        <!-- paper format -->
+        <record id="papel_format_address_report" model="report.paperformat">
+            <field name="name">label argentine mail in Address Paper Format</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">110</field>
+        </record>
+        <record id="action_report_preprinted_label_in_address" model="ir.actions.report">
+            <field name="paperformat_id" ref="papel_format_address_report" />
+        </record>
 </odoo>

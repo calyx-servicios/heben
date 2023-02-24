@@ -47,7 +47,7 @@
                     <td style="background:black;color:white;text-align: center;border:1px solid;width:30%;padding-left: 30px;"><h3 class="">NO se debe cobrar POSTE RESTANTE</h3></td>
                 </tr>
             </table>
-            <div class="" style="border:1px solid; width:100%;background:#C8C8C8;height:20%;margin-top:20px">
+            <div class="" style="border:1px solid; width:100%;background:#C8C8C8;height:20%;margin-top:20px;margin-bottom:30px;">
                 <table style="margin-top:60px" >
                     <tr class="">
                         <td style="margin-top:10px">
@@ -67,4 +67,22 @@
         </t>
          </t>
         </template>
+
+        <!-- paper format -->
+        <record id="papel_format_branch_report" model="report.paperformat">
+            <field name="name">label argentine mail in Branch Paper Format</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">110</field>
+        </record>
+        <record id="action_report_preprinted_label_in_branch" model="ir.actions.report">
+            <field name="paperformat_id" ref="papel_format_branch_report" />
+        </record>
 </odoo>
