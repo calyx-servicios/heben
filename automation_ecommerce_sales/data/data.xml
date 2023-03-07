@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+	<record id="partner_automation_ecommerce" model="res.partner">
+        <field name="name">Automation Ecommerce</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="email">automationecommerce@example.com</field>
+    </record>
+
+    <record id="user_automation_ecommerce" model="res.users">
+         <field name="name">Automation Ecommerce</field>
+        <field name="login">autoec</field>
+        <field name="password">autoec</field>
+        <field name="partner_id" ref="partner_automation_ecommerce"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="company_ids" eval="[(4, ref('base.main_company'))]"/>
+        <!-- <field name="groups_id" eval="[(4, ref('point_of_sale.group_pos_manager')), (4, ref('stock.group_stock_user'))]"/> -->
+    </record>
+</odoo>
