@@ -4,16 +4,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20220425\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 15:07+0000\n"
-"PO-Revision-Date: 2023-02-14 15:07+0000\n"
+"POT-Creation-Date: 2023-03-09 13:49+0000\n"
+"PO-Revision-Date: 2023-03-09 10:50-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: label_argentine_post
 #: model_terms:ir.ui.view,arch_db:label_argentine_post.preprinted_label_brach
@@ -100,6 +102,16 @@ msgid "DESTINATARIO"
 msgstr "DESTINATARIO"
 
 #. module: label_argentine_post
+#: model_terms:ir.ui.view,arch_db:label_argentine_post.stock_search_inherit
+msgid "Delivery Type"
+msgstr "Tipo de entrega"
+
+#. module: label_argentine_post
+#: model:ir.model.fields,field_description:label_argentine_post.field_stock_picking__in_branch
+msgid "Delivery type"
+msgstr "Tipo de entrega"
+
+#. module: label_argentine_post
 #: model:ir.model.fields,field_description:label_argentine_post.field_stock_post_branch__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -120,7 +132,12 @@ msgid "ID"
 msgstr "ID"
 
 #. module: label_argentine_post
-#: model:ir.model.fields,field_description:label_argentine_post.field_stock_picking__in_branch
+#: model:ir.model.fields.selection,name:label_argentine_post.selection__stock_picking__in_branch__in_address
+msgid "In Address"
+msgstr "En domicilio"
+
+#. module: label_argentine_post
+#: model:ir.model.fields.selection,name:label_argentine_post.selection__stock_picking__in_branch__in_branch
 msgid "In Branch"
 msgstr "En sucursal"
 
