@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- action window model -->
+        <record id="action_stock_post_branch" model="ir.actions.act_window">
+            <field name="name">Branch Argentine Post</field>
+            <field name="res_model">stock.post.branch</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- form view -->
+        <record id="view_stock_post_branch_form" model="ir.ui.view">
+            <field name="name">stock.post.branch</field>
+            <field name="model">stock.post.branch</field>
+            <field name="arch" type="xml">
+                <form string="Post Branch" >
+                    <sheet>
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="phone" widget="phone" />
+                                <field name="code_cpa" />
+                                <field name="code_nis"/>
+                                <field name="type_brach"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- tree view -->
+        <record id="view_stock_post_branch_tree" model="ir.ui.view">
+            <field name="name">stock.post.branch.tree</field>
+            <field name="model">stock.post.branch</field>
+            <field name="arch" type="xml">
+                <tree string="Post Branch">
+                    <field name="name"/>
+                    
+                </tree>
+            </field>
+        </record>
+        <!-- menu item -->
+        <menuitem action="action_stock_post_branch" id="menu_action_stock_post_branch"
+            parent="stock.menu_warehouse_config" sequence="10"/>
+    
+
+</odoo>
+
+
+

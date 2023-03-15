@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <record id="stock_form_inherit" model="ir.ui.view">
+        <field name="name">stock.view.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position='inside'>
+                <button name ='create_template_label_in_branch' 
+                    string = "Print label Argentine post" 
+                    type='object'
+                    attrs="{'invisible': [('in_branch', '=', 'in_branch')]}"
+                />
+                <button name ='create_template_label_in_address' 
+                    string = "Print label Argentine post" 
+                    type='object'
+                    attrs="{'invisible': [('in_branch', '=', 'in_address')]}"
+                />
+            </xpath>
+            <field name="origin" position="after">
+                <field name="in_branch"/>
+                <field name="branch_post_id" attrs="{'invisible': [('in_branch', '!=', 'in_branch')]}"/>
+            </field>
+        </field>
+        </record>
+        <record id="stock_search_inherit" model="ir.ui.view">
+        <field name="name">stock.view.search.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_transfers']" position="after">
+                <separator/>
+                    <filter name="branch" string="In branch" domain="[('in_branch', '=', 'in_branch')]"/>
+                    <filter name="address" string="In Address" domain="[('in_branch', '=', 'in_address')]"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Delivery Type" name="type" domain="[]" context="{'group_by': 'in_branch'}"/>
+            </xpath>
+        </field>
+        </record>
+
+</odoo>
