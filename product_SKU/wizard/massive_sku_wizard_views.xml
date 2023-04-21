@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="massive_sku_wizard_view_form" model="ir.ui.view">
+        <field name="name">massive.sku.wizard.form</field>
+        <field name="model">massive.sku.wizard</field>
+        <field name="arch" type="xml">
+        	<form string="Sku massive">
+	            <group>
+	            	<field name="use_sku"/>
+	            	<field name="mask_sku_id"/>
+	            </group>
+	            <footer>
+	                <button name="massive_sku" string="Apply" type="object" class="btn-primary"/>
+	                <button string="Cancel" class="btn-secondary" special="cancel"/>
+	            </footer>
+	       </form>
+        </field>
+    </record>
+    
+    <act_window
+        name="Create SKU massive"
+        res_model="massive.sku.wizard"
+        binding_model="product.product"
+        binding_views="list"
+        view_mode="form"
+        target="new"
+        view_id="massive_sku_wizard_view_form"
+        id="action_sku_massive_product"
+    />
+    
+    <record id="massive_sku_wizard_view_form_template" model="ir.ui.view">
+        <field name="name">massive.sku.wizard.form</field>
+        <field name="model">massive.sku.wizard</field>
+        <field name="arch" type="xml">
+        	<form string="Sku massive">
+	            <group>
+	            	<field name="use_sku"/>
+	            	<field name="mask_sku_id"/>
+	            </group>
+	            <footer>
+	                <button name="massive_sku_template" string="Apply" type="object" class="btn-primary"/>
+	                <button string="Cancel" class="btn-secondary" special="cancel"/>
+	            </footer>
+	       </form>
+        </field>
+    </record>
+    
+    <act_window
+        name="Create SKU massive"
+        res_model="massive.sku.wizard"
+        binding_model="product.template"
+        binding_views="list"
+        view_mode="form"
+        target="new"
+        view_id="massive_sku_wizard_view_form_template"
+        id="action_sku_massive_template"
+    />
+    
+</odoo>
