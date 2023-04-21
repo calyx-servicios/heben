@@ -1,10 +1,10 @@
-===========
-Product SKU
-===========
+=====================
+Default code products
+=====================
 
-.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   !! This module adds sku for products    !!
-   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !! This module adds default code for products    !!
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 .. User https://shields.io for badge creation.
@@ -20,12 +20,12 @@ Product SKU
 
 |badge1| |badge2| |badge3|
 
-This module adds sku for products.
+This module adds default code for products.
 
 Install
 =======
 
-* Go to applications > Find module "product_SKU" > Press Install
+* Go to applications > Find module "default_code_products" > Press Install
 
 * Go to Stock > Products > and see the modifications
 
@@ -47,12 +47,6 @@ Contributors
 ~~~~~~~~~~~~
 
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
-  
-  * Guzman Georigina 
-  
-  * Oegg Marcos
-  
-  * Paradiso Cristian
   
   * Perez Gabriela
 
