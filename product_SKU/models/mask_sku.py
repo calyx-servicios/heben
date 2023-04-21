@@ -39,8 +39,8 @@ class MaskSku(models.Model):
                 sku_fields['variant_talle_id'] = variant_talle_id[0].product_attribute_value_id.code
             if len(product.variant_seller_ids) >= 1:
                 sku_fields['partner_code'] = product.variant_seller_ids[0].name.partner_code
-            if product.internal_code:
-                sku_fields['internal_code'] = product.internal_code
+            if product.modelo_articulo:
+                sku_fields['internal_code'] = product.modelo_articulo
             sku = ''
             for code in sku_name:
                 if code == '-':
@@ -48,3 +48,4 @@ class MaskSku(models.Model):
                 else:
                     sku += sku_fields.get(code,'')
             self.sku_example = sku
+

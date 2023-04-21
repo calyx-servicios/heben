@@ -25,8 +25,8 @@ class ProductProduct (models.Model):
                 sku_fields['variant_talle_id'] = variant_talle_id[0].product_attribute_value_id.code
             if len(self.variant_seller_ids) >= 1:
                 sku_fields['partner_code'] = self.variant_seller_ids[0].name.partner_code
-            if self.internal_code:
-                sku_fields['internal_code'] = self.internal_code
+            if self.modelo_articulo:
+                sku_fields['internal_code'] = self.modelo_articulo
             sku = ''
             for code in code_list:
                     sku += sku_fields.get(code,'')
@@ -51,9 +51,10 @@ class ProductTemplate (models.Model):
                 sku_fields['product_material_id'] = self.product_material_id.code
             if len(self.variant_seller_ids) >= 1:
                 sku_fields['partner_code'] = self.variant_seller_ids[0].name.partner_code
-            if self.internal_code:
-                sku_fields['internal_code'] = self.internal_code
+            if self.modelo_articulo:
+                sku_fields['internal_code'] = self.modelo_articulo
             sku = ''
             for code in code_list:
                     sku += sku_fields.get(code,'')
             self.default_code = sku
+
