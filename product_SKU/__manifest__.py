@@ -9,7 +9,7 @@
     "version": "13.0.3.0.1",
     "application": False,
     "license": "AGPL-3",
-    "depends": ["sale","stock","stock_account","product_seasons"],
+    "depends": ["sale","stock","stock_account","product_seasons", "default_code_products"],
     "data": [
         "security/ir.model.access.csv",
         "data/data.xml",
