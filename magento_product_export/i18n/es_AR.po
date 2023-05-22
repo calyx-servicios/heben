@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* magento_product_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-18 11:48+0000\n"
+"PO-Revision-Date: 2023-05-18 11:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: magento_product_export
+#: model:ir.model.fields,field_description:magento_product_export.field_report_magento_product_export_product_export_xls__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: magento_product_export
+#: model:ir.model.fields,field_description:magento_product_export.field_report_magento_product_export_product_export_xls__id
+msgid "ID"
+msgstr ""
+
+#. module: magento_product_export
+#: model:ir.model.fields,field_description:magento_product_export.field_report_magento_product_export_product_export_xls____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: magento_product_export
+#: model:ir.actions.server,name:magento_product_export.magento_product_export_action
+msgid "Magento Export"
+msgstr "Exportación Magento"
+
+#. module: magento_product_export
+#: model:ir.model,name:magento_product_export.model_report_magento_product_export_product_export_xls
+msgid "Magento Product Export Xls"
+msgstr "Exportación de productos Magento Xls"
+
+#. module: magento_product_export
+#: code:addons/magento_product_export/report/magento_product_export.py:0
+#, python-format
+msgid "Product Report"
+msgstr "Informe de producto"
+
+#. module: magento_product_export
+#: model:ir.model,name:magento_product_export.model_product_product
+msgid "Product Variant (Multi-Company)"
+msgstr "Variante del producto (multiempresa)"
+
+#. module: magento_product_export
+#: model:ir.actions.report,name:magento_product_export.product_export_xls
+msgid "Report Product Report"
+msgstr "Informe Producto Informe"
+
+#. module: magento_product_export
+#: code:addons/magento_product_export/models/product_product.py:0
+#, python-format
+msgid "You don't have the necessary permissions to perform this action."
+msgstr "No tienes los permisos necesarios para realizar esta acción."
