@@ -1,16 +1,20 @@
 from odoo import models, _
+import xlsxwriter
+from odoo.exceptions import AccessError
 
 class MagentoProductExportXls(models.AbstractModel):
     _name = "report.magento_product_export.product_export_xls"
     _inherit = "report.report_xlsx.abstract"
-    _description= "Magento Product Export Xls"
+    _description = "Magento Product Export Xls"
 
     def generate_xlsx_report(self, workbook, data, obj):
         sheet = workbook.add_worksheet(_('Product Report'))
         bold = workbook.add_format({
             'bold': True,
-            'align': 'center',
+            'align': 'center'
         })
+        price_format = workbook.add_format({'num_format': '#,##0.00'})
+        price_format.set_num_format('#,##0.00')
 
         columns = [
             ('A', 50, 'sku'),
@@ -34,7 +38,7 @@ class MagentoProductExportXls(models.AbstractModel):
             sheet.write(f'A{row}', product_data['sku'])
             sheet.write(f'B{row}', product_data['name'])
             sheet.write(f'C{row}', product_data['description'])
-            sheet.write(f'D{row}', product_data['price'])
+            sheet.write(f'D{row}', product_data['price'], price_format)
             sheet.write(f'E{row}', product_data['stock'])
             sheet.write(f'F{row}', product_data['ds_category'])
             sheet.write(f'G{row}', product_data['ds_material_filter'])
