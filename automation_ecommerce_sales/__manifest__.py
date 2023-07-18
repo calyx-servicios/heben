@@ -9,13 +9,14 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Sale",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.1.1",
     "installable": True,
     "application": False,
     "depends": [
         'globalteckz_magento_2',
         'location_by_proximity',
-        'pos_sale_chat'
+        'pos_sale_chat',
+        'melisync'
     ],
     "data": [
         'data/data.xml',
