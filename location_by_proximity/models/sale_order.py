@@ -25,9 +25,24 @@ class SaleOrder(models.Model):
             if not house_empty:
                 msg='For the product ' + order_line.name  + ' there is no stock in the selected locations'
                 self.message_post(body=msg)
+    
+    def action_confirm(self):
+        lines_product = self.order_line.filtered(lambda x: x.product_id.type != 'service')
+        if lines_product:
+            lines_unlocated = lines_product.filtered(lambda l: not l.location_id)
+            if lines_unlocated:
+                order_id = lines_unlocated.mapped("order_id")
+                if not order_id.partner_id.zip:
+                    for line in lines_unlocated:
+                        line.location_id = order_id.warehouse_id.lot_stock_id.id
+                else:
+                    order_id.check_location()
+        return super(SaleOrder, self).action_confirm()
+
 
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
     _order = "id desc"
 
     location_id = fields.Many2one('stock.location')
+
