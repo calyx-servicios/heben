@@ -9,7 +9,7 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Sale",
-    "version": "13.0.1.1.1",
+    "version": "13.0.1.2.2",
     "installable": True,
     "application": False,
     "depends": [
