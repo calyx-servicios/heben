@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_untaxed
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-25 17:26+0000\n"
+"PO-Revision-Date: 2023-07-25 17:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_untaxed
+#: model:ir.model,name:invoice_untaxed.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos Contables"
+
+#. module: invoice_untaxed
+#: model:ir.model,name:invoice_untaxed.model_account_move_line
+msgid "Journal Item"
+msgstr "Asiento Contable"
+
+#. module: invoice_untaxed
+#: model:ir.model,name:invoice_untaxed.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
