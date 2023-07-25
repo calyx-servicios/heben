@@ -44,12 +44,6 @@ msgstr "Error al confirmar el pedido de venta "
 #. module: automation_ecommerce_sales
 #: code:addons/automation_ecommerce_sales/models/sale_order.py:0
 #, python-format
-msgid "Error confirming sales order of mercado libre"
-msgstr "Error al confirmar las ventas de mercado libre"
-
-#. module: automation_ecommerce_sales
-#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
-#, python-format
 msgid "Error creating the invoice for the sale "
 msgstr "Error al crear la factura de la venta "
 
