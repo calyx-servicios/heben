@@ -1,20 +1,23 @@
 {
-    "name": "Magento Product Export",
+    "name": "Argentina - Product Barcode",
     "summary": """
-        This module generates a customized Excel file for easily exporting products to Magento.
+    This module generates, according to Argentine regulations, the barcode for the product.
     """,
     "author": "Calyx Servicios S.A.",
     "maintainers": ["Zamora, Javier"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.1.1.0",
+    "version": "13.0.1.0.0",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
-    "depends": ['globalteckz_magento_2', 'report_xlsx'],
+    "depends": [
+        'base',
+        'product_barcode',
+    ],
     "data": [
-        'views/action_menu.xml',
-        'report/magento_product_export.xml',
+        'views/res_config_settings.xml',
+        'data/ir_config_parameter.xml',
     ],
 }

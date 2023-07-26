@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="gt_magento_location_store_form_view" model="ir.ui.view">
+            <field name="name">Magento Store Location</field>
+            <field name="model">gt.magento.store</field>
+            <field name="inherit_id" ref="globalteckz_magento_2.gt_magento__store_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='warehouse_id']" position="after">
+                    <field name="stock_location_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo> 
+
