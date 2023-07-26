@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_move_invoice_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-20 15:34+0000\n"
+"PO-Revision-Date: 2023-04-20 15:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_move_invoice_group
+#: model:ir.model,name:stock_move_invoice_group.model_picking_invoice_wizard
+msgid "Create Invoice from picking"
+msgstr "Crear factura a partir de transferencias"
+
+#. module: stock_move_invoice_group
+#: code:addons/stock_move_invoice_group/models/stock_picking.py:0
+#: code:addons/stock_move_invoice_group/models/stock_picking.py:0
+#, python-format
+msgid "Please configure the journal from settings"
+msgstr "Por favor configure el diario desde configuración"
+
+#. module: stock_move_invoice_group
+#: model:ir.model,name:stock_move_invoice_group.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"

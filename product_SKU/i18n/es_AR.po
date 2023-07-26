@@ -1,0 +1,238 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_SKU
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-21 15:54+0000\n"
+"PO-Revision-Date: 2023-04-21 15:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_SKU
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form_template
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_product_attribute_value
+msgid "Attribute Value"
+msgstr "Valor del Atributo"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_product_attribute_value__code
+msgid "Attribute Value Code"
+msgstr "Código del Valor del Atributo"
+
+#. module: product_SKU
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form_template
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__code_list
+msgid "Code List"
+msgstr "Lista"
+
+#. module: product_SKU
+#: code:addons/product_SKU/wizard/massive_sku.py:0
+#: model:ir.model,name:product_SKU.model_massive_sku_wizard
+#, python-format
+msgid "Create SKU for products"
+msgstr "Crear SKU para productos"
+
+#. module: product_SKU
+#: model:ir.actions.act_window,name:product_SKU.action_sku_massive_product
+#: model:ir.actions.act_window,name:product_SKU.action_sku_massive_template
+msgid "Create SKU massive"
+msgstr "Crear SKU masivamente"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__create_uid
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__create_uid
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__create_uid
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__create_uid
+msgid "Created by"
+msgstr "Creado Por"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__create_date
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__create_date
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__create_date
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__display_name
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__display_name
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__display_name
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_product_attribute__display_type
+msgid "Display Type"
+msgstr "Tipo de pantalla"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__field_require_rule
+msgid "Field Require Rule"
+msgstr "Campo Utilizado"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__id
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__id
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__id
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__id
+msgid "ID"
+msgstr ""
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__mask_sku_id
+#: model:ir.model.fields,field_description:product_SKU.field_product_product__mask_sku_id
+#: model:ir.model.fields,field_description:product_SKU.field_product_template__mask_sku_id
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku____last_update
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard____last_update
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule____last_update
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificacion en"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__write_uid
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__write_uid
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__write_uid
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualizacion por"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__write_date
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__write_date
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__write_date
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima Actualizacion en"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_mask_sku
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__mask_sku_id
+msgid "Mask Sku"
+msgstr "Mascara"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__name
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule_line__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_product_attribute
+msgid "Product Attribute"
+msgstr "Atributo del Producto"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_product_template
+msgid "Product Template (Multi-Company)"
+msgstr "Producto (Multi-compañia)"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_product_product
+msgid "Product Variant (Multi-Company)"
+msgstr "Variante (Multi-compañia)"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__rule_id
+msgid "Rule"
+msgstr "Reglas"
+
+#. module: product_SKU
+#: model:ir.actions.act_window,name:product_SKU.action_product_sku
+#: model:ir.ui.menu,name:product_SKU.menu_product_sku_inventory
+#: model_terms:ir.ui.view,arch_db:product_SKU.view_product_template_form_sku_vv
+#: model_terms:ir.ui.view,arch_db:product_SKU.view_product_variant_form_sku_vv
+msgid "SKU"
+msgstr "SKU"
+
+#. module: product_SKU
+#: model:ir.model.fields,help:product_SKU.field_massive_sku_wizard__mask_sku_id
+#: model:ir.model.fields,help:product_SKU.field_product_product__mask_sku_id
+#: model:ir.model.fields,help:product_SKU.field_product_template__mask_sku_id
+msgid "Select a rule sku for this product"
+msgstr "Seleccione una mascara para este producto"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_sku_rule__sequence
+msgid "Sequence"
+msgstr "secuencia"
+
+#. module: product_SKU
+#: model:ir.model.fields.selection,name:product_SKU.selection__product_attribute__display_type__size
+msgid "Size"
+msgstr "Talle"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__sku_example
+msgid "Sku Example"
+msgstr "Ejemplo de SKU"
+
+#. module: product_SKU
+#: model_terms:ir.ui.view,arch_db:product_SKU.view_product_sku_tree
+msgid "Sku Mask"
+msgstr "Mascara de SKU"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_sku_rule
+msgid "Sku Rule"
+msgstr "Regla SKU"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_mask_sku__sku_rules_ids
+msgid "Sku Rules"
+msgstr "Reglas SKU"
+
+#. module: product_SKU
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:product_SKU.massive_sku_wizard_view_form_template
+msgid "Sku massive"
+msgstr "Sku masivo"
+
+#. module: product_SKU
+#: model:ir.model.fields,help:product_SKU.field_product_attribute__display_type
+msgid "The display type used in the Product Configurator."
+msgstr "El tipo de visualización utilizado en el Configurador de producto."
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_product_product__use_sku
+#: model:ir.model.fields,field_description:product_SKU.field_product_template__use_sku
+msgid "Use Sku"
+msgstr "Usar SKU"
+
+#. module: product_SKU
+#: model:ir.model.fields,field_description:product_SKU.field_massive_sku_wizard__use_sku
+msgid "Use sku?"
+msgstr "Usar sku?"
+
+#. module: product_SKU
+#: model_terms:ir.ui.view,arch_db:product_SKU.view_product_sku_form
+msgid "name"
+msgstr "Nombre"
+
+#. module: product_SKU
+#: model:ir.model,name:product_SKU.model_sku_rule_line
+msgid "sku.rule.line"
+msgstr "sku.rule.line"

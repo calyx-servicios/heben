@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "Product Curve",
     "summary": """
@@ -9,19 +9,20 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Sale",
-    "version": "13.0.1.0.0",
-    "development_status": "Production/Stable",
-    "application": False,
+    "version": "13.0.3.4.1",
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
+    "application": False,
     "depends": [
         'base', 
         'sale', 
+        'stock',
         'product', 
         'product_matrix', 
         'sale_management', 
         'purchase', 
-        'purchase_requisition'
+        'purchase_requisition',
+        'status_product',
+        'stock_picking_batch_extended_custom'
     ],
     "data": [
         'views/assets.xml',

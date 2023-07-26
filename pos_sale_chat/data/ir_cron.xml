@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record forcecreate="True" id="verify_stock_reserve_cron" model="ir.cron">
+        <field name="name">Verify Stock Reserve Cron</field>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall">False</field>
+        <field name="active">True</field>
+        <field name="priority">5</field>
+        <field name="model_id" ref="pos_sale_chat.model_stock_picking"/>
+        <field name="state">code</field>
+        <field name="code">model.verify_stock_reserve()</field>
+    </record>
+</odoo>

@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* automation_ecommerce_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-18 18:40+0000\n"
+"PO-Revision-Date: 2023-07-18 18:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: automation_ecommerce_sales
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#, python-format
+msgid " there is no stock in the selected locations."
+msgstr " no hay stock en las ubicaciones seleccionadas."
+
+#. module: automation_ecommerce_sales
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#, python-format
+msgid "Automation Ecommerce Sales"
+msgstr "Automatización del proceso de Ventas Ecommerce"
+
+#. module: automation_ecommerce_sales
+#: model:ir.actions.server,name:automation_ecommerce_sales.automation_ecommerce_sales_cron_ir_actions_server
+#: model:ir.cron,cron_name:automation_ecommerce_sales.automation_ecommerce_sales_cron
+#: model:ir.cron,name:automation_ecommerce_sales.automation_ecommerce_sales_cron
+msgid "Automation Ecommerce Sales Cron"
+msgstr "Automatización del proceso de Ventas Ecommerce Cron"
+
+#. module: automation_ecommerce_sales
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#, python-format
+msgid "Error confirming sales order "
+msgstr "Error al confirmar el pedido de venta "
+
+#. module: automation_ecommerce_sales
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#, python-format
+msgid "Error creating the invoice for the sale "
+msgstr "Error al crear la factura de la venta "
+
+#. module: automation_ecommerce_sales
+#: code:addons/automation_ecommerce_sales/models/sale_order.py:0
+#, python-format
+msgid "For the sale order "
+msgstr "Para el pedido de venta "
+
+#. module: automation_ecommerce_sales
+#: model:ir.model,name:automation_ecommerce_sales.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"

@@ -14,7 +14,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ['base','product', 'sale_stock','account', 'stock'],
+    "depends": ['base','product', 'sale_stock','account', 'stock','sale'],
     "data": [
         "security/ir.model.access.csv",
         "views/product_color_search_views.xml",
