@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_export_xls" model="ir.actions.report">
+        <field name="name">Report Product Report</field>
+        <field name="model">product.product</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">magento_product_export.product_export_xls</field>
+        <field name="report_file">magento_product_export.product_export_xls</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

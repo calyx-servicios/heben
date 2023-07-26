@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_product_template_form_sku_vv" model="ir.ui.view">
+        <field name="name">product template form view: add sku_vv</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <field name="default_code" position="before">
+                <field name="mask_sku_id" string="SKU" attrs="{'invisible': [('use_sku', '=', False)]}"/>
+                <field name="use_sku" />
+                <field name="default_code" />
+            </field>
+        </field>
+    </record>
+    
+</odoo>

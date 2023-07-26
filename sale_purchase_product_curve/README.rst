@@ -1,6 +1,6 @@
-===========================
+=============
 Product Curve
-===========================
+=============
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    !! This module adds the curve for products             !!
@@ -14,20 +14,26 @@ Product Curve
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/gitlab-calyxservicios--group%2Fodoo%2Fodoo--calyx-lightgray.png?logo=gitlab
-    :target: https://gitlab.com/calyxservicios-group/odoo/odoo-calyx
-    :alt: calyxservicios-group/odoo/odoo-calyx
+.. |badge3| image:: https://img.shields.io/badge/github-calyx--servicios%2Fheben-lightgray.png?logo=github
+    :target: https://github.com/calyx-servicios/heben.git
+    :alt: calyx-servicios/heben.git
 
 |badge1| |badge2| |badge3|
 
+This module extends the functionality of the curve for products.
 
 Install
 =======
 
-# Go to applications
-# Find module "sale_purchase_product_curve"
-# Press Install
-# Go to Sale Purchase > and see the modifications
+* Go to applications > Find module "sale_purchase_product_curve" > Press Install
+
+* Go to Purchase or Sale > and see the modifications
+
+* Go to Sale > Settings > Budget templates > and see the modifications
+
+* Go to Purchase > Purchase Agreements > and see the modifications
+
+* Go to Stock > Operations > Transfers > and see the modifications
 
 
 Known issues / Roadmap
@@ -54,6 +60,7 @@ Contributors
 * `Calyx Servicios S.A. <http://www.calyxservicios.com.ar/>`_
   
   * Perez Gabriela
+  
   * Deyker Gil
 
 Maintainers
@@ -62,10 +69,10 @@ Maintainers
 This module is maintained by the Calyx Servicios S.A.
 
 .. image:: https://ss-static-01.esmsv.com/id/13290/galeriaimagenes/obtenerimagen/?width=120&height=40&id=sitio_logo&ultimaModificacion=2020-05-25+21%3A45%3A05
-   :alt: Odoo Calyx Servicios S.A.
-   :target: http://www.calyxservicios.com.ar/
+   :alt: Calyx Servicios S.A.
+   :target: https://odoo.calyx-cloud.com.ar/
 
-CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization positioned among the 20 largest consultant-studios in the world.
-The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 200 professionals.
+CALYX SERVICIOS S.A. It is part of the PGK Consultores economic group, member of an important global network, a world organization.
+The PGK Consultores group is one of the 20 largest consultant-studios in Argentina with nearly 300 professionals.
 
-This module is part of the `Repo_name <https://github.com/calyx-servicios/custom-heben>`_ project on Github.
+This module is part of the `Heben <https://github.com/calyx-servicios/heben>`_ project on Github.

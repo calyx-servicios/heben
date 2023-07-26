@@ -1,0 +1,22 @@
+<odoo>
+    <record id="stock_batch_picking_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.batch.form</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch_extended.stock_batch_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="type_of_operation" invisible="1"/>
+                <field name="partner_id"/>
+            </xpath>
+            <xpath expr="//field[@name='move_line_ids']" position="after">
+                <button name="compute_import" string="compute products"  type="object"/>
+                <field name="product_imput_ids"> 
+                    <tree editable="bottom">
+                        <field name="product_id" />
+                        <field name="qty" />
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+</odoo> 
