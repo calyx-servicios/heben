@@ -1,6 +1,8 @@
 from odoo import fields, models, _
 from datetime import date
 
+import logging
+_logger = logging.getLogger(__name__)
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
@@ -18,6 +20,7 @@ class SaleOrder(models.Model):
             "res_model_id": model_sale.id,
             "res_model": model_sale.model
         }
+        #Ordenes de magento
         orders = self.env["sale.order"].search([('ma_order_id','!=',''),('order_status','=','processing')])
         for order in orders:
             try:
@@ -41,4 +44,22 @@ class SaleOrder(models.Model):
                 vals.update({"note": msg, "res_id": order.id, "res_name": order.name})
                 ma_except = ma_obj.create(vals)
                 ma_except.action_close_dialog()
+        
+        #Ordenes de mercado libre
+        try:
+            settings_instance = self.env["melisync.settings"].search([], limit=1)
+            if settings_instance:
+                self.env["sale.order"].meli_get_sales(settings_instance)
+                meli_orders = self.env["sale.order"].search([('meli_id', '!=', ""),('state','in', ['draft','sent'])])
+                if meli_orders:
+                    for meli_order in meli_orders:
+                        try:
+                            meli_order.action_confirm()
+                        except:
+                            msg = _('Error confirming sales order ') + meli_order.name
+                            vals.update({"note": msg, "res_id": meli_order.id, "res_name": meli_order.name})
+                            ma_except = ma_obj.create(vals)
+                            ma_except.action_close_dialog()
+        except ValueError as e:
+            _logger.info(e)
 

@@ -7,7 +7,7 @@ class ProductProduct(models.Model):
     def magento_product_export(self):
         if not self.env.user.has_group('globalteckz_magento_2.group_magento_manager'):
             raise AccessError(_("You don't have the necessary permissions to perform this action."))
-    
+
         data = []
         for product in self:
             vals = {
@@ -16,7 +16,7 @@ class ProductProduct(models.Model):
                 'description': product.description or '',
                 'price': product.lst_price,
                 'stock': product.qty_available,
-                'ds_category': product.categ_id.name,
+                'ds_category': product.categ_id.display_name,
                 'ds_material_filter': product.product_material_id.name,
                 'meta_description': product.description or '',
             }
