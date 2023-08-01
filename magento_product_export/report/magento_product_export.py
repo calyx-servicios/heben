@@ -1,21 +1,20 @@
 from odoo import models, _
 import xlsxwriter
-from odoo.exceptions import AccessError
+
 
 class MagentoProductExportXls(models.AbstractModel):
     _name = "report.magento_product_export.product_export_xls"
     _inherit = "report.report_xlsx.abstract"
     _description = "Magento Product Export Xls"
 
-    def generate_xlsx_report(self, workbook, data, obj):
-        sheet = workbook.add_worksheet(_('Product Report'))
-        bold = workbook.add_format({
-            'bold': True,
-            'align': 'center'
-        })
-        price_format = workbook.add_format({'num_format': '#,##0.00'})
-        price_format.set_num_format('#,##0.00')
 
+    def generate_xlsx_report(self, workbook, data, obj):
+        # Set delimiter
+        workbook.delimiter = ';'
+        sheet = workbook.add_worksheet(_('Product Report'))
+        bold = workbook.add_format({'bold': True, 'align': 'center'})
+
+        # Prepare Headers and width
         columns = [
             ('A', 50, 'sku'),
             ('B', 18, 'name'),
@@ -28,21 +27,28 @@ class MagentoProductExportXls(models.AbstractModel):
             ('I', 18, 'meta_description'),
         ]
 
+        # Creating column headers
         for col, width, label in columns:
             sheet.set_column(f'{col}:{col}', width)
             sheet.write(f'{col}1', label, bold)
 
-        row = 2
+        # Row after header
+        row = 1
 
+        # Setting values on cells
         for product_data in data['data']:
-            sheet.write(f'A{row}', product_data['sku'])
-            sheet.write(f'B{row}', product_data['name'])
-            sheet.write(f'C{row}', product_data['description'])
-            sheet.write(f'D{row}', product_data['price'], price_format)
-            sheet.write(f'E{row}', product_data['stock'])
-            sheet.write(f'F{row}', product_data['ds_category'])
-            sheet.write(f'G{row}', product_data['ds_material_filter'])
-            sheet.write(f'H{row}', product_data['ds_color_filter'])
-            sheet.write(f'I{row}', product_data['meta_description'])
+            formatted_price = '{:.2f}'.format(float(product_data['price'])).replace(',', '.')
 
+            row_data = [
+                product_data['sku'],
+                product_data['name'],
+                product_data['description'],
+                formatted_price,
+                product_data['stock'],
+                product_data['ds_category'],
+                product_data['ds_material_filter'],
+                product_data['ds_color_filter'],
+                product_data['meta_description'],
+            ]
+            sheet.write_row(row, 0, row_data)
             row += 1
