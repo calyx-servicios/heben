@@ -15,6 +15,7 @@
     "depends": ['globalteckz_magento_2', 'report_xlsx'],
     "data": [
         'views/action_menu.xml',
+        'views/product_product.xml',
         'report/magento_product_export.xml',
     ],
 }
