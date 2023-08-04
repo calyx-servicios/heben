@@ -8,11 +8,14 @@
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.1.2.1",
+    "version": "13.0.1.3.2",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
-    "depends": ['globalteckz_magento_2', 'report_xlsx'],
+    "depends": [
+        'globalteckz_magento_2',
+        'report_xlsx'
+    ],
     "data": [
         'views/action_menu.xml',
         'views/product_product.xml',

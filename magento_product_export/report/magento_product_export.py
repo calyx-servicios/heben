@@ -37,18 +37,18 @@ class MagentoProductExportXls(models.AbstractModel):
 
         # Setting values on cells
         for product_data in data['data']:
-            formatted_price = '{:.2f}'.format(float(product_data['price'])).replace(',', '.')
+            formatted_price = '{:.2f}'.format(float(product_data.get('price', 0.0))).replace(',', '.')
 
             row_data = [
-                product_data['sku'],
-                product_data['name'],
-                product_data['description'],
+                product_data.get('sku', ''),
+                product_data.get('name', ''),
+                product_data.get('description', ''),
                 formatted_price,
-                product_data['stock'],
-                product_data['ds_category'],
-                product_data['ds_material_filter'],
-                product_data['ds_color_filter'],
-                product_data['meta_description'],
+                product_data.get('stock', 0),
+                product_data.get('ds_category', ''),
+                product_data.get('ds_material_filter', ''),
+                product_data.get('ds_color_filter', ''),
+                product_data.get('meta_description', ''),
             ]
             sheet.write_row(row, 0, row_data)
             row += 1
