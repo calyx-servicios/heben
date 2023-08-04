@@ -51,6 +51,8 @@ class ProductProduct(models.Model):
                         vals[field_name] = vals.get(field_name, '') + attrs.name
             else:
                 # Attributes from Odoo
+                if not product.product_material_id.name:
+                    raise UserError(_('The product {} does not have ds_material_filter'.format(product.name)))
                 for attrs in product.product_template_attribute_value_ids:
                     if attrs.display_type == 'color':
                         if vals.get('ds_color_filter'):

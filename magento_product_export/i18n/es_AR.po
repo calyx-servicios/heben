@@ -54,8 +54,14 @@ msgstr "Informe Producto Informe"
 #. module: magento_product_export
 #: code:addons/magento_product_export/models/product_product.py:0
 #, python-format
-msgid "The product {} has no Magento attributes"
-msgstr "El producto {} no tiene atributos Magento"
+msgid "The product {} does not have ds_category"
+msgstr "El producto {} no tiene ds_category"
+
+#. module: magento_product_export
+#: code:addons/magento_product_export/models/product_product.py:0
+#, python-format
+msgid "The product {} does not have ds_material_filter"
+msgstr "El producto {} no tiene ds_material_filter"
 
 #. module: magento_product_export
 #: code:addons/magento_product_export/models/product_product.py:0
@@ -68,3 +74,4 @@ msgstr "Para exportar a Magento, el campo de descripción es obligatorio"
 #, python-format
 msgid "You don't have the necessary permissions to perform this action."
 msgstr "No tienes los permisos necesarios para realizar esta acción."
+
