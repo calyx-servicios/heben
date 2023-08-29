@@ -22,10 +22,6 @@ class SaleOrder(models.Model):
                     order_line.location_id = location.id
                     house_empty = True
                     break
-                else:
-                    order_line.location_id = self.warehouse_id.lot_stock_id.id
-                    house_empty = True
-                    break
             if not house_empty:
                 msg='For the product ' + order_line.name  + ' there is no stock in the selected locations'
                 self.message_post(body=msg)
