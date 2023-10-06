@@ -9,12 +9,12 @@
                 <button name ='create_template_label_in_branch' 
                     string = "Print label Argentine post" 
                     type='object'
-                    attrs="{'invisible': [('in_branch', '=', 'in_branch')]}"
+                    attrs="{'invisible': [('in_branch', '!=', 'in_branch')]}"
                 />
                 <button name ='create_template_label_in_address' 
                     string = "Print label Argentine post" 
                     type='object'
-                    attrs="{'invisible': [('in_branch', '=', 'in_address')]}"
+                    attrs="{'invisible': [('in_branch', '!=', 'in_address')]}"
                 />
             </xpath>
             <field name="origin" position="after">
