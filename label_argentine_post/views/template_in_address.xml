@@ -30,7 +30,7 @@
                 </tr>
                 <tr class="">
                     <!-- <span t-field="o.company_id.l10n_latam_identification_type_id.name"/> -->
-                    <td class=""><span t-field="o.company_id.vat"/><br/></td>
+                    <td class="">CUIT: <span t-field="o.company_id.vat"/><br/></td>
                 </tr>
                 <tr class="">
                     <td class=""><span class="">TE: </span><span t-field="o.company_id.phone"/><br/></td>
@@ -49,6 +49,7 @@
                         </td>
                         <td class="" style="background:white; width:85%;border:1px solid;height:170px">
                                 <span t-field="o.partner_id.name"/><span class="" style="margin-left:100px">TE: </span><span t-field="o.partner_id.phone"/><br/>
+                                <span t-field="o.partner_id.street"/><br/>
                                 <span t-field="o.partner_id.zip"/><span style="margin-left:30px" t-field="o.partner_id.city"/><br/>
                                 <span t-field="o.partner_id.state_id.name"/><br/>
                         </td>

@@ -4,11 +4,11 @@
     "summary": """
         Create label for Argentine post""",
     "author": "Calyx Servicios S.A.",
-    "maintainers": ["GeorginaGuzman","PerezGabriela"],
+    "maintainers": ["GeorginaGuzman","PerezGabriela", "Zamora, Javier"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Stock",
-    "version": "13.0.2.2.3",
+    "version": "13.0.2.3.3",
     "development_status": "Production/Stable",
     "installable": True,
     "application": False,
