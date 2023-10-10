@@ -1,1 +1,2 @@
-from . import stock_picking, stock_post_branch
+from . import stock_picking
+from . import stock_post_branch
