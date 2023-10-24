@@ -2,7 +2,7 @@
 
 ## Clone
 
-`git clone --recurse-submodules --branch 13.0 https://github.com/calyx-servicios/heben.git`
+`git clone --recurse-submodules --branch 13.0_staging https://github.com/calyx-servicios/heben.git`
 
 ## odoo.conf File
 
