@@ -90,10 +90,6 @@
 	url = https://github.com/OCA/bank-statement-import.git
 	path = submodules/OCA/bank-statement-import
 	branch = refs/heads/13.0
-[submodule "OCA/commission"]
-	url = https://github.com/OCA/commission.git
-	path = submodules/OCA/commission
-	branch = refs/heads/13.0
 [submodule "OCA/contract"]
 	url = https://github.com/OCA/contract.git
 	path = submodules/OCA/contract
