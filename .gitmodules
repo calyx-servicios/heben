@@ -2,10 +2,6 @@
 	url = https://github.com/CybroOdoo/CybroAddons.git
 	path = submodules/CybroOdoo/CybroAddons
 	branch = refs/heads/13.0
-[submodule "calyx-servicios/account-analytic"]
-	url = https://github.com/calyx-servicios/account-analytic.git
-	path = submodules/calyx-servicios/account-analytic
-	branch = refs/heads/13.0
 [submodule "calyx-servicios/account-financial-tools"]
 	url = https://github.com/calyx-servicios/account-financial-tools.git
 	path = submodules/calyx-servicios/account-financial-tools
