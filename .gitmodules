@@ -26,10 +26,6 @@
 	url = https://github.com/ctmil/payment_mercadopago.git
 	path = submodules/ctmil/payment_mercadopago
 	branch = refs/heads/13.0
-[submodule "jobiols/odoo-addons"]
-	url = https://github.com/jobiols/odoo-addons.git
-	path = submodules/jobiols/odoo-addons
-	branch = refs/heads/13.0
 [submodule "ingadhoc/account-financial-tools"]
 	url = https://github.com/ingadhoc/account-financial-tools.git
 	path = submodules/ingadhoc/account-financial-tools
