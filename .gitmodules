@@ -70,10 +70,6 @@
 	url = https://github.com/ingadhoc/stock.git
 	path = submodules/ingadhoc/stock
 	branch = refs/heads/13.0
-[submodule "ingadhoc/website"]
-	url = https://github.com/ingadhoc/website.git
-	path = submodules/ingadhoc/website
-	branch = refs/heads/13.0
 [submodule "OCA/account-analytic"]
 	url = https://github.com/OCA/account-analytic.git
 	path = submodules/OCA/account-analytic
