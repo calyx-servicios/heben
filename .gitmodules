@@ -86,10 +86,6 @@
 	url = https://github.com/OCA/account-financial-tools.git
 	path = submodules/OCA/account-financial-tools
 	branch = refs/heads/13.0
-[submodule "OCA/account-reconcile"]
-	url = https://github.com/OCA/account-reconcile.git
-	path = submodules/OCA/account-reconcile
-	branch = refs/heads/13.0
 [submodule "OCA/bank-statement-import"]
 	url = https://github.com/OCA/bank-statement-import.git
 	path = submodules/OCA/bank-statement-import
