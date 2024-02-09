@@ -9,9 +9,12 @@ class SaleOrder(models.Model):
             if rec.picking_ids:
                 for picking in rec.picking_ids:
                     if picking.state == 'confirmed':
+                        # Valido que `contact` devuelve un registro `res.partner` válido.
                         partner_id = picking.location_id.contact
-                        msg = picking.get_url_stock_reserve()
-                        rec.send_notice(partner_id, msg)
+                        # Si `partner_id` es falso o `None`, no enviar la notificación.
+                        if partner_id:
+                            msg = picking.get_url_stock_reserve()
+                            rec.send_notice(partner_id, msg)
         return rec
     
     def send_notice(self, partner_id, msg):
@@ -19,9 +22,14 @@ class SaleOrder(models.Model):
         self.send_chat(self.user_id, partner_id, msg, subj)
 
     def send_chat(self, user_id, partner_id, message, subj):
+        # Valido que ambos IDs son enteros válidos
+        if not (user_id.partner_id and user_id.partner_id.id and partner_id and partner_id.id):
+            return
+
         channel_odoo_bot_users = '%s, %s' % (user_id.partner_id.name, partner_id.name)
         channel_obj = self.env['mail.channel']
         channel_id = channel_obj.search([('name', 'like', channel_odoo_bot_users)])
+        
         if not channel_id:
             channel_id = channel_obj.create({
                 'name': channel_odoo_bot_users,
@@ -31,4 +39,3 @@ class SaleOrder(models.Model):
                 'channel_partner_ids': [(4, user_id.partner_id.id),(4, partner_id.id)]
             })
         channel_id.message_post(subject=subj, body=message, message_type='comment', subtype='mail.mt_comment')
-
