@@ -25,6 +25,9 @@ class SaleOrder(models.Model):
             if not house_empty:
                 msg='For the product ' + order_line.name  + ' there is no stock in the selected locations'
                 self.message_post(body=msg)
+                self.send_chat(order_line.order_id.user_id, order_line.order_id.partner_id, msg, order_line.product_id.name)
+                return False
+        return True
     
     def action_confirm(self):
         lines_product = self.order_line.filtered(lambda x: x.product_id.type != 'service')
@@ -36,7 +39,8 @@ class SaleOrder(models.Model):
                     for line in lines_unlocated:
                         line.location_id = order_id.warehouse_id.lot_stock_id.id
                 else:
-                    order_id.check_location()
+                    if not order_id.check_location():
+                        return
         if not self.user_id:
             self.user_id = self.env.user.id
         return super(SaleOrder, self).action_confirm()
