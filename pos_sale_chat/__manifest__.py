@@ -5,7 +5,7 @@
         This module adds the stock reservation notice to the pos
     """,
     "author": "Calyx Servicios S.A.",
-    "maintainers": ["PerezGabriela"],
+    "maintainers": ["PerezGabriela","EnzoGonzalezDev"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Sale",
