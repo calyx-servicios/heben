@@ -11,8 +11,7 @@
             <xpath expr="//field[@name='contact']" position="after">
                 <field name="zip_code_field" string="Postal Code" readonly="True"/>
                     <div class="o_address_format">
-                        <field name="from_zip" placeholder="From Zip"/>
-                        <field name="to_zip" placeholder="To Zip"/>
+                        <field name="zip_interval" placeholder="Zip Interval"/>
                     </div>
             </xpath>
             <xpath expr="//field[@name='return_location']" position="after">
