@@ -42,10 +42,10 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: location_by_proximity
-#: model:ir.model.fields,field_description:location_by_proximity.field_stock_location__from_zip
+#: model:ir.model.fields,field_description:location_by_proximity.field_stock_location__zip_interval
 #: model_terms:ir.ui.view,arch_db:location_by_proximity.stock_location_form_inherit
-msgid "From Zip"
-msgstr "Zip Desde"
+msgid "Zip Interval"
+msgstr "Zip Intervalo"
 
 #. module: location_by_proximity
 #: model:ir.model,name:location_by_proximity.model_stock_location
@@ -77,12 +77,6 @@ msgstr "Almacenes Secundario"
 #: model:ir.model.fields,field_description:location_by_proximity.field_stock_location__sequence
 msgid "Sequence"
 msgstr ""
-
-#. module: location_by_proximity
-#: model:ir.model.fields,field_description:location_by_proximity.field_stock_location__to_zip
-#: model_terms:ir.ui.view,arch_db:location_by_proximity.stock_location_form_inherit
-msgid "To Zip"
-msgstr "Zip Hasta"
 
 #. module: location_by_proximity
 #: model:ir.model.fields,field_description:location_by_proximity.field_sale_order_line__wherehouse_id
