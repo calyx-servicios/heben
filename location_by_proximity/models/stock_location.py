@@ -26,8 +26,8 @@ class StockLocation(models.Model):
                 interval = re.sub(r"[^\d,\s-]", "", location.zip_interval)
                 interval = re.sub(r"\s+", "", interval)
                 intervals = [
-                    tuple(map(int, interval.split("-")))
-                    for interval in location.interval.split(",")
+                    tuple(map(int, zip_interval.split("-")))
+                    for zip_interval in interval.split(",")
                 ]
                 if any(start <= zip_code <= end for start, end in intervals):
                     matched_locations += location
