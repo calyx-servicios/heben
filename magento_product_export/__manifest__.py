@@ -4,11 +4,11 @@
         This module generates a customized Excel file for easily exporting products to Magento.
     """,
     "author": "Calyx Servicios S.A.",
-    "maintainers": ["Zamora, Javier"],
+    "maintainers": ["Zamora, Javier","EnzoGonzalezDev"],
     "website": "http://odoo.calyx-cloud.com.ar/",
     "license": "AGPL-3",
     "category": "Custom",
-    "version": "13.0.1.4.2",
+    "version": "13.0.2.4.2",
     "development_status": "Production/Stable",
     "application": False,
     "installable": True,
