@@ -6,7 +6,10 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     def check_location(self):
-        client_zip = int(self.partner_id.zip)
+        if self.partner_shipping_id:
+            client_zip = int(self.partner_shipping_id.zip)
+        else:
+            client_zip = int(self.partner_id.zip)
         matched_locations = self.env["stock.location"].search_by_zip(client_zip)
 
         locations = matched_locations + \
