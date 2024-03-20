@@ -9,12 +9,11 @@ class SaleOrder(models.Model):
             if rec.picking_ids:
                 for picking in rec.picking_ids:
                     if picking.state == 'confirmed':
-                        # Valido que `contact` devuelve un registro `res.partner` válido.
-                        partner_id = picking.location_id.contact
-                        # Si `partner_id` es falso o `None`, no enviar la notificación.
-                        if partner_id:
-                            msg = picking.get_url_stock_reserve()
-                            rec.send_notice(partner_id, msg)
+                        if not self.ma_order_id:
+                            partner_id = picking.location_id.contact
+                            if partner_id:
+                                msg = picking.get_url_stock_reserve()
+                                rec.send_notice(partner_id, msg)
         return rec
     
     def send_notice(self, partner_id, msg):
@@ -22,7 +21,6 @@ class SaleOrder(models.Model):
         self.send_chat(self.user_id, partner_id, msg, subj)
 
     def send_chat(self, user_id, partner_id, message, subj):
-        # Valido que ambos IDs son enteros válidos
         if not (user_id.partner_id and user_id.partner_id.id and partner_id and partner_id.id):
             return
 
