@@ -5,14 +5,23 @@ class StockPicking(models.Model):
 
     def action_assign(self):
         rec = super(StockPicking, self).action_assign()
-        if self.state == "assigned":
-            if self.sale_id:
-                partner_id = self.location_id.contact
-                user_id = self.sale_id.user_id
-                msg = _("Stock reservation successful!")
-                subj = _("Stock reserve notification")
-                self.message_post(body=msg)
-                self.sale_id.send_chat(user_id, partner_id, msg, subj)
+        if self.state == "assigned" or self.state == "confirmed":
+            if self.state == "confirmed":
+                if self.sale_id:
+                    partner_id = self.location_id.contact
+                    user_id = self.sale_id.user_id
+                    msg = _("Review and reserve stock.")
+                    subj = _("Stock reserve notification")
+                    pick = self
+                    pick = pick.get_url_stock_reserve_custom()
+                    self.message_post(body=msg)
+                    self.sale_id.send_chat(user_id, partner_id, pick, subj)
+            if self.state == "assigned":
+                    partner_id = self.location_id.contact
+                    user_id = self.sale_id.user_id
+                    msg = _("Reservation made.")
+                    subj = _("Stock reserve notification")
+                    self.message_post(body=msg)
         else:
             self.message_post(body=_("Stock not available!"))
         return rec
@@ -26,6 +35,28 @@ class StockPicking(models.Model):
         url = "/web?#action=%s&model=%s&view_type=list" % (action_id, self._name)
         span = _("<a href='%s' target='_blank'>Committed products</a>") % url
         msg = _("You have committed products for sale Ecommerce %s") % (span)
+        return msg
+
+    def get_url_stock_reserve_custom(self):
+        action_id = self.env.ref("pos_sale_chat.action_pos_reserve_products").id
+        active_id = self.env['ir.actions.act_window'].browse(action_id)
+        cids = self.env.company.id
+        record_id = self.id
+        menu_id = 735
+        model = 'stock.picking'
+        
+        # Construir la URL con los parámetros especificados
+        url = "/web#action={action_id}&active_id={active_id}&cids={cids}&id={record_id}&menu_id={menu_id}&model={model}&view_type=form".format(
+            action_id=action_id,
+            active_id=active_id,
+            cids=cids,
+            record_id=record_id,
+            menu_id=menu_id,
+            model=model
+        )
+        
+        span = _("<a href='{url}' target='_blank'>Commited Products</a>").format(url=url)
+        msg = _("You have deliveries to confirm: {span}").format(span=span)
         return msg
 
     def verify_stock_reserve(self):

@@ -47,6 +47,30 @@ msgid "Stock reserve notification"
 msgstr "Notificación de reserva de existencias"
 
 #. module: pos_sale_chat
+#: code:addons/pos_sale_chat/models/stock_picking.py:0
+#, python-format
+msgid "Review and reserve stock."
+msgstr "Revisar y reservar stock."
+
+#. module: pos_sale_chat
+#: code:addons/pos_sale_chat/models/stock_picking.py:0
+#, python-format
+msgid "Reservation made."
+msgstr "Reserva realizada."
+
+#. module: pos_sale_chat
+#: code:addons/pos_sale_chat/models/stock_picking.py:0
+#, python-format
+msgid "You have deliveries to confirm: {span}"
+msgstr "Tiene entregas que confirmar: {span}"
+
+#. module: pos_sale_chat
+#: code:addons/pos_sale_chat/models/stock_picking.py:0
+#, python-format
+msgid "<a href='{url}' target='_blank'>Commited Products</a>"
+msgstr "<a href='{url}' target='_blank'>Productos Comprometidos</a>"
+
+#. module: pos_sale_chat
 #: model:ir.model,name:pos_sale_chat.model_stock_picking
 msgid "Transfer"
 msgstr "Albarán"
