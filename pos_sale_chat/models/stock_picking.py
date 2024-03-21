@@ -5,25 +5,29 @@ class StockPicking(models.Model):
 
     def action_assign(self):
         rec = super(StockPicking, self).action_assign()
-        if self.state == "assigned" or self.state == "confirmed":
-            if self.state == "confirmed":
-                if self.sale_id:
-                    partner_id = self.location_id.contact
-                    user_id = self.sale_id.user_id
-                    msg = _("Review and reserve stock.")
-                    subj = _("Stock reserve notification")
-                    pick = self
-                    pick = pick.get_url_stock_reserve_custom()
-                    self.message_post(body=msg)
-                    self.sale_id.send_chat(user_id, partner_id, pick, subj)
-            if self.state == "assigned":
-                    partner_id = self.location_id.contact
-                    user_id = self.sale_id.user_id
-                    msg = _("Reservation made.")
-                    subj = _("Stock reserve notification")
-                    self.message_post(body=msg)
-        else:
-            self.message_post(body=_("Stock not available!"))
+
+        for picking in self:
+            if picking.sale_id.ma_order_id or picking.sale_id.meli_id:
+                if picking.state == "assigned" or picking.state == "confirmed":
+                    if picking.state == "confirmed":
+                        if picking.sale_id:
+                            partner_id = picking.location_id.contact
+                            user_id = picking.sale_id.user_id
+                            msg = _("Review and reserve stock.")
+                            subj = _("Stock reserve notification")
+                            pick = picking
+                            pick = pick.get_url_stock_reserve_custom()
+                            picking.message_post(body=msg)
+                            picking.sale_id.send_chat(user_id, partner_id, pick, subj)
+                    if picking.state == "assigned":
+                            partner_id = picking.location_id.contact
+                            user_id = picking.sale_id.user_id
+                            msg = _("Reservation made.")
+                            subj = _("Stock reserve notification")
+                            picking.message_post(body=msg)
+                else:
+                    picking.message_post(body=_("Stock not available!"))
+                
         return rec
 
     def get_url_stock_reserve(self):

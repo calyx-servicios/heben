@@ -8,10 +8,7 @@ class CustomStockPicking(models.Model):
 
     @api.model
     def create(self, vals):
-        # Identificar si el picking está relacionado con una orden de venta con ma_order_id establecido
-        # Nota: Este código asume que puedes obtener de alguna manera la orden de venta relacionada desde los valores de creación
-        # Puede que necesites ajustar esta lógica basada en cómo se relacionan tus modelos exactamente
-        sale_order = self.env['sale.order'].search([('id', '=', vals.get('origin', False))], limit=1)
+        sale_order = self.env['sale.order'].search([('name', '=', vals.get('origin', False))], limit=1)
         if sale_order and sale_order.ma_order_id:
             vals['state'] = 'confirmed'
             vals['ma_action_assign_ignored'] = True  # Marcar para ignorar el primer action_assign
