@@ -28,14 +28,14 @@ class SaleOrder(models.Model):
                     order_line.location_id = location.id
                     house_empty = False
                     id_wh = self.env["stock.warehouse"].search([('view_location_id', '=', location.location_id.id)])
-                    return id_wh.id
-                    break
 
             if house_empty:
                 msg = "For the product " + order_line.name + \
                     " there is no stock in the selected locations"
                 self.message_post(body=msg)
                 return 0
+            
+        return id_wh.id
 
     def action_confirm(self):
         lines_product = self.order_line.filtered(

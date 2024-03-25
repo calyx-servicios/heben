@@ -24,6 +24,8 @@ class StockPicking(models.Model):
                             user_id = picking.sale_id.user_id
                             msg = _("Reservation made.")
                             subj = _("Stock reserve notification")
+                            for product in picking.product_id:
+                                product.GtExportSingleProductStock()
                             picking.message_post(body=msg)
                 else:
                     picking.message_post(body=_("Stock not available!"))
