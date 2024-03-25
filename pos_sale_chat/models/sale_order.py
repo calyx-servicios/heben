@@ -26,14 +26,17 @@ class SaleOrder(models.Model):
 
         channel_odoo_bot_users = '%s, %s' % (user_id.partner_id.name, partner_id.name)
         channel_obj = self.env['mail.channel']
-        channel_id = channel_obj.search([('name', 'like', channel_odoo_bot_users)])
+        channel_ids = channel_obj.search([('name', 'like', channel_odoo_bot_users)])
         
-        if not channel_id:
-            channel_id = channel_obj.create({
+        if not channel_ids:
+            channel_ids = channel_obj.create({
                 'name': channel_odoo_bot_users,
                 'email_send': False,
                 'channel_type': 'chat',
                 'public': 'private',
                 'channel_partner_ids': [(4, user_id.partner_id.id),(4, partner_id.id)]
             })
-        channel_id.message_post(subject=subj, body=message, message_type='comment', subtype='mail.mt_comment')
+            
+        for channel_id in channel_ids:
+            channel_id.message_post(subject=subj, body=message, message_type='comment', subtype='mail.mt_comment')
+        
