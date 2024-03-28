@@ -8,7 +8,7 @@ class SaleOrder(models.Model):
         for rec in self:
             if rec.picking_ids:
                 for picking in rec.picking_ids:
-                    if picking.state == 'confirmed':
+                    if picking.state == 'assigned':
                         if not self.ma_order_id:
                             partner_id = picking.location_id.contact
                             if partner_id:

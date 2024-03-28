@@ -61,8 +61,14 @@ msgstr "Reserva realizada."
 #. module: pos_sale_chat
 #: code:addons/pos_sale_chat/models/stock_picking.py:0
 #, python-format
-msgid "You have deliveries to confirm: {span}"
-msgstr "Tiene entregas que confirmar: {span}"
+msgid "You have deliveries to confirm: {link_specific} and {link_custom}"
+msgstr "Tiene entregas que confirmar: {link_specific} y {link_custom}"
+
+#. module: pos_sale_chat
+#: code:addons/pos_sale_chat/models/stock_picking.py:0
+#, python-format
+msgid "<a href='{url}' target='_blank'>Specific Link</a>"
+msgstr "<a href='{url}' target='_blank'>Lista de entregas</a>"
 
 #. module: pos_sale_chat
 #: code:addons/pos_sale_chat/models/stock_picking.py:0
